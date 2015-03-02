@@ -1,8 +1,8 @@
 3-5, Level 1
-Q1, "What is the name of this shape?", "Square", "Circle", "Triangle", "Rectangle"
+Q1, "What is this shape?", "Square", "Circle", "Triangle", "Rectangle"
 Q2, "How many cats are there?", 2, 3, 4, 5
 Q3, 3+4=?, 5, 7, 9, 11
-Q4, 
+Q4, “What noise does a cow make”, moo, meow, neigh, woof.
 Q5,  
 3-5, Level 2
 Q1, 
@@ -25,7 +25,7 @@ Q4,
 Q5,  
 5-7, Level 2
 Q1, 
-Q2, 
+Q2, “What is the opposite of up? left, right, around, down
 Q3, 
 Q4, 
 Q5,  
