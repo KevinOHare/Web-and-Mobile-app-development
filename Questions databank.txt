@@ -1,37 +1,42 @@
 3-5, Level 1
-Q1, "What is this shape?", "Square", "Circle", "Triangle", "Rectangle"
-Q2, "How many cats are there?", 2, 3, 4, 5
-Q3, 3+4=?, 5, 7, 9, 11
-Q4, “What noise does a cow make”, moo, meow, neigh, woof.
-Q5,  
+Q1, What is this shape? Square, Circle, Triangle, Rectangle
+Q2, Which object is in the middle?
+Q3, Which truck is the longest?
+Q4, 3+4=? 5, 7, 9, 11?
+Q5, Which is lighter?
+
 3-5, Level 2
-Q1, 
-Q2, 
-Q3, 
-Q4, 
-Q5,  
+Q1, Which TV is wider?
+Q2, How many cats are there?
+Q3, Which sugar bowl holds more?
+Q4, How much money is there?
+Q5, Which tree is the tallest?
+
 3-5, Level 3
-Q1, 
-Q2, 
-Q3, 
-Q4, 
-Q5, 
+Q1, What noise does a cow make? moo, meow, neigh, woof?
+Q2, Which picture shows 5 squares?
+Q3, How much is this coin worth?
+Q4, How many cats are there?
+Q5, Which group has more?
+
 
 5-7, Level 1
-Q1, 
-Q2, 
-Q3, 
-Q4, 
-Q5,  
+Q1, What time does the clock show?
+Q2, How do you write this number using digits?
+Q3, Which colour is the arrow most likely to land on?
+Q4, Count the tally marks? Which number is shown?
+Q5, Which number comes between 15 and 17?
+
 5-7, Level 2
-Q1, 
-Q2, “What is the opposite of up? left, right, around, down
-Q3, 
-Q4, 
-Q5,  
+Q1, Are there more flamingos or flowers?
+Q2, What is the opposite of up? Left, right, around, down?
+Q3, Which shape has least sides?
+Q4, Which one is different
+Q5, Type the missing number in the sqeuence
+
 5-7, Level 3
-Q1, 
-Q2, 
-Q3, 
-Q4, 
-Q5, 
+Q1, Which season comes before summer?
+Q2, Which group of coins shows the same amount?
+Q3, When is sunrise?
+Q4, Put these in order of smallest to largest
+Q5, How many puppies are there? Count by fives
