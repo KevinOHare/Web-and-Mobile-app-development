@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.quizforkids"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SelectAgeActivity"
+            android:label="@string/title_activity_select_age" >
+        </activity>
+        <activity
+            android:name=".LevelSelect3to5"
+            android:label="@string/title_activity_level_select3to5" >
+        </activity>
+        <activity
+            android:name=".LevelSelect5to7"
+            android:label="@string/title_activity_level_select5to7" >
+        </activity>
+        <activity
+            android:name=".Results"
+            android:label="@string/title_activity_results" >
+        </activity>
+        <activity
+            android:name=".Highscore"
+            android:label="@string/title_activity_highscore" >
+        </activity>
+        <activity
+            android:name="Maths3to5.Maths3to5Q1"
+            android:label="@string/title_activity_maths3to5_q1" >
+        </activity>
+        <activity
+            android:name="Maths3to5.Maths3to5Q2"
+            android:label="@string/title_activity_maths3to5_q2" >
+        </activity>
+        <activity
+            android:name="Maths3to5.Maths3to5Q3"
+            android:label="@string/title_activity_maths3to5_q3" >
+        </activity>
+        <activity
+            android:name="Maths3to5.Maths3to5Q4"
+            android:label="@string/title_activity_maths3to5_q4" >
+        </activity>
+        <activity
+            android:name="Maths3to5.Maths3to5Q5"
+            android:label="@string/title_activity_maths3to5_q5" >
+        </activity>
+        <activity
+            android:name="Animals3to5.Animals3to5Q1"
+            android:label="@string/title_activity_animals3to5_q1" >
+        </activity>
+        <activity
+            android:name="Animals3to5.Animals3to5Q2"
+            android:label="@string/title_activity_animals3to5_q2" >
+        </activity>
+        <activity
+            android:name="Animals3to5.Animals3to5Q3"
+            android:label="@string/title_activity_animals3to5_q3" >
+        </activity>
+        <activity
+            android:name="Animals3to5.Animals3to5Q4"
+            android:label="@string/title_activity_animals3to5_q4" >
+        </activity>
+        <activity
+            android:name="Animals3to5.Animals3to5Q5"
+            android:label="@string/title_activity_animals3to5_q5" >
+        </activity>
+        <activity
+            android:name="Shapes3to5.Shapes3to5Q1"
+            android:label="@string/title_activity_shapes3to5_q1" >
+        </activity>
+        <activity
+            android:name="Shapes3to5.Shapes3to5Q2"
+            android:label="@string/title_activity_shapes3to5_q2" >
+        </activity>
+        <activity
+            android:name="Shapes3to5.Shapes3to5Q3"
+            android:label="@string/title_activity_shapes3to5_q3" >
+        </activity>
+        <activity
+            android:name="Shapes3to5.Shapes3to5Q4"
+            android:label="@string/title_activity_shapes3to5_q4" >
+        </activity>
+        <activity
+            android:name="Shapes3to5.Shapes3to5Q5"
+            android:label="@string/title_activity_shapes3to5_q5" >
+        </activity>
+        <activity
+            android:name="English5to7.English5to7Q1"
+            android:label="@string/title_activity_english5to7_q1" >
+        </activity>
+        <activity
+            android:name="English5to7.English5to7Q2"
+            android:label="@string/title_activity_english5to7_q2" >
+        </activity>
+        <activity
+            android:name="English5to7.English5to7Q3"
+            android:label="@string/title_activity_english5to7_q3" >
+        </activity>
+        <activity
+            android:name="English5to7.English5to7Q4"
+            android:label="@string/title_activity_english5to7_q4" >
+        </activity>
+        <activity
+            android:name="English5to7.English5to7Q5"
+            android:label="@string/title_activity_english5to7_q5" >
+        </activity>
+        <activity
+            android:name=".Maths5to7Q1"
+            android:label="@string/title_activity_maths5to7_q1" >
+        </activity>
+        <activity
+            android:name=".Maths5to7Q2"
+            android:label="@string/title_activity_maths5to7_q2" >
+        </activity>
+        <activity
+            android:name=".Maths5to7Q3"
+            android:label="@string/title_activity_maths5to7_q3" >
+        </activity>
+        <activity
+            android:name=".Maths5to7Q4"
+            android:label="@string/title_activity_maths5to7_q4" >
+        </activity>
+        <activity
+            android:name=".Maths5to7Q5"
+            android:label="@string/title_activity_maths5to7_q5" >
+        </activity>
+    </application>
+
+</manifest>

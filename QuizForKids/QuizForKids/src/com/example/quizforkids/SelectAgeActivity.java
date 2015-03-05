@@ -1,5 +1,7 @@
 package com.example.quizforkids;
 
+import com.example.quizforkids.R;
+
 import android.app.Activity;
 import android.os.Bundle;
 
