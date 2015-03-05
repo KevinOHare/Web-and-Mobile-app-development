@@ -67,19 +67,19 @@
             android:label="@string/title_activity_animals3to5_q1" >
         </activity>
         <activity
-            android:name="animals3to5.animals3to5Q2"
+            android:name="animals3to5.Animals3to5Q2"
             android:label="@string/title_activity_animals3to5_q2" >
         </activity>
         <activity
-            android:name="animals3to5.animals3to5Q3"
+            android:name="animals3to5.Animals3to5Q3"
             android:label="@string/title_activity_animals3to5_q3" >
         </activity>
         <activity
-            android:name="animals3to5.animals3to5Q4"
+            android:name="animals3to5.Animals3to5Q4"
             android:label="@string/title_activity_animals3to5_q4" >
         </activity>
         <activity
-            android:name="animals3to5.animals3to5Q5"
+            android:name="animals3to5.Animals3to5Q5"
             android:label="@string/title_activity_animals3to5_q5" >
         </activity>
         <activity

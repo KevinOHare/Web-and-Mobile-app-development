@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class animals3to5Q1 extends Activity {
+public class Animals3to5Q1 extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

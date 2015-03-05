@@ -1,0 +1,21 @@
+package com.example.quizforkids;
+
+import com.example.quizforkids.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class SelectAgeActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_select_age);
+		
+		
+		// Create button for 3-5 button
+		final Button age3to5 = (Button) findViewById(R.id.ages3_5yrs);
+		final Button age5to7 = (Button) findViewById(R.id.ages5_7yrs);
+	}
+}

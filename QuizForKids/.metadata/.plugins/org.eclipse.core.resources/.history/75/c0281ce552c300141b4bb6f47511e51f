@@ -1,0 +1,18 @@
+package com.example.quizforkids;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class LevelSelect3to5 extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_level_select3to5);
+		
+		//Create button objects for the page
+		final Button level1 = (Button) findViewById(R.id.level_1_button);
+		final Button level2 = (Button) findViewById(R.id.level_2_button);
+		final Button level3 = (Button) findViewById(R.id.level_3_button);
+	}
+}
