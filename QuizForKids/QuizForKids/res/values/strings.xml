@@ -14,11 +14,15 @@
     <string name="ages5_7yrs">5-7yrs</string>
     
     
-    
-    
-    
     <string name="title_activity_level_select3to5">LevelSelect3to5</string>
     <string name="title_activity_level_select5to7">LevelSelect5to7</string>
+    <string name="level_1_button">Level 1</string>
+    <string name="level_2_button">Level 2</string>
+    <string name="level_3_button">Level 3</string>
+    
+    
+    
+    
     <string name="title_activity_results">Results</string>
     <string name="title_activity_highscore">Highscore</string>
     <string name="title_activity_maths3to5_q1">Maths3to5Q1</string>
