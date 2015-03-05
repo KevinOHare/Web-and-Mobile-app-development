@@ -10,19 +10,22 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
 	
+	// Create a mediaPlayer for music
 	MediaPlayer bugSong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        // Set the details for the song
         bugSong = MediaPlayer.create(MainActivity.this, R.raw.dontsquashthatbug);
         bugSong.setLooping(true);
         bugSong.start();
         
-        final Button rightanswer = (Button) findViewById(R.id.button1);
-        
-        rightanswer.setOnClickListener(new View.OnClickListener() {
+        // Create the functionality for the PLAY button
+        final Button play = (Button) findViewById(R.id.play_button);
+        play.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -33,6 +36,42 @@ public class MainActivity extends ActionBarActivity {
 				
 			}
 		});
+        
+        // Create the functionality for the SOUND button
+        final Button soundButton = (Button) findViewById(R.id.sound_button);
+        soundButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				boolean soundOn = false;
+				
+				if (soundOn = false){
+					soundButton.setEnabled(true);
+					soundButton.setText("SOUND: ON");
+					bugSong.start();
+					soundOn = true;
+				}
+				
+				if (soundOn = true){
+					soundButton.setText("SOUND: OFF");
+					soundButton.setEnabled(true);
+					bugSong.stop();
+					soundOn = false;
+				}
+			}
+		});
+        
+        // Create the functionality for the EXIT button
+        final Button exitButton = (Button) findViewById(R.id.exit_button);
+        exitButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				 finish();
+		            System.exit(0);
+			}
+		});
+        
         
     }
 }
