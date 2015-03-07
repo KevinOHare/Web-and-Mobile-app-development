@@ -1660,10 +1660,10 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0a002e;
         public static final int action_mode_bar_stub=0x7f0a002d;
         public static final int action_mode_close_button=0x7f0a0020;
-        public static final int action_settings=0x7f0a0048;
+        public static final int action_settings=0x7f0a004b;
         public static final int activity_chooser_view_content=0x7f0a0021;
-        public static final int ages3_5yrs=0x7f0a0047;
-        public static final int ages5_7yrs=0x7f0a0046;
+        public static final int ages3_5yrs=0x7f0a004a;
+        public static final int ages5_7yrs=0x7f0a0049;
         public static final int always=0x7f0a0014;
         public static final int beginning=0x7f0a001b;
         public static final int checkbox=0x7f0a0029;
@@ -1695,6 +1695,7 @@ containing a value of this type.
         public static final int play_button=0x7f0a0042;
         public static final int progress_circular=0x7f0a0007;
         public static final int progress_horizontal=0x7f0a0008;
+        public static final int questionscore=0x7f0a0045;
         public static final int radio=0x7f0a002b;
         public static final int search_badge=0x7f0a0035;
         public static final int search_bar=0x7f0a0034;
@@ -1714,8 +1715,10 @@ containing a value of this type.
         public static final int split_action_bar=0x7f0a0004;
         public static final int submit_area=0x7f0a003c;
         public static final int tabMode=0x7f0a000c;
-        public static final int textView1=0x7f0a0045;
+        public static final int textView1=0x7f0a0048;
+        public static final int timescore=0x7f0a0046;
         public static final int title=0x7f0a0027;
+        public static final int totalscore=0x7f0a0047;
         public static final int up=0x7f0a0001;
         public static final int useLogo=0x7f0a0013;
         public static final int withText=0x7f0a0018;
@@ -1881,7 +1884,9 @@ containing a value of this type.
         public static final int level_1_button=0x7f0b001c;
         public static final int level_2_button=0x7f0b001d;
         public static final int level_3_button=0x7f0b001e;
+        public static final int questionscore=0x7f0b003f;
         public static final int sound=0x7f0b0015;
+        public static final int timescore=0x7f0b0040;
         public static final int title_activity_animals3to5_q1=0x7f0b0026;
         public static final int title_activity_animals3to5_q2=0x7f0b0027;
         public static final int title_activity_animals3to5_q3=0x7f0b0028;
@@ -1918,6 +1923,7 @@ containing a value of this type.
         public static final int title_activity_shapes5to7_q3=0x7f0b003c;
         public static final int title_activity_shapes5to7_q4=0x7f0b003d;
         public static final int title_activity_shapes5to7_q5=0x7f0b003e;
+        public static final int totalscore=0x7f0b0041;
     }
     public static final class style {
         /** 

@@ -359,10 +359,10 @@ int id action_menu_presenter 0x7f0a0006
 int id action_mode_bar 0x7f0a002e
 int id action_mode_bar_stub 0x7f0a002d
 int id action_mode_close_button 0x7f0a0020
-int id action_settings 0x7f0a0048
+int id action_settings 0x7f0a004b
 int id activity_chooser_view_content 0x7f0a0021
-int id ages3_5yrs 0x7f0a0047
-int id ages5_7yrs 0x7f0a0046
+int id ages3_5yrs 0x7f0a004a
+int id ages5_7yrs 0x7f0a0049
 int id always 0x7f0a0014
 int id beginning 0x7f0a001b
 int id checkbox 0x7f0a0029
@@ -394,6 +394,7 @@ int id normal 0x7f0a000b
 int id play_button 0x7f0a0042
 int id progress_circular 0x7f0a0007
 int id progress_horizontal 0x7f0a0008
+int id questionscore 0x7f0a0045
 int id radio 0x7f0a002b
 int id search_badge 0x7f0a0035
 int id search_bar 0x7f0a0034
@@ -413,8 +414,10 @@ int id sound_button 0x7f0a0043
 int id split_action_bar 0x7f0a0004
 int id submit_area 0x7f0a003c
 int id tabMode 0x7f0a000c
-int id textView1 0x7f0a0045
+int id textView1 0x7f0a0048
+int id timescore 0x7f0a0046
 int id title 0x7f0a0027
+int id totalscore 0x7f0a0047
 int id up 0x7f0a0001
 int id useLogo 0x7f0a0013
 int id withText 0x7f0a0018
@@ -508,7 +511,9 @@ int string hello_world 0x7f0b0011
 int string level_1_button 0x7f0b001c
 int string level_2_button 0x7f0b001d
 int string level_3_button 0x7f0b001e
+int string questionscore 0x7f0b003f
 int string sound 0x7f0b0015
+int string timescore 0x7f0b0040
 int string title_activity_animals3to5_q1 0x7f0b0026
 int string title_activity_animals3to5_q2 0x7f0b0027
 int string title_activity_animals3to5_q3 0x7f0b0028
@@ -545,6 +550,7 @@ int string title_activity_shapes5to7_q2 0x7f0b003b
 int string title_activity_shapes5to7_q3 0x7f0b003c
 int string title_activity_shapes5to7_q4 0x7f0b003d
 int string title_activity_shapes5to7_q5 0x7f0b003e
+int string totalscore 0x7f0b0041
 int style AppBaseTheme 0x7f0c00eb
 int style AppTheme 0x7f0c00ec
 int style Base_TextAppearance_AppCompat 0x7f0c0098
