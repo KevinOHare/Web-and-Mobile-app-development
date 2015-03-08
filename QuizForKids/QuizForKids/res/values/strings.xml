@@ -8,6 +8,7 @@
     <string name="Play">Play</string>
     <string name="sound">Sound: ON</string>
     <string name="exit">Exit</string>
+    <string name="highscores">Highscores</string>
     
     <string name="Select_Your_Age_Group">Select Your Age Group</string>
     <string name="title_activity_main2">MainActivity</string>

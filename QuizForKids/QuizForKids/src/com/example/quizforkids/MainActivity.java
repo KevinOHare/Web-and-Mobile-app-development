@@ -61,12 +61,24 @@ public class MainActivity extends ActionBarActivity {
 			}
 		});
         
+        //Create the functionality for the HIGHSCORES button
+        final Button highScoresButton = (Button) findViewById(R.id.highscores_button);
+        highScoresButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent changeScreen = new Intent(MainActivity.this, Highscore.class);
+				startActivity(changeScreen);
+			}
+		});
+        
         // Create the functionality for the EXIT button
         final Button exitButton = (Button) findViewById(R.id.exit_button);
         exitButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				bugSong.stop();
 				 finish();
 		            System.exit(0);
 			}

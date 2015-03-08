@@ -23,10 +23,23 @@
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
         android:layout_below="@id/play_button" 
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/sound"
         android:textColor="#A6D785"
         android:textSize="24sp" />
+    
+    <Button 
+       	android:id="@+id/highscores_button"
+       	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/sound_button" 
+        android:layout_marginTop="20dp"
+        android:text="@string/highscores"
+        android:textColor="#A6D785"
+        android:textSize="24sp"
+       	/>
     
     <Button 
         android:id="@+id/exit_button"
@@ -34,8 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
-        android:layout_below="@id/sound_button" 
-        android:layout_marginTop="40dp"
+        android:layout_below="@id/highscores_button" 
+        android:layout_marginTop="20dp"
         android:text="@string/exit"
         android:textColor="#A6D785"
         android:textSize="24sp" />

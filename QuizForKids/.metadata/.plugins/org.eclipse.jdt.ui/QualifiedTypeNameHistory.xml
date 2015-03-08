@@ -3,9 +3,7 @@
 <fullyQualifiedTypeName name="com.example.quizforkids.MainActivity"/>
 <fullyQualifiedTypeName name="com.example.quizforkids.SelectAgeActivity"/>
 <fullyQualifiedTypeName name="com.example.quizforkids.LevelSelect5to7"/>
-<fullyQualifiedTypeName name="com.example.quizforkids.R.id"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.example.quizforkids.LevelSelect3to5"/>
 <fullyQualifiedTypeName name="maths3to5.Maths3to5Q1"/>
@@ -14,4 +12,7 @@
 <fullyQualifiedTypeName name="maths5to7.Maths5to7Q1"/>
 <fullyQualifiedTypeName name="english5to7.English5to7Q1"/>
 <fullyQualifiedTypeName name="shapes5to7.Shapes5to7Q1"/>
+<fullyQualifiedTypeName name="com.example.quizforkids.R.id"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="com.example.quizforkids.Highscore"/>
 </qualifiedTypeNameHistroy>
