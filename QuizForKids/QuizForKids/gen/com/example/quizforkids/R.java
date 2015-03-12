@@ -1819,6 +1819,9 @@ containing a value of this type.
         public static final int dontsquashthatbug=0x7f050000;
     }
     public static final class string {
+        public static final int Level1Highscore=0x7f0b0043;
+        public static final int Level2Highscore=0x7f0b0044;
+        public static final int Level3Highscore=0x7f0b0045;
         public static final int Play=0x7f0b0014;
         public static final int Select_Your_Age_Group=0x7f0b0018;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 

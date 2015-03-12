@@ -59,5 +59,8 @@
     <string name="questionscore">30</string>
     <string name="timescore">20</string>
     <string name="totalscore">0</string>
+    <string name="Level1Highscore">888</string>
+    <string name="Level2Highscore">888</string>
+    <string name="Level3Highscore">888</string>
 
 </resources>

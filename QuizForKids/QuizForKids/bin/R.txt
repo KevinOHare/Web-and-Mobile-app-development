@@ -486,6 +486,9 @@ int layout activity_shapes5to7_q5 0x7f03003a
 int layout support_simple_spinner_dropdown_item 0x7f03003b
 int menu highscore 0x7f0d0000
 int raw dontsquashthatbug 0x7f050000
+int string Level1Highscore 0x7f0b0043
+int string Level2Highscore 0x7f0b0044
+int string Level3Highscore 0x7f0b0045
 int string Play 0x7f0b0014
 int string Select_Your_Age_Group 0x7f0b0018
 int string abc_action_bar_home_description 0x7f0b0001
