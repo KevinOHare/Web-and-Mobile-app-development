@@ -1,7 +1,6 @@
 INDEX VERSION 1.127+/Users/chrismcclune/Documents/Web and Mobile Repo/QuizForKids/.metadata/.plugins/org.eclipse.jdt.core
 224943525.index
 2930013218.index
-3952450476.index
 1457298791.index
 3722231358.index
 1270315800.index

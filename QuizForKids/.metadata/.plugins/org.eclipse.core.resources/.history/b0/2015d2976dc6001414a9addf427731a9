@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logopage"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:text="@string/Play"
+        android:textColor="#00EE00"
+        android:textSize="24sp" />
+    
+     <Button
+        android:id="@+id/highscores_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/play_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:text="@string/highscores"
+        android:textColor="#00EE00"
+        android:textSize="24sp" />
+    
+    <Button
+        android:id="@+id/music_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_below="@+id/highscores_button"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="20dp"
+        android:layout_marginRight="34dp"
+        android:background="@android:color/transparent"
+        android:text="@string/music_label"
+        android:textColor="#00EE00"
+        android:textSize="24sp" />
+    
+     <Button
+        android:id="@+id/music_on_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/music_label"
+        android:layout_marginLeft="125dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/music_on_button"
+        android:textColor="#A6D785"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/music_off_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/exit_button"
+        android:layout_alignBase="@+id/music_label"
+        android:layout_toRightOf="@+id/music_on_button"
+        android:text="@string/music_off_button"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+   
+
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/music_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:text="@string/exit"
+        android:textColor="#00EE00"
+        android:textSize="24sp" />
+
+    
+
+</RelativeLayout>

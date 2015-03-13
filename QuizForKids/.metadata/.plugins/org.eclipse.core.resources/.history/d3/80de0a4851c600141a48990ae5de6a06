@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Quiz for Kids</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_select_age">SelectAgeActivity</string>
+    <string name="Play">Play</string>
+    <string name="sound">Sound: </string>
+    <string name="sound_on_button">On</string>
+    <string name="sound_off_button">Off</string>
+    <string name="exit">Exit</string>
+    <string name="highscores">Highscores</string>
+    
+    <string name="Select_Your_Age_Group">Select Your Age Group</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="ages5_7yrs">5-7yrs</string>
+    
+    
+    <string name="title_activity_level_select3to5">LevelSelect3to5</string>
+    <string name="title_activity_level_select5to7">LevelSelect5to7</string>
+    <string name="level_1_button">Level 1</string>
+    <string name="level_2_button">Level 2</string>
+    <string name="level_3_button">Level 3</string>
+    
+    
+    
+    
+    <string name="title_activity_results">Results</string>
+    <string name="title_activity_highscore">Highscore</string>
+    <string name="title_activity_maths3to5_q1">Maths3to5Q1</string>
+    <string name="title_activity_maths3to5_q2">Maths3to5Q2</string>
+    <string name="title_activity_maths3to5_q3">Maths3to5Q3</string>
+    <string name="title_activity_maths3to5_q4">Maths3to5Q4</string>
+    <string name="title_activity_maths3to5_q5">Maths3to5Q5</string>
+    <string name="title_activity_animals3to5_q1">Animals3to5Q1</string>
+    <string name="title_activity_animals3to5_q2">Animals3to5Q2</string>
+    <string name="title_activity_animals3to5_q3">Animals3to5Q3</string>
+    <string name="title_activity_animals3to5_q4">Animals3to5Q4</string>
+    <string name="title_activity_animals3to5_q5">Animals3to5Q5</string>
+    <string name="title_activity_shapes3to5_q1">Shapes3to5Q1</string>
+    <string name="title_activity_shapes3to5_q2">Shapes3to5Q2</string>
+    <string name="title_activity_shapes3to5_q3">Shapes3to5Q3</string>
+    <string name="title_activity_shapes3to5_q4">Shapes3to5Q4</string>
+    <string name="title_activity_shapes3to5_q5">Shapes3to5Q5</string>
+    <string name="title_activity_english5to7_q1">English5to7Q1</string>
+    <string name="title_activity_english5to7_q2">English5to7Q2</string>
+    <string name="title_activity_english5to7_q3">English5to7Q3</string>
+    <string name="title_activity_english5to7_q4">English5to7Q4</string>
+    <string name="title_activity_english5to7_q5">English5to7Q5</string>
+    <string name="title_activity_maths5to7_q1">Maths5to7Q1</string>
+    <string name="title_activity_maths5to7_q2">Maths5to7Q2</string>
+    <string name="title_activity_maths5to7_q3">Maths5to7Q3</string>
+    <string name="title_activity_maths5to7_q4">Maths5to7Q4</string>
+    <string name="title_activity_maths5to7_q5">Maths5to7Q5</string>
+    <string name="title_activity_shapes5to7_q1">Shapes5to7Q1</string>
+    <string name="title_activity_shapes5to7_q2">Shapes5to7Q2</string>
+    <string name="title_activity_shapes5to7_q3">Shapes5to7Q3</string>
+    <string name="title_activity_shapes5to7_q4">Shapes5to7Q4</string>
+    <string name="title_activity_shapes5to7_q5">Shapes5to7Q5</string>
+    <string name="questionscore">30</string>
+    <string name="timescore">20</string>
+    <string name="totalscore">0</string>
+
+</resources>
