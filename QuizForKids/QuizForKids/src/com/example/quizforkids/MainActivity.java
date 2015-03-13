@@ -11,7 +11,7 @@ public class MainActivity extends ActionBarActivity {
 
 	// Create a mediaPlayer for music
 	MediaPlayer bugSong;
-
+	private int mSec = 0;
 	// Create button objects for the on/off mediaPlayer functionality
 
 	@Override
@@ -42,7 +42,14 @@ public class MainActivity extends ActionBarActivity {
 			public void onClick(View v) {
 				bugSong = MediaPlayer.create(MainActivity.this, R.raw.dontsquashthatbug);
 				bugSong.setLooping(true);
+				
+				if (mSec == 0) {
+					bugSong.start();
+				} else {
+				bugSong.seekTo(mSec);
 				bugSong.start();
+				}
+				
 				soundOnButton.setEnabled(false);
 				soundOffButton.setEnabled(true);
 			}
@@ -54,7 +61,8 @@ public class MainActivity extends ActionBarActivity {
 
 			@Override
 			public void onClick(View v) {
-				bugSong.stop();
+				bugSong.pause();
+				mSec = bugSong.getCurrentPosition();
 				soundOffButton.setEnabled(false);
 				soundOnButton.setEnabled(true);
 			}
