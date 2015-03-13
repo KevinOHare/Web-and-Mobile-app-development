@@ -162,6 +162,10 @@
             android:name="shapes5to7.Shapes5to7Q5"
             android:label="@string/title_activity_shapes5to7_q5" >
         </activity>
+        <activity
+            android:name="maths3to5.Maths3to5Q1"
+            android:label="@string/title_activity_maths3to5_q1" >
+        </activity>
     </application>
 
 </manifest>

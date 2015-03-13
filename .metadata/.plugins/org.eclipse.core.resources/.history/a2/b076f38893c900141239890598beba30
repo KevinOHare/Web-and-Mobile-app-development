@@ -1,0 +1,170 @@
+package maths3to5;
+
+import android.support.v7.app.ActionBarActivity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class Maths3to5Q1 extends ActionBarActivity {
+
+	// Text View for timer
+	TextView timer;
+
+	// Button set up
+	Button button1;
+	Button button2;
+	Button button3;
+	Button button4;
+
+	// Boolean for arrow
+	Boolean flag;
+
+	// Image View
+	ImageView next;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.example_question);
+
+		// implement count down
+		countDown();
+
+		// create button views and link to xml
+		button1 = (Button) findViewById(R.id.button1);
+		button2 = (Button) findViewById(R.id.button2);
+		button3 = (Button) findViewById(R.id.button3);
+		button4 = (Button) findViewById(R.id.button4);
+
+		// boolean set
+		flag = false;
+
+		// create image view link to xml
+		next = (ImageView) findViewById(R.id.next_page);
+
+		// set image view arrow to invisible
+		next.setVisibility(ImageView.INVISIBLE);
+
+		// ****** on click listeners *******
+
+		button1.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (button1.isPressed()) {
+					button1.setBackgroundColor(Color.RED);
+					button2.setBackgroundColor(Color.YELLOW);
+					button3.setBackgroundColor(Color.YELLOW);
+					button4.setBackgroundColor(Color.YELLOW);
+				}
+				// boolean for next page
+				flag = true;
+				// set arrow to visible 
+				next.setVisibility(ImageView.VISIBLE);
+				// arrow image is clickable
+				next.isClickable();
+				// method to navigate to next page
+				nextPage();
+
+			}
+		});
+
+		button2.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (button2.isPressed()) {
+					button1.setBackgroundColor(Color.YELLOW);
+					button2.setBackgroundColor(Color.RED);
+					button3.setBackgroundColor(Color.YELLOW);
+					button4.setBackgroundColor(Color.YELLOW);
+				}
+				// boolean for next page
+				flag = true;
+				// set arrow to visible 
+				next.setVisibility(ImageView.VISIBLE);
+				// arrow image is clickable
+				next.isClickable();
+				// method to navigate to next page
+				nextPage();
+			}
+		});
+
+		button3.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (button3.isPressed()) {
+					button1.setBackgroundColor(Color.YELLOW);
+					button2.setBackgroundColor(Color.YELLOW);
+					button3.setBackgroundColor(Color.RED);
+					button4.setBackgroundColor(Color.YELLOW);
+				}
+				// boolean for next page
+				flag = true;
+				// set arrow to visible 
+				next.setVisibility(ImageView.VISIBLE);
+				// arrow image is clickable
+				next.isClickable();
+				// method to navigate to next page
+				nextPage();
+			}
+		});
+
+		button4.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (button4.isPressed()) {
+					button1.setBackgroundColor(Color.YELLOW);
+					button2.setBackgroundColor(Color.YELLOW);
+					button3.setBackgroundColor(Color.YELLOW);
+					button4.setBackgroundColor(Color.RED);
+				}
+				// boolean for next page
+				flag = true;
+				// set arrow to visible 
+				next.setVisibility(ImageView.VISIBLE);
+				// arrow image is clickable
+				next.isClickable();
+				// method to navigate to next page
+				nextPage();
+			}
+		});
+
+
+	} // ********* end on create **********
+
+	/**
+	 * Countdown timer method - from 30 seconds
+	 */
+	public void countDown() {
+		// create timer Text view and link to xml
+		timer = (TextView) findViewById(R.id.timer);
+
+		// create timer function
+		new CountDownTimer(30000, 1000) {
+			@Override
+			public void onTick(long millSecs) {
+
+				timer.setText("" + millSecs / 1000);
+			}
+
+			public void onFinish() {
+				timer.setText("Times up!");
+			}
+		}.start();
+	}
+
+	/**
+	 * Method for the next page intent
+	 */
+	public void nextPage() {
+		next.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				while (flag == true) {
+					// **intent to next page
+				}
+			}
+		});
+	}
+
+}
