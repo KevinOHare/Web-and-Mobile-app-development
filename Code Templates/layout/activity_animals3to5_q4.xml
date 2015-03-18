@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/Animals_bk"
-    tools:context="com.example.app_project.QuestionExample" >
+    tools:context="${relativePackage}.${activityClass}" >
 
     <!-- image of question -->
 

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/shapes_bk"
-    tools:context="com.example.app_project.Shapes3to5Q1" >
+    tools:context="${relativePackage}.${activityClass}" >
 
     <!-- image of question -->
 
