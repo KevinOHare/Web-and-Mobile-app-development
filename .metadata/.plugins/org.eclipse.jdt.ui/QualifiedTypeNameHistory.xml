@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.example.quizforkids.R"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+<fullyQualifiedTypeName name="android.widget.ImageButton"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="animals3to5.Animals3to5Q1"/>
+<fullyQualifiedTypeName name="animals3to5.Animals3to5Q2"/>
+<fullyQualifiedTypeName name="english5to7.English5to7Q1"/>
+<fullyQualifiedTypeName name="english5to7.English5to7Q2"/>
+<fullyQualifiedTypeName name="animals3to5.Animals3to5Q5"/>
+<fullyQualifiedTypeName name="maths3to5.Maths3to5Q1"/>
+<fullyQualifiedTypeName name="maths3to5.Maths3to5Q2"/>
 <fullyQualifiedTypeName name="shapes3to5.Shapes3to5Q1"/>
+<fullyQualifiedTypeName name="shapes3to5.Shapes3to5Q2"/>
+<fullyQualifiedTypeName name="shapes3to5.Shapes3to5Q3"/>
+<fullyQualifiedTypeName name="com.example.quizforkids.Results"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="com.example.quizforkids.R.id"/>
 </qualifiedTypeNameHistroy>

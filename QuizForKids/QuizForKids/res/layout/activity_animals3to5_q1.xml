@@ -103,8 +103,6 @@
         android:background="#FCEE21"
         android:textAllCaps="false" />
     
-    <!-- Image View for arrow -->
-    
     <!-- Image View for stop watch -->
     
      <ImageView
@@ -116,13 +114,16 @@
          android:layout_marginTop="3dp"
          android:layout_marginBottom="200dp"
          android:src="@drawable/timer" />
+     
+     <!-- Image View for arrow -->
 
      <ImageButton
          android:id="@+id/next_page"
-         android:layout_width="115dp"
-         android:layout_height="90dp"
+         android:layout_width="80dp"
+         android:layout_height="60dp"
          android:layout_alignParentBottom="true"
-         android:layout_alignRight="@+id/timer"
+         android:layout_alignRight="@+id/button4"
+         android:layout_marginBottom="14dp"
          android:background="@null"
          android:src="@drawable/arrow" />
 
