@@ -12,7 +12,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="160sp"
+        android:paddingLeft="190sp"
         android:paddingTop="125sp"
         />
     
@@ -23,7 +23,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="160sp"
+        android:paddingLeft="190sp"
         android:paddingTop="230sp"
         />
         
@@ -34,7 +34,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="160sp"
+        android:paddingLeft="190sp"
         android:paddingTop="335sp"
         />
 
