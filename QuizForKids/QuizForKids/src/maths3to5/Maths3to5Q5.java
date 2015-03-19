@@ -30,7 +30,7 @@ public class Maths3to5Q5 extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_animals3to5_q5);
+		setContentView(R.layout.activity_maths3to5_q5);
 		
 		// assign image to arrow button
 		btn = (ImageButton) findViewById(R.id.next_page);

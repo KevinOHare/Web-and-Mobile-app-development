@@ -2,7 +2,6 @@ package com.example.quizforkids;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.TextView;
 
 public class Results extends Activity {
 	
