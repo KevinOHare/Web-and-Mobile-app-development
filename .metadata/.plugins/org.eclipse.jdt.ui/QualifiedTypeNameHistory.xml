@@ -17,4 +17,7 @@
 <fullyQualifiedTypeName name="com.example.quizforkids.Results"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="com.example.quizforkids.R.id"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="android.os.CountDownTimer"/>
 </qualifiedTypeNameHistroy>
