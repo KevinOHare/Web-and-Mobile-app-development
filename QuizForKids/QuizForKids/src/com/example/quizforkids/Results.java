@@ -7,15 +7,15 @@ import android.widget.TextView;
 public class Results extends Activity {
 	
 
-	TextView questionscore = (TextView) findViewById(R.id.questionscore);
-	TextView timescore = (TextView) findViewById(R.id.timescore);
-	TextView totalscore = (TextView) findViewById(R.id.totalscore);
+	//TextView questionscore = (TextView) findViewById(R.id.questionscore);
+	//TextView timescore = (TextView) findViewById(R.id.timescore);
+	//TextView totalscore = (TextView) findViewById(R.id.totalscore);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_results);
-		
+		/*
 		int intquestionscore = Integer.parseInt(questionscore.getText().toString());
 		int inttimescore = Integer.parseInt(timescore.getText().toString());
 		
@@ -27,7 +27,7 @@ public class Results extends Activity {
 		// + Integer.valueOf((String) timescore.getText());
 
 		// calculateTotal();
-
+		 */
 	}
 
 }
