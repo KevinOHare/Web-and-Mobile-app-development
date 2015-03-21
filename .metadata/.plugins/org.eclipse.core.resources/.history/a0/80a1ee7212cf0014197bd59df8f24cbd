@@ -120,7 +120,7 @@ public class Animals3to5Q1 extends Activity {
 			}
 
 			public void onFinish() {
-				timer.setText("!"); 
+				timer.setText("!");
 			}
 		}.start();
 	}
