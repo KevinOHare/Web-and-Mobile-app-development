@@ -1,5 +1,6 @@
 package maths3to5;
 
+import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
 
 import android.app.Activity;
@@ -16,6 +17,9 @@ public class Maths3to5Q1 extends Activity {
 
 	// Text View for timer
 	TextView timer;
+	
+	// Score for results screen
+	//public static int this.numberAnsweredCorrectly;
 
 	// Buttons for answers
 	static Button Answer1;
@@ -25,6 +29,10 @@ public class Maths3to5Q1 extends Activity {
 	
 	// Button for the arrow
 	static ImageButton btn;
+
+	public static int numberAnsweredCorrectly;
+	
+	public static int numberAnsweredCorrectlyByQ1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +88,7 @@ public class Maths3to5Q1 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.RED);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					numberAnsweredCorrectlyByQ1 = numberAnsweredCorrectly++;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);

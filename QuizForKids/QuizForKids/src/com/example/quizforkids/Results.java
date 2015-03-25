@@ -1,12 +1,16 @@
 package com.example.quizforkids;
 
+import maths3to5.Maths3to5Q1;
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class Results extends Activity {
-	
 
-	//TextView questionscore = (TextView) findViewById(R.id.questionscore);
+	public static int numberAnsweredCorrectlyByQ5;
+	
+	TextView questionscore;
+	
 	//TextView timescore = (TextView) findViewById(R.id.timescore);
 	//TextView totalscore = (TextView) findViewById(R.id.totalscore);
 
@@ -14,19 +18,10 @@ public class Results extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_results);
-		/*
-		int intquestionscore = Integer.parseInt(questionscore.getText().toString());
-		int inttimescore = Integer.parseInt(timescore.getText().toString());
 		
-		int inttotalscore = intquestionscore + inttimescore;
+		questionscore = (TextView) findViewById(R.id.questionscore);
 		
-		totalscore.setText(inttotalscore);
-
-		// Integer total = Integer.valueOf((String) questionscore.getText())
-		// + Integer.valueOf((String) timescore.getText());
-
-		// calculateTotal();
-		 */
+		questionscore.setText(Integer.toString((numberAnsweredCorrectlyByQ5)*30));
 	}
 
 }

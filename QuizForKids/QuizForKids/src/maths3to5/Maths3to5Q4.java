@@ -16,6 +16,10 @@ public class Maths3to5Q4 extends Activity {
 
 	// Text View for timer
 	TextView timer;
+	
+	public static int numberAnsweredCorrectlyBy3;
+	
+	public static int numberAnsweredCorrectlyByQ4;
 
 	// Buttons for answers
 	static Button Answer1;
@@ -93,6 +97,7 @@ public class Maths3to5Q4 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.RED);
+					numberAnsweredCorrectlyByQ4 = numberAnsweredCorrectlyBy3+1;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
