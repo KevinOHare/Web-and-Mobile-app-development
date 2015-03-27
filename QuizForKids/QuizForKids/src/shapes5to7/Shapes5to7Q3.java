@@ -26,6 +26,8 @@ public class Shapes5to7Q3 extends Activity {
 	
 	// Button for the arrow
 	static ImageButton btn;
+	
+	static boolean answeredCorrectly = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,7 @@ public class Shapes5to7Q3 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -68,6 +71,7 @@ public class Shapes5to7Q3 extends Activity {
 					Answer2.setBackgroundColor(Color.RED);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -81,7 +85,7 @@ public class Shapes5to7Q3 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.RED);
 					Answer4.setBackgroundColor(Color.YELLOW);
-					//Results.numberAnsweredCorrectly = Results.numberAnsweredCorrectly+1;
+					answeredCorrectly = true;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -95,6 +99,7 @@ public class Shapes5to7Q3 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.RED);
+					answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -137,10 +142,22 @@ public class Shapes5to7Q3 extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				updateScore();
 				Intent changeScreen = new Intent(Shapes5to7Q3.this,
 						Shapes5to7Q4.class);
 				startActivity(changeScreen);
 			}
 		});
+	}
+	
+	public static void updateScore() {
+		if (answeredCorrectly == true) {
+			Results.numberCorrect += 1;
+		}
+	}
+	
+	@Override
+	public void onBackPressed(){
+		//super.onBackPressed();
 	}
 }

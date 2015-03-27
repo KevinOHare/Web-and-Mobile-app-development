@@ -27,7 +27,7 @@ public class Animals3to5Q1 extends Activity {
 	// Button for the arrow
 	static ImageButton btn;
 
-	boolean answeredCorrectly = false;
+	static boolean answeredCorrectly = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -142,14 +142,22 @@ public class Animals3to5Q1 extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				updateScore();
 				Intent changeScreen = new Intent(Animals3to5Q1.this,
 						Animals3to5Q2.class);
-				if(answeredCorrectly = true){
-					Results.numberCorrect = Results.numberCorrect+1;
-				}
 				startActivity(changeScreen);
 			}
 		});
 	}
 	
+	public static void updateScore() {
+		if (answeredCorrectly == true) {
+			Results.numberCorrect = 1;
+		}
+	}
+	
+	@Override
+	public void onBackPressed(){
+		//super.onBackPressed();
+	}
 }

@@ -22,8 +22,8 @@ public class LevelSelect3to5 extends Activity {
 		final Button level3 = (Button) findViewById(R.id.level_3_button);
 		
 		// Set level 1 and 2 buttons to be not clickable until previous level is complete
-		level2.setEnabled(false);
-		level3.setEnabled(false);
+		//level2.setEnabled(false);
+		//level3.setEnabled(false);
 		
 		// Create listener for Level 1 button
 		level1.setOnClickListener(new View.OnClickListener() {

@@ -152,8 +152,13 @@ public class Maths3to5Q5 extends Activity {
 	}
 	
 	public static void updateScore() {
-		if(answeredCorrectly = true){
-			Results.numberCorrect = Results.numberCorrect+1;
+		if (answeredCorrectly == true) {
+			Results.numberCorrect += 1;
 		}
+	}
+	
+	@Override
+	public void onBackPressed(){
+		//super.onBackPressed();
 	}
 }
