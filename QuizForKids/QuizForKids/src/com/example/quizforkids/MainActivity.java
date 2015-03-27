@@ -8,9 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
-	
-	// Score for results screen
-	public static int numberAnsweredCorrectly = 0;
 
 	// Create a mediaPlayer for music
 	MediaPlayer bugSong;
@@ -95,4 +92,5 @@ public class MainActivity extends Activity {
 			}
 		});
 	}
+
 }

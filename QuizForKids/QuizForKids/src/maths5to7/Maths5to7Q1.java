@@ -1,6 +1,8 @@
 package maths5to7;
 
 import com.example.quizforkids.R;
+import com.example.quizforkids.Results;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -53,6 +55,7 @@ public class Maths5to7Q1 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					//Results.numberAnsweredCorrectly = 0;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -66,6 +69,7 @@ public class Maths5to7Q1 extends Activity {
 					Answer2.setBackgroundColor(Color.RED);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					//Results.numberAnsweredCorrectly = 1;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -79,6 +83,7 @@ public class Maths5to7Q1 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.RED);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					//Results.numberAnsweredCorrectly = 0;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -92,6 +97,7 @@ public class Maths5to7Q1 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.RED);
+					//Results.numberAnsweredCorrectly = 0;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);

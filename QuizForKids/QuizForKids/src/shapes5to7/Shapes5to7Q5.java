@@ -81,6 +81,7 @@ public class Shapes5to7Q5 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.RED);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					//Results.numberAnsweredCorrectly = Results.numberAnsweredCorrectly+1;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);

@@ -1,7 +1,7 @@
 package maths3to5;
 
-import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
+import com.example.quizforkids.Results;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,9 +17,6 @@ public class Maths3to5Q1 extends Activity {
 
 	// Text View for timer
 	TextView timer;
-	
-	// Score for results screen
-	//public static int this.numberAnsweredCorrectly;
 
 	// Buttons for answers
 	static Button Answer1;
@@ -29,10 +26,8 @@ public class Maths3to5Q1 extends Activity {
 	
 	// Button for the arrow
 	static ImageButton btn;
-
-	public static int numberAnsweredCorrectly;
 	
-	public static int numberAnsweredCorrectlyByQ1;
+	boolean answeredCorrectly = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +57,7 @@ public class Maths3to5Q1 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -75,6 +71,7 @@ public class Maths3to5Q1 extends Activity {
 					Answer2.setBackgroundColor(Color.RED);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -83,15 +80,17 @@ public class Maths3to5Q1 extends Activity {
 
 		Answer3.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
+				
 				if (Answer3.isPressed()) {
 					Answer1.setBackgroundColor(Color.YELLOW);
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.RED);
 					Answer4.setBackgroundColor(Color.YELLOW);
-					numberAnsweredCorrectlyByQ1 = numberAnsweredCorrectly++;
+					answeredCorrectly = true;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
+				
 			}
 		});
 
@@ -102,6 +101,7 @@ public class Maths3to5Q1 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.RED);
+					answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -145,8 +145,14 @@ public class Maths3to5Q1 extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				if(answeredCorrectly = true){
+					Results.numberCorrect = 1;
+				} else {
+					Results.numberCorrect = 0;
+				}
 				Intent changeScreen = new Intent(Maths3to5Q1.this,
 						Maths3to5Q2.class);
+				
 				startActivity(changeScreen);
 			}
 		});

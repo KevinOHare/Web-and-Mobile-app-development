@@ -1,6 +1,7 @@
 package maths3to5;
 
 import com.example.quizforkids.R;
+import com.example.quizforkids.Results;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,10 +17,6 @@ public class Maths3to5Q3 extends Activity {
 
 	// Text View for timer
 	TextView timer;
-	
-	public static int numberAnsweredCorrectlyByQ2;
-	
-	public static int numberAnsweredCorrectlyByQ3;
 
 	// Buttons for answers
 	static Button Answer1;
@@ -29,6 +26,8 @@ public class Maths3to5Q3 extends Activity {
 	
 	// Button for the arrow
 	static ImageButton btn;
+	
+	boolean answeredCorrectly = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +57,7 @@ public class Maths3to5Q3 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -71,6 +71,7 @@ public class Maths3to5Q3 extends Activity {
 					Answer2.setBackgroundColor(Color.RED);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -84,6 +85,7 @@ public class Maths3to5Q3 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.RED);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -97,7 +99,7 @@ public class Maths3to5Q3 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.RED);
-					numberAnsweredCorrectlyByQ3 = numberAnsweredCorrectlyByQ2+1;
+					answeredCorrectly = true;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -140,8 +142,15 @@ public class Maths3to5Q3 extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				
+				/*
+				if(answeredCorrectly = true){
+					Results.numberCorrect = Results.numberCorrect+1;
+				}*/
+				
 				Intent changeScreen = new Intent(Maths3to5Q3.this,
 						Maths3to5Q4.class);
+				
 				startActivity(changeScreen);
 			}
 		});

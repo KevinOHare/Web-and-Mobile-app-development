@@ -1,6 +1,7 @@
 package english5to7;
 
 import com.example.quizforkids.R;
+import com.example.quizforkids.Results;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -80,6 +81,7 @@ public class English5to7Q4 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.RED);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					//Results.numberAnsweredCorrectly = Results.numberAnsweredCorrectly+1;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);

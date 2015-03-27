@@ -94,6 +94,7 @@ public class Maths5to7Q5 extends Activity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.RED);
+					//Results.numberAnsweredCorrectly = Results.numberAnsweredCorrectly+1;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
