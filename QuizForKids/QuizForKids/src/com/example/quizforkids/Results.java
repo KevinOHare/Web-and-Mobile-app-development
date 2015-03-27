@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 public class Results extends Activity {
 	
-	public static int numberCorrect;
+	public static int numberCorrect = 0;
 	
 	TextView questionscore;
 	

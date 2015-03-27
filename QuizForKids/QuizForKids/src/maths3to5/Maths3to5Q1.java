@@ -23,20 +23,20 @@ public class Maths3to5Q1 extends Activity {
 	static Button Answer2;
 	static Button Answer3;
 	static Button Answer4;
-	
+
 	// Button for the arrow
 	static ImageButton btn;
-	
-	boolean answeredCorrectly = false;
+
+	static boolean answeredCorrectly = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_maths3to5_q1);
-		
+
 		// assign image to arrow button
 		btn = (ImageButton) findViewById(R.id.next_page);
-		
+
 		// Buttons for answers
 		Answer1 = (Button) findViewById(R.id.button1);
 		Answer2 = (Button) findViewById(R.id.button2);
@@ -80,7 +80,7 @@ public class Maths3to5Q1 extends Activity {
 
 		Answer3.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				
+
 				if (Answer3.isPressed()) {
 					Answer1.setBackgroundColor(Color.YELLOW);
 					Answer2.setBackgroundColor(Color.YELLOW);
@@ -90,7 +90,7 @@ public class Maths3to5Q1 extends Activity {
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
-				
+
 			}
 		});
 
@@ -133,7 +133,6 @@ public class Maths3to5Q1 extends Activity {
 			}
 		}.start();
 	}
-	
 
 	/**
 	 * Method to change screen after arrow is pressed
@@ -145,17 +144,19 @@ public class Maths3to5Q1 extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				if(answeredCorrectly = true){
-					Results.numberCorrect = 1;
-				} else {
-					Results.numberCorrect = 0;
-				}
+				updateScore();
 				Intent changeScreen = new Intent(Maths3to5Q1.this,
 						Maths3to5Q2.class);
-				
+
 				startActivity(changeScreen);
 			}
 		});
 	}
-	
+
+	public static void updateScore() {
+		if (answeredCorrectly = true) {
+			Results.numberCorrect = 1;
+		}
+	}
+
 }

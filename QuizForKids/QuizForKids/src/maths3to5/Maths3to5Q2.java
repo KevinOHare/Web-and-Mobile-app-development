@@ -27,7 +27,7 @@ public class Maths3to5Q2 extends Activity {
 	// Button for the arrow
 	static ImageButton btn;
 	
-	boolean answeredCorrectly = false;
+	static boolean answeredCorrectly = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -142,13 +142,17 @@ public class Maths3to5Q2 extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(answeredCorrectly = true){
-					Results.numberCorrect = Results.numberCorrect+1;
-				}
+				updateScore();
 				Intent changeScreen = new Intent(Maths3to5Q2.this,
 						Maths3to5Q3.class);
 				startActivity(changeScreen);
 			}
 		});
+	}
+	
+	public static void updateScore() {
+		if(answeredCorrectly = true){
+			Results.numberCorrect = Results.numberCorrect+1;
+		}
 	}
 }
