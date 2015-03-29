@@ -6,7 +6,7 @@
     tools:context="com.example.quizforkids.Highscore" >
     
     <TextView 
-        android:text="@string/Level1Highscore"
+        android:id="@+id/Level1Highscore"
         android:textSize="30sp"
         android:textColor="#ffffff"
         android:textStyle="bold"
@@ -17,7 +17,7 @@
         />
     
        <TextView 
-        android:text="@string/Level2Highscore"
+        android:id="@+id/Level2Highscore"
         android:textSize="30sp"
         android:textColor="#ffffff"
         android:textStyle="bold"
@@ -28,7 +28,7 @@
         />
         
        <TextView 
-        android:text="@string/Level3Highscore"
+        android:id="@+id/Level3Highscore"
         android:textSize="30sp"
         android:textColor="#ffffff"
         android:textStyle="bold"

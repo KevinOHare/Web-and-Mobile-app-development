@@ -1,22 +1,16 @@
 package maths5to7;
 
+import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
-import com.example.quizforkids.Results;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
-public class Maths5to7Q4 extends Activity {
-
-	// Text View for timer
-	TextView timer;
+public class Maths5to7Q4 extends MainActivity {
 
 	// Buttons for answers
 	static Button Answer1;
@@ -26,8 +20,6 @@ public class Maths5to7Q4 extends Activity {
 	
 	// Button for the arrow
 	static ImageButton btn;
-	
-	static boolean answeredCorrectly = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -112,27 +104,6 @@ public class Maths5to7Q4 extends Activity {
 	}
 
 	/**
-	 * Countdown timer method - from 30 seconds
-	 */
-	public void countDown() {
-		// create timer Text view and link to xml
-		timer = (TextView) findViewById(R.id.timer);
-
-		// create timer function
-		new CountDownTimer(30000, 1000) {
-			@Override
-			public void onTick(long millSecs) {
-
-				timer.setText("" + millSecs / 1000);
-			}
-
-			public void onFinish() {
-				timer.setText("!");
-			}
-		}.start();
-	}
-
-	/**
 	 * Method to change screen after arrow is pressed
 	 */
 	private void nextPageButton() {
@@ -143,17 +114,12 @@ public class Maths5to7Q4 extends Activity {
 			@Override
 			public void onClick(View v) {
 				updateScore();
+				countDownTimer.cancel();
 				Intent changeScreen = new Intent(Maths5to7Q4.this,
 						Maths5to7Q5.class);
 				startActivity(changeScreen);
 			}
 		});
-	}
-	
-	public static void updateScore() {
-		if (answeredCorrectly == true) {
-			Results.numberCorrect += 1;
-		}
 	}
 	
 	@Override

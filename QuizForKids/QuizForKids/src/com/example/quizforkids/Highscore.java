@@ -1,16 +1,21 @@
 package com.example.quizforkids;
 
-import android.app.Activity;
+import com.example.quizforkids.R;
+import com.example.quizforkids.MainActivity;
+import com.example.quizforkids.Results;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
-public class Highscore extends Activity {
+public class Highscore extends MainActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_highscore);
+		
 	}
 
 	@Override

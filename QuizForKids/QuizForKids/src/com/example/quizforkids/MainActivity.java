@@ -4,14 +4,29 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.example.quizforkids.Results;
 
 public class MainActivity extends Activity {
 
+	public static TextView timer;
+
+	public static boolean answeredCorrectly = false;
+
+	public static CountDownTimer countDownTimer;
+	
+	public static boolean level1Selected = false;
+	public static boolean level2Selected = false;
+	public static boolean level3Selected = false;
+	
 	// Create a mediaPlayer for music
 	MediaPlayer bugSong;
 	private int mSec = 0;
+
 	// Create button objects for the on/off mediaPlayer functionality
 
 	@Override
@@ -40,16 +55,17 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				bugSong = MediaPlayer.create(MainActivity.this, R.raw.dontsquashthatbug);
+				bugSong = MediaPlayer.create(MainActivity.this,
+						R.raw.dontsquashthatbug);
 				bugSong.setLooping(true);
-				
+
 				if (mSec == 0) {
 					bugSong.start();
 				} else {
-				bugSong.seekTo(mSec);
-				bugSong.start();
+					bugSong.seekTo(mSec);
+					bugSong.start();
 				}
-				
+
 				soundOnButton.setEnabled(false);
 				soundOffButton.setEnabled(true);
 			}
@@ -91,6 +107,36 @@ public class MainActivity extends Activity {
 				System.exit(0);
 			}
 		});
+	}
+
+	/**
+	 * Countdown timer method - from 30 seconds
+	 */
+	public void countDown() {
+		
+		// create timer Text view and link to xml
+		timer = (TextView) findViewById(R.id.timer);
+		
+		// create timer function
+		countDownTimer = new CountDownTimer(30000, 1000) {
+			
+			public void onTick(long millSecs) {
+				timer.setText("" + millSecs / 1000);
+			}
+
+			public void onFinish() {
+				timer.setText("!");
+			}
+
+		}.start();
+
+	}
+
+	public static void updateScore() {
+		if (answeredCorrectly == true) {
+			Results.numberCorrect+=1;
+			Results.timerPoints += Integer.parseInt(timer.getText().toString());
+		}
 	}
 
 }
