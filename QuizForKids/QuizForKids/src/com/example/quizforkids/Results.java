@@ -14,10 +14,19 @@ import android.widget.Toast;
 
 public class Results extends MainActivity {
 
+	/**
+	 * Image Button object to be used for the next arrow.
+	 */
 	static ImageButton btn;
 
+	/**
+	 * Instance variable for the number of correct answers.
+	 */
 	public static int numberCorrect = 0;
 
+	/**
+	 * Instance variable for the points assigned per second remaining.
+	 */
 	public static int timerPoints = 0;
 
 	// causes app to always start with a highest score of 0
@@ -27,8 +36,19 @@ public class Results extends MainActivity {
 	int Level2CurrentHighscore;
 	int Level3CurrentHighscore;
 
+	/**
+	 * TextView object for the Level 1 Highscores.
+	 */
 	public static TextView Level1HighscoreTextView;
+	
+	/**
+	 * TextView object for the Level 2 Highscores.
+	 */
 	public static TextView Level2HighscoreTextView;
+	
+	/**
+	 * TextView object for the Level 3 Highscores.
+	 */
 	public static TextView Level3HighscoreTextView;
 
 	public static String data1;
@@ -40,13 +60,22 @@ public class Results extends MainActivity {
 	public static String data3;
 	public static String file3 = "lvl3Highscore";
 
-	// displays question points for round
+	
+	/**
+	 * TextView object for the points earned for each round
+	 */
 	public static TextView questionscoreTextView;
 
-	// displays time points for round
+	
+	/**
+	 * TextView object for the points earned for time remaining
+	 */
 	public static TextView timescoreTextView;
 
 	// displays total points for round
+	/**
+	 * TextView object for the points earned in total
+	 */
 	public static TextView totalscoreTextView;
 
 	@Override
@@ -54,6 +83,7 @@ public class Results extends MainActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_results);
 		
+		// open file 1 to be written to
 		try {
 			FileInputStream fin = openFileInput(Results.file1);
 			int c;
@@ -65,6 +95,7 @@ public class Results extends MainActivity {
 		} catch (Exception e) {
 		}
 		
+		// open file 2 to be written to
 		try {
 			FileInputStream fin = openFileInput(Results.file2);
 			int c;
@@ -76,6 +107,7 @@ public class Results extends MainActivity {
 		} catch (Exception e) {
 		}
 		
+		// open file 3 to be written to
 		try {
 			FileInputStream fin = openFileInput(Results.file3);
 			int c;
@@ -131,7 +163,7 @@ public class Results extends MainActivity {
 	}
 
 	/**
-	 * saves score to high scores table
+	 * saves score from level 1 to high scores table
 	 * 
 	 * @param view
 	 */
@@ -156,7 +188,7 @@ public class Results extends MainActivity {
 	}
 	
 	/**
-	 * saves score to high scores table
+	 * saves score from level 2 to high scores table
 	 * 
 	 * @param view
 	 */
@@ -180,7 +212,7 @@ public class Results extends MainActivity {
 	}
 	
 	/**
-	 * saves score to high scores table
+	 * saves score from level 3 to high scores table
 	 * 
 	 * @param view
 	 */
@@ -226,6 +258,9 @@ public class Results extends MainActivity {
 		});
 	}
 
+	/**
+	 * Method to disable the back button
+	 */
 	@Override
 	public void onBackPressed() {
 		// super.onBackPressed();

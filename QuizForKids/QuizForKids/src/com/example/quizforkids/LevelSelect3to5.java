@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import animals3to5.Animals3to5Q1;
 
+/**
+ * Class to be used to give functionality to the level select for 3 to 5 year olds.
+ * @author chrismcclune
+ *
+ */
 public class LevelSelect3to5 extends MainActivity {
 
 	@Override
