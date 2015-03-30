@@ -1,5 +1,6 @@
 package com.example.quizforkids;
 
+import java.io.FileInputStream;
 import com.example.quizforkids.R;
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.Results;
@@ -11,10 +12,54 @@ import android.widget.TextView;
 
 public class Highscore extends MainActivity {
 
+	TextView Level1HighscoreTextView;
+	TextView Level2HighscoreTextView;
+	TextView Level3HighscoreTextView;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_highscore);
+
+		Level1HighscoreTextView = (TextView) findViewById(R.id.Level1Highscore);
+		Level2HighscoreTextView = (TextView) findViewById(R.id.Level2Highscore);
+		Level3HighscoreTextView = (TextView) findViewById(R.id.Level3Highscore);
+		
+		// reads this levels saved high score and displays it
+		try {
+			FileInputStream fin = openFileInput(Results.file1);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level1HighscoreTextView.setText(temp.toString());
+		} catch (Exception e) {
+		}
+		
+		// reads this levels saved high score and displays it
+		try {
+			FileInputStream fin = openFileInput(Results.file2);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level2HighscoreTextView.setText(temp.toString());
+		} catch (Exception e) {
+		}
+		
+		// reads this levels saved high score and displays it
+		try {
+			FileInputStream fin = openFileInput(Results.file3);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level3HighscoreTextView.setText(temp.toString());
+		} catch (Exception e) {
+		}
 		
 	}
 

@@ -8,7 +8,6 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.example.quizforkids.Results;
 
 public class MainActivity extends Activity {

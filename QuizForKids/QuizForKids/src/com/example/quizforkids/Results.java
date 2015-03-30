@@ -1,30 +1,44 @@
 package com.example.quizforkids;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
-import com.example.quizforkids.Highscore;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Results extends MainActivity {
-	
+
 	static ImageButton btn;
 
 	public static int numberCorrect = 0;
 
 	public static int timerPoints = 0;
-	
+
+	// causes app to always start with a highest score of 0
+	// move to another location to make internal storage keep actual highest
+	// score in final product
+	int Level1CurrentHighscore;
+	int Level2CurrentHighscore;
+	int Level3CurrentHighscore;
+
 	public static TextView Level1HighscoreTextView;
 	public static TextView Level2HighscoreTextView;
 	public static TextView Level3HighscoreTextView;
+
+	public static String data1;
+	public static String file1 = "lvl1Highscore";
 	
-	public static int level1Highscore = 0;
-	public static int level2Highscore = 0;
-	public static int level3Highscore = 0;
+	public static String data2;
+	public static String file2 = "lvl2Highscore";
+	
+	public static String data3;
+	public static String file3 = "lvl3Highscore";
 
 	// displays question points for round
 	public static TextView questionscoreTextView;
@@ -40,54 +54,153 @@ public class Results extends MainActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_results);
 		
-		Level1HighscoreTextView = (TextView) findViewById(R.id.Level1Highscore);
-		Level2HighscoreTextView = (TextView) findViewById(R.id.Level2Highscore);
-		Level3HighscoreTextView = (TextView) findViewById(R.id.Level3Highscore);
+		try {
+			FileInputStream fin = openFileInput(Results.file1);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level1CurrentHighscore = Integer.parseInt(temp);
+		} catch (Exception e) {
+		}
 		
+		try {
+			FileInputStream fin = openFileInput(Results.file2);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level2CurrentHighscore = Integer.parseInt(temp);
+		} catch (Exception e) {
+		}
+		
+		try {
+			FileInputStream fin = openFileInput(Results.file3);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level3CurrentHighscore = Integer.parseInt(temp);
+		} catch (Exception e) {
+		}
+
 		// assign image to arrow button
 		btn = (ImageButton) findViewById(R.id.next_page);
 
 		questionscoreTextView = (TextView) findViewById(R.id.questionscore);
 		// gives 30points per correct answer
 		questionscoreTextView.setText(Integer.toString(numberCorrect * 30));
-		
+
 		timescoreTextView = (TextView) findViewById(R.id.timescore);
 		// gives timer points for each correct answer
 		timescoreTextView.setText(Integer.toString(timerPoints));
 
 		totalscoreTextView = (TextView) findViewById(R.id.totalscore);
 		// adds the question points and timer points
-		totalscoreTextView.setText(Integer.toString((numberCorrect * 30)+(timerPoints)));
+		totalscoreTextView.setText(Integer.toString((numberCorrect * 30)
+				+ (timerPoints)));
+
+		if (level1Selected == true) {
+			if ((numberCorrect * 30) + (timerPoints) > Level1CurrentHighscore) {
+				saveLevel1HighScore(Level1HighscoreTextView);
+			}
+		}
 		
-		//updateHighscores();
+		if (level2Selected == true) {
+			if ((numberCorrect * 30) + (timerPoints) > Level2CurrentHighscore) {
+				saveLevel2HighScore(Level2HighscoreTextView);
+			}
+		}
+		
+		if (level3Selected == true) {
+			if ((numberCorrect * 30) + (timerPoints) > Level3CurrentHighscore) {
+				saveLevel3HighScore(Level3HighscoreTextView);
+			}
+		}
+		
+		// reset booleans for next game
+		level1Selected = false;
+		level2Selected = false;
+		level3Selected = false;
 		
 		nextPageButton();
+
+	}
+
+	/**
+	 * saves score to high scores table
+	 * 
+	 * @param view
+	 */
+	public void saveLevel1HighScore(View view) {
+
+		data1 = totalscoreTextView.getText().toString();
+
+		// sets new current high score
+		Level1CurrentHighscore = Integer.parseInt(data1);
+
+		try {
+			FileOutputStream fOut = openFileOutput(file1, MODE_WORLD_READABLE);
+			fOut.write(data1.getBytes());
+			fOut.close();
+			Toast.makeText(getBaseContext(), "New High Score",
+					Toast.LENGTH_SHORT).show();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
-	public static void updateHighscores(){
-		
-		if(MainActivity.level1Selected == true){
-			if(Integer.parseInt(totalscoreTextView.getText().toString()) > level1Highscore){
-				Level1HighscoreTextView.setText(totalscoreTextView.toString());
-			}
-			level1Selected = false;
-		}
-		
-		if(level2Selected == true){
-			if(Integer.parseInt(totalscoreTextView.getText().toString()) > level2Highscore){
-				Level2HighscoreTextView.setText(totalscoreTextView.toString());
-			}
-			level2Selected = false;
-		}
-		
-		if(level3Selected == true){
-			if(Integer.parseInt(totalscoreTextView.getText().toString()) > level3Highscore){
-				Level3HighscoreTextView.setText(totalscoreTextView.toString());
-			}
-			level3Selected = false;
-		}
+	/**
+	 * saves score to high scores table
+	 * 
+	 * @param view
+	 */
+	public void saveLevel2HighScore(View view) {
 
+		data2 = totalscoreTextView.getText().toString();
+
+		Level2CurrentHighscore = Integer.parseInt(data2);
+
+		try {
+			FileOutputStream fOut = openFileOutput(file2, MODE_WORLD_READABLE);
+			fOut.write(data2.getBytes());
+			fOut.close();
+			Toast.makeText(getBaseContext(), "New High Score",
+					Toast.LENGTH_SHORT).show();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	/**
+	 * saves score to high scores table
+	 * 
+	 * @param view
+	 */
+	public void saveLevel3HighScore(View view) {
+
+		data3 = totalscoreTextView.getText().toString();
+
+		Level3CurrentHighscore = Integer.parseInt(data3);
+
+		try {
+			FileOutputStream fOut = openFileOutput(file3, MODE_WORLD_READABLE);
+			fOut.write(data3.getBytes());
+			fOut.close();
+			Toast.makeText(getBaseContext(), "New High Score",
+					Toast.LENGTH_SHORT).show();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 	/**
@@ -112,10 +225,10 @@ public class Results extends MainActivity {
 
 		});
 	}
-	
+
 	@Override
-	public void onBackPressed(){
-		//super.onBackPressed();
+	public void onBackPressed() {
+		// super.onBackPressed();
 	}
-	
+
 }

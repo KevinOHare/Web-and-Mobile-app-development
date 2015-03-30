@@ -121,7 +121,6 @@ public class Maths3to5Q1 extends MainActivity {
 						Maths3to5Q2.class);
 				startActivity(changeScreen);
 			}
-
 		});
 	}
 	
@@ -129,5 +128,4 @@ public class Maths3to5Q1 extends MainActivity {
 	public void onBackPressed(){
 		//super.onBackPressed();
 	}
-
 }

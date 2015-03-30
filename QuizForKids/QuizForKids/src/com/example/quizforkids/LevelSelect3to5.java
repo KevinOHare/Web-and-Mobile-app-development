@@ -1,10 +1,7 @@
 package com.example.quizforkids;
 
-import com.example.quizforkids.Results;
-
 import maths3to5.Maths3to5Q1;
 import shapes3to5.Shapes3to5Q1;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +29,8 @@ public class LevelSelect3to5 extends MainActivity {
 			@Override
 			public void onClick(View v) {
 				level1Selected = true;
+				level2Selected = false;
+				level3Selected = false;
 				// Create intent to switch to the first Question in level 1
 				Intent q1SwitchLevel1 = new Intent(LevelSelect3to5.this, Maths3to5Q1.class);
 				startActivity(q1SwitchLevel1);
@@ -42,7 +41,9 @@ public class LevelSelect3to5 extends MainActivity {
 		level2.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				level1Selected = false;
 				level2Selected = true;
+				level3Selected = false;
 				// Create intent to switch to the first Question in level 2
 				Intent q1SwitchLevel2 = new Intent(LevelSelect3to5.this, Animals3to5Q1.class);
 				startActivity(q1SwitchLevel2);
@@ -53,6 +54,8 @@ public class LevelSelect3to5 extends MainActivity {
 		level3.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				level1Selected = false;
+				level2Selected = false;
 				level3Selected = true;
 				// Create intent to switch to the first Question in level 3
 				Intent q1SwitchLevel3 = new Intent(LevelSelect3to5.this, Shapes3to5Q1.class);
