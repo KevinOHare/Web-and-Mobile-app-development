@@ -30,6 +30,8 @@ public class LevelSelect5to7 extends MainActivity {
 			@Override
 			public void onClick(View v) {
 				level1Selected = true;
+				level2Selected = false;
+				level3Selected = false;
 				// Create intent to switch to the first Question in level 1
 				Intent q1SwitchLevel1 = new Intent(LevelSelect5to7.this,
 						Maths5to7Q1.class);
@@ -41,7 +43,9 @@ public class LevelSelect5to7 extends MainActivity {
 		level2.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				level1Selected = false;
 				level2Selected = true;
+				level3Selected = false;
 				// Create intent to switch to the first Question in level 2
 				Intent q1SwitchLevel2 = new Intent(LevelSelect5to7.this,
 						English5to7Q1.class);
@@ -53,6 +57,8 @@ public class LevelSelect5to7 extends MainActivity {
 		level3.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				level1Selected = false;
+				level2Selected = false;
 				level3Selected = true;
 				// Create intent to switch to the first Question in level 3
 				Intent q1SwitchLevel3 = new Intent(LevelSelect5to7.this,
