@@ -8,6 +8,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import com.example.quizforkids.Results;
 
 public class MainActivity extends Activity {
@@ -131,6 +132,7 @@ public class MainActivity extends Activity {
 
 	}
 
+	// increases results screen score for each correct answer
 	public static void updateScore() {
 		if (answeredCorrectly == true) {
 			Results.numberCorrect+=1;
