@@ -72,7 +72,6 @@ public class Results extends MainActivity {
 	 */
 	public static TextView timescoreTextView;
 
-	// displays total points for round
 	/**
 	 * TextView object for the points earned in total
 	 */
@@ -154,9 +153,9 @@ public class Results extends MainActivity {
 		}
 		
 		// reset booleans for next game
-		level1Selected = false;
-		level2Selected = false;
-		level3Selected = false;
+		//level1Selected = false;
+		//level2Selected = false;
+		//level3Selected = false;
 		
 		nextPageButton();
 
