@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.quizforkids.Results;
@@ -22,6 +23,13 @@ public class MainActivity extends Activity {
 	public static boolean level1Selected = false;
 	public static boolean level2Selected = false;
 	public static boolean level3Selected = false;
+	
+	public static ImageView greentick0;
+	public static ImageView greentick1;
+	public static ImageView greentick2;
+	public static ImageView greentick3;
+	public static ImageView greentick4;
+	public static ImageView greentick5;
 	
 	// Create a mediaPlayer for music
 	MediaPlayer bugSong;
@@ -140,4 +148,27 @@ public class MainActivity extends Activity {
 		}
 	}
 
+	public void setTicks() {
+		greentick0  = (ImageView) findViewById(R.id.greentick0);
+		greentick1  = (ImageView) findViewById(R.id.greentick1);
+		greentick2  = (ImageView) findViewById(R.id.greentick2);
+		greentick3  = (ImageView) findViewById(R.id.greentick3);
+		greentick4  = (ImageView) findViewById(R.id.greentick4);
+		greentick5  = (ImageView) findViewById(R.id.greentick5);
+
+
+		if (Results.numberCorrect == 1) {
+			greentick1.setVisibility(View.VISIBLE);
+		} else if (Results.numberCorrect == 2) {
+			greentick2.setVisibility(View.VISIBLE);
+		} else if (Results.numberCorrect == 3) {
+			greentick3.setVisibility(View.VISIBLE);
+		} else if (Results.numberCorrect == 4) {
+			greentick4.setVisibility(View.VISIBLE);
+		} else if (Results.numberCorrect == 5) {
+			greentick5.setVisibility(View.VISIBLE);
+		} else if (Results.numberCorrect == 0) {
+			greentick0.setVisibility(View.VISIBLE);
+		}
+	}
 }

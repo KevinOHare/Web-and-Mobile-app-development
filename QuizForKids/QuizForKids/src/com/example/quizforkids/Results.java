@@ -158,6 +158,7 @@ public class Results extends MainActivity {
 		//level3Selected = false;
 		
 		nextPageButton();
+		setTicks();
 
 	}
 
