@@ -133,7 +133,7 @@ public class MainActivity extends Activity {
 			}
 
 			public void onFinish() {
-				timer.setText("!");
+				timer.setText("0");
 			}
 
 		}.start();

@@ -63,7 +63,7 @@ public class Shapes3to5Q4 extends MainActivity {
 					Answer2.setBackgroundColor(Color.RED);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
-					answeredCorrectly = false;
+					answeredCorrectly = true;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -77,7 +77,7 @@ public class Shapes3to5Q4 extends MainActivity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.RED);
 					Answer4.setBackgroundColor(Color.YELLOW);
-					answeredCorrectly = true;
+					answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
