@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/change_image"
-        android:layout_width="220dp"
-        android:layout_height="140dp"
-        android:layout_marginLeft="53dp"
-        android:layout_marginTop="95dp"
+        android:layout_width="400dp"
+        android:layout_height="163dp"
+	android:layout_marginTop="102dp"
+	android:layout_marginBottom="10dp"
         android:src="@drawable/apple5" />
 
     <!-- question asked -->
@@ -21,10 +21,8 @@
         android:id="@+id/question"
         android:layout_width="270dp"
         android:layout_height="30dp"
-        android:layout_alignBottom="@+id/stop_watch"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/next_page"
-        android:layout_alignEnd="@+id/next_page"
         android:layout_marginTop="8dp"
         android:text="How many apples are there?"
         android:textColor="#000000"
@@ -95,7 +93,7 @@
     <Button
         android:id="@+id/button4"
         android:layout_width="130dp"
-        android:layout_height="40dp"
+	        android:layout_height="40dp"
         android:layout_below="@+id/change_image"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="130dp"

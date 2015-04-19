@@ -45,7 +45,7 @@ public class English5to7Q3 extends MainActivity {
 		Answer1.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				if (Answer1.isPressed()) {
-					Answer1.setBackgroundColor(Color.RED);
+					Answer1.setBackgroundColor(Color.WHITE);
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);

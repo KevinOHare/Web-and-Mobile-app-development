@@ -8,11 +8,11 @@
     <!-- image of question -->
 
     <ImageView
-        android:id="@+id/change_image"
-        android:layout_width="200dp"
-        android:layout_height="210dp"
-        android:layout_marginLeft="61dp"
-        android:layout_marginTop="50dp"
+       	android:id="@+id/change_image"
+        android:layout_width="400dp"
+        android:layout_height="170dp"
+	android:layout_marginTop="100dp"
+	android:layout_marginBottom="4dp"
         android:src="@drawable/lines" />
 
     <!-- question asked -->

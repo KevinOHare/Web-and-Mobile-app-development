@@ -45,7 +45,7 @@ public class Animals3to5Q1 extends MainActivity {
 		Answer1.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				if (Answer1.isPressed()) {
-					Answer1.setBackgroundColor(Color.RED);
+					Answer1.setBackgroundColor(Color.WHITE);
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
@@ -90,7 +90,7 @@ public class Animals3to5Q1 extends MainActivity {
 					Answer1.setBackgroundColor(Color.YELLOW);
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
-					Answer4.setBackgroundColor(Color.RED);
+					Answer4.setBackgroundColor(Color.WHITE);
 					answeredCorrectly = false;
 				}
 				// set arrow to visible
