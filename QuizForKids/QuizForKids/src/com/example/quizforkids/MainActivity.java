@@ -110,7 +110,6 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				bugSong.stop();
 				finish();
 				System.exit(0);
 			}

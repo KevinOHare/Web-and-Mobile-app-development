@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -91,6 +92,7 @@ public class Results extends MainActivity {
 				temp = temp + Character.toString((char) c);
 			}
 			Level1CurrentHighscore = Integer.parseInt(temp);
+			fin.close();
 		} catch (Exception e) {
 		}
 		
@@ -103,6 +105,7 @@ public class Results extends MainActivity {
 				temp = temp + Character.toString((char) c);
 			}
 			Level2CurrentHighscore = Integer.parseInt(temp);
+			fin.close();
 		} catch (Exception e) {
 		}
 		
@@ -115,6 +118,7 @@ public class Results extends MainActivity {
 				temp = temp + Character.toString((char) c);
 			}
 			Level3CurrentHighscore = Integer.parseInt(temp);
+			fin.close();
 		} catch (Exception e) {
 		}
 
@@ -151,12 +155,7 @@ public class Results extends MainActivity {
 				saveLevel3HighScore(Level3HighscoreTextView);
 			}
 		}
-		
-		// reset booleans for next game
-		//level1Selected = false;
-		//level2Selected = false;
-		//level3Selected = false;
-		
+
 		nextPageButton();
 		setTicks();
 
@@ -167,7 +166,7 @@ public class Results extends MainActivity {
 	 * 
 	 * @param view
 	 */
-	public void saveLevel1HighScore(View view) {
+	@SuppressLint("WorldReadableFiles") public void saveLevel1HighScore(View view) {
 
 		data1 = totalscoreTextView.getText().toString();
 
@@ -175,6 +174,7 @@ public class Results extends MainActivity {
 		Level1CurrentHighscore = Integer.parseInt(data1);
 
 		try {
+			@SuppressWarnings("deprecation")
 			FileOutputStream fOut = openFileOutput(file1, MODE_WORLD_READABLE);
 			fOut.write(data1.getBytes());
 			fOut.close();
@@ -192,13 +192,14 @@ public class Results extends MainActivity {
 	 * 
 	 * @param view
 	 */
-	public void saveLevel2HighScore(View view) {
+	@SuppressLint("WorldReadableFiles") public void saveLevel2HighScore(View view) {
 
 		data2 = totalscoreTextView.getText().toString();
 
 		Level2CurrentHighscore = Integer.parseInt(data2);
 
 		try {
+			@SuppressWarnings("deprecation")
 			FileOutputStream fOut = openFileOutput(file2, MODE_WORLD_READABLE);
 			fOut.write(data2.getBytes());
 			fOut.close();
@@ -216,13 +217,14 @@ public class Results extends MainActivity {
 	 * 
 	 * @param view
 	 */
-	public void saveLevel3HighScore(View view) {
+	@SuppressLint("WorldReadableFiles") public void saveLevel3HighScore(View view) {
 
 		data3 = totalscoreTextView.getText().toString();
 
 		Level3CurrentHighscore = Integer.parseInt(data3);
 
 		try {
+			@SuppressWarnings("deprecation")
 			FileOutputStream fOut = openFileOutput(file3, MODE_WORLD_READABLE);
 			fOut.write(data3.getBytes());
 			fOut.close();

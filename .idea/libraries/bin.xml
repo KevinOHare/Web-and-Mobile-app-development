@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="bin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/QuizForKids/appcompat_v7/bin/android-support-v7-appcompat.jar!/" />
+      <root url="jar://$PROJECT_DIR$/QuizForKids/appcompat_v7/bin/appcompat_v7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

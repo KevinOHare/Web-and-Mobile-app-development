@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/QuizForKids/QuizForKids/bin/dexedLibs/android-support-v4-d41ca85642bb3e36dd72d210ed541cde.jar!/" />
+      <root url="jar://$PROJECT_DIR$/QuizForKids/QuizForKids/bin/dexedLibs/android-support-v7-appcompat-316e7f3d98ca2d4835baa824e3a83213.jar!/" />
+      <root url="jar://$PROJECT_DIR$/QuizForKids/QuizForKids/bin/dexedLibs/android-support-v7-appcompat-6f80bc2b32a495cc77763e81020cb226.jar!/" />
+      <root url="jar://$PROJECT_DIR$/QuizForKids/QuizForKids/bin/dexedLibs/android-support-v7-appcompat-303cf777e65f11b7242ed67901cb31e5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/QuizForKids/QuizForKids/bin/dexedLibs/android-support-v7-appcompat-31f45b0d828c01cf1fe49da0970870a2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/QuizForKids/QuizForKids/bin/dexedLibs/android-support-v7-appcompat-75ca10f613df2bef41e789bc16601e38.jar!/" />
+      <root url="jar://$PROJECT_DIR$/QuizForKids/QuizForKids/bin/dexedLibs/android-support-v7-appcompat-ff8d4fbc6e7480cff8b61855220cf438.jar!/" />
+      <root url="jar://$PROJECT_DIR$/QuizForKids/QuizForKids/bin/dexedLibs/android-support-v4-ca114ccab4d36a527d803fd87e4ceb76.jar!/" />
+      <root url="jar://$PROJECT_DIR$/QuizForKids/QuizForKids/bin/dexedLibs/android-support-v4-343068f82d00ceadf9e6a4c7b7f205ed.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
