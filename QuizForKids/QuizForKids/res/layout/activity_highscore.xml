@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="190sp"
-        android:paddingTop="125sp"
+        android:paddingTop="135sp"
         />
     
        <TextView 
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="190sp"
-        android:paddingTop="230sp"
+        android:paddingTop="250sp"
         />
         
        <TextView 
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="190sp"
-        android:paddingTop="335sp"
+        android:paddingTop="365sp"
         />
 
 </RelativeLayout>
