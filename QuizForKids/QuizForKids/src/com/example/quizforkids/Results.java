@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,12 +42,12 @@ public class Results extends MainActivity {
 	 * TextView object for the Level 1 Highscores.
 	 */
 	public static TextView Level1HighscoreTextView;
-	
+
 	/**
 	 * TextView object for the Level 2 Highscores.
 	 */
 	public static TextView Level2HighscoreTextView;
-	
+
 	/**
 	 * TextView object for the Level 3 Highscores.
 	 */
@@ -54,20 +55,18 @@ public class Results extends MainActivity {
 
 	public static String data1;
 	public static String file1 = "lvl1Highscore";
-	
+
 	public static String data2;
 	public static String file2 = "lvl2Highscore";
-	
+
 	public static String data3;
 	public static String file3 = "lvl3Highscore";
 
-	
 	/**
 	 * TextView object for the points earned for each round
 	 */
 	public static TextView questionscoreTextView;
 
-	
 	/**
 	 * TextView object for the points earned for time remaining
 	 */
@@ -78,11 +77,19 @@ public class Results extends MainActivity {
 	 */
 	public static TextView totalscoreTextView;
 
+	public static ImageView goldMedal;
+
+	public static ImageView silverMedal;
+
+	public static ImageView bronzeMedal;
+
+	public static TextView resultMessage;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_results);
-		
+
 		// open file 1 to be written to
 		try {
 			FileInputStream fin = openFileInput(Results.file1);
@@ -95,7 +102,7 @@ public class Results extends MainActivity {
 			fin.close();
 		} catch (Exception e) {
 		}
-		
+
 		// open file 2 to be written to
 		try {
 			FileInputStream fin = openFileInput(Results.file2);
@@ -108,7 +115,7 @@ public class Results extends MainActivity {
 			fin.close();
 		} catch (Exception e) {
 		}
-		
+
 		// open file 3 to be written to
 		try {
 			FileInputStream fin = openFileInput(Results.file3);
@@ -138,18 +145,43 @@ public class Results extends MainActivity {
 		totalscoreTextView.setText(Integer.toString((numberCorrect * 30)
 				+ (timerPoints)));
 
+		goldMedal = (ImageView) findViewById(R.id.goldMedal);
+		silverMedal = (ImageView) findViewById(R.id.silverMedal);
+		bronzeMedal = (ImageView) findViewById(R.id.bronzeMedal);
+		
+		resultMessage = (TextView) findViewById(R.id.resultMessage);
+
+		if (((numberCorrect * 30) + (timerPoints)) >= 200) {
+			goldMedal.setVisibility(View.VISIBLE);
+			silverMedal.setVisibility(View.INVISIBLE);
+			bronzeMedal.setVisibility(View.INVISIBLE);
+			resultMessage.setText("Well done!");
+		} else if (((numberCorrect * 30) + (timerPoints)) >= 100
+				&& ((numberCorrect * 30) + (timerPoints)) < 200) {
+			goldMedal.setVisibility(View.INVISIBLE);
+			silverMedal.setVisibility(View.VISIBLE);
+			bronzeMedal.setVisibility(View.INVISIBLE);
+			resultMessage.setText("Almost, try again");
+		} else if (((numberCorrect * 30) + (timerPoints)) >= 0
+				&& ((numberCorrect * 30) + (timerPoints)) < 100) {
+			goldMedal.setVisibility(View.INVISIBLE);
+			silverMedal.setVisibility(View.INVISIBLE);
+			bronzeMedal.setVisibility(View.VISIBLE);
+			resultMessage.setText("Hard luck");
+		}
+
 		if (level1Selected == true) {
 			if ((numberCorrect * 30) + (timerPoints) > Level1CurrentHighscore) {
 				saveLevel1HighScore(Level1HighscoreTextView);
 			}
 		}
-		
+
 		if (level2Selected == true) {
 			if ((numberCorrect * 30) + (timerPoints) > Level2CurrentHighscore) {
 				saveLevel2HighScore(Level2HighscoreTextView);
 			}
 		}
-		
+
 		if (level3Selected == true) {
 			if ((numberCorrect * 30) + (timerPoints) > Level3CurrentHighscore) {
 				saveLevel3HighScore(Level3HighscoreTextView);
@@ -166,7 +198,8 @@ public class Results extends MainActivity {
 	 * 
 	 * @param view
 	 */
-	@SuppressLint("WorldReadableFiles") public void saveLevel1HighScore(View view) {
+	@SuppressLint("WorldReadableFiles")
+	public void saveLevel1HighScore(View view) {
 
 		data1 = totalscoreTextView.getText().toString();
 
@@ -184,15 +217,16 @@ public class Results extends MainActivity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	/**
 	 * saves score from level 2 to high scores table
 	 * 
 	 * @param view
 	 */
-	@SuppressLint("WorldReadableFiles") public void saveLevel2HighScore(View view) {
+	@SuppressLint("WorldReadableFiles")
+	public void saveLevel2HighScore(View view) {
 
 		data2 = totalscoreTextView.getText().toString();
 
@@ -209,15 +243,16 @@ public class Results extends MainActivity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	/**
 	 * saves score from level 3 to high scores table
 	 * 
 	 * @param view
 	 */
-	@SuppressLint("WorldReadableFiles") public void saveLevel3HighScore(View view) {
+	@SuppressLint("WorldReadableFiles")
+	public void saveLevel3HighScore(View view) {
 
 		data3 = totalscoreTextView.getText().toString();
 
@@ -234,7 +269,7 @@ public class Results extends MainActivity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	/**
