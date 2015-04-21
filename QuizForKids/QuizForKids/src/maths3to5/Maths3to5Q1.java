@@ -60,7 +60,7 @@ public class Maths3to5Q1 extends MainActivity {
 			public void onClick(View v) {
 				if (Answer2.isPressed()) {
 					Answer1.setBackgroundColor(Color.YELLOW);
-					Answer2.setBackgroundColor(Color.RED);
+					Answer2.setBackgroundColor(Color.WHITE);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
 					answeredCorrectly = false;
@@ -76,7 +76,7 @@ public class Maths3to5Q1 extends MainActivity {
 				if (Answer3.isPressed()) {
 					Answer1.setBackgroundColor(Color.YELLOW);
 					Answer2.setBackgroundColor(Color.YELLOW);
-					Answer3.setBackgroundColor(Color.RED);
+					Answer3.setBackgroundColor(Color.WHITE);
 					Answer4.setBackgroundColor(Color.YELLOW);
 					answeredCorrectly = true;
 				}
@@ -92,7 +92,7 @@ public class Maths3to5Q1 extends MainActivity {
 					Answer1.setBackgroundColor(Color.YELLOW);
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
-					Answer4.setBackgroundColor(Color.RED);
+					Answer4.setBackgroundColor(Color.WHITE);
 					answeredCorrectly = false;
 				}
 				// set arrow to visible

@@ -24,6 +24,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="9dp"
         android:layout_marginTop="8dp"
+	android:background="@color/white"
+	android:layout_width="wrap_content"
         android:text="What rhymes with this word?"
         android:textColor="#000000"
         android:textSize="21dp"

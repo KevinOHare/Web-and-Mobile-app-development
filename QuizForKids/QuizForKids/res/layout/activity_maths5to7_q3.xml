@@ -24,6 +24,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/next_page"
         android:layout_marginTop="4dp"
+	android:background="@color/white"
+	android:layout_width="wrap_content"
         android:text="What number comes between?"
         android:textColor="#000000"
         android:textSize="22dp"
