@@ -248,7 +248,6 @@ public class Results extends MainActivity {
 			@Override
 			public void onClick(View v) {
 				// resets the timer
-				countDownTimer.cancel();
 				Intent changeScreen = new Intent(Results.this,
 						MainActivity.class);
 				startActivity(changeScreen);

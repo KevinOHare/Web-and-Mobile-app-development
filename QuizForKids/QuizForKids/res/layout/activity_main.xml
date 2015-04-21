@@ -64,20 +64,4 @@
         android:textColor="#000000"
         android:textSize="24sp" />
 
-   
-
-    <Button
-        android:id="@+id/exit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/music_label"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/transparent"
-        android:text="@string/exit"
-        android:textColor="#00EE00"
-        android:textSize="24sp" />
-
-    
-
 </RelativeLayout>

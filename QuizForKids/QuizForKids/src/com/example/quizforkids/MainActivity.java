@@ -104,16 +104,6 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		// Create the functionality for the EXIT button
-		final Button exitButton = (Button) findViewById(R.id.exit_button);
-		exitButton.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				finish();
-				System.exit(0);
-			}
-		});
 	}
 
 	/**
