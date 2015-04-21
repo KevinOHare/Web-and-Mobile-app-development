@@ -24,6 +24,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="21dp"
         android:layout_marginTop="9dp"
+	android:background="@color/white"
+	android:layout_width="wrap_content"
         android:text="What is the value of this\ncoin?"
         android:textColor="#000000"
         android:textSize="19dp"
