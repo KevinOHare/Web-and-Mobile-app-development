@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class SelectAgeActivity extends Activity {
+	
+	static boolean age3to5Selected = false;
+	static boolean age5to7Selected = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,8 @@ public class SelectAgeActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				
+				age3to5Selected = true;
 
 				// Create intent to change screen on click
 				Intent pageSwitch3to5 = new Intent(SelectAgeActivity.this,
@@ -38,6 +43,9 @@ public class SelectAgeActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				
+				age5to7Selected = true;
+				
 				Intent pageSwitch5to7 = new Intent(SelectAgeActivity.this,
 						LevelSelect5to7.class);
 				startActivity(pageSwitch5to7);

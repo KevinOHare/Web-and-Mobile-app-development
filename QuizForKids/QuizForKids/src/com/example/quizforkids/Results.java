@@ -34,9 +34,9 @@ public class Results extends MainActivity {
 	// causes app to always start with a highest score of 0
 	// move to another location to make internal storage keep actual highest
 	// score in final product
-	int Level1CurrentHighscore;
-	int Level2CurrentHighscore;
-	int Level3CurrentHighscore;
+	static int Level1CurrentHighscore;
+	static int Level2CurrentHighscore;
+	static int Level3CurrentHighscore;
 
 	/**
 	 * TextView object for the Level 1 Highscores.
@@ -155,6 +155,7 @@ public class Results extends MainActivity {
 			goldMedal.setVisibility(View.VISIBLE);
 			silverMedal.setVisibility(View.INVISIBLE);
 			bronzeMedal.setVisibility(View.INVISIBLE);
+			LevelSelect3to5.level2.setEnabled(true);
 			resultMessage.setText("Well done!");
 		} else if (((numberCorrect * 30) + (timerPoints)) >= 100
 				&& ((numberCorrect * 30) + (timerPoints)) < 200) {
@@ -282,7 +283,7 @@ public class Results extends MainActivity {
 
 			@Override
 			public void onClick(View v) {
-				// resets the timer
+				
 				Intent changeScreen = new Intent(Results.this,
 						MainActivity.class);
 				startActivity(changeScreen);

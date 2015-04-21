@@ -1,0 +1,320 @@
+package com.example.quizforkids;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+import com.example.quizforkids.MainActivity;
+import com.example.quizforkids.R;
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class Results extends MainActivity {
+
+	/**
+	 * Image Button object to be used for the next arrow.
+	 */
+	static ImageButton btn;
+
+	/**
+	 * Instance variable for the number of correct answers.
+	 */
+	public static int numberCorrect = 0;
+
+	/**
+	 * Instance variable for the points assigned per second remaining.
+	 */
+	public static int timerPoints = 0;
+
+	// causes app to always start with a highest score of 0
+	// move to another location to make internal storage keep actual highest
+	// score in final product
+	int Level1CurrentHighscore;
+	int Level2CurrentHighscore;
+	int Level3CurrentHighscore;
+
+	/**
+	 * TextView object for the Level 1 Highscores.
+	 */
+	public static TextView Level1HighscoreTextView;
+
+	/**
+	 * TextView object for the Level 2 Highscores.
+	 */
+	public static TextView Level2HighscoreTextView;
+
+	/**
+	 * TextView object for the Level 3 Highscores.
+	 */
+	public static TextView Level3HighscoreTextView;
+
+	public static String data1;
+	public static String file1 = "lvl1Highscore";
+
+	public static String data2;
+	public static String file2 = "lvl2Highscore";
+
+	public static String data3;
+	public static String file3 = "lvl3Highscore";
+
+	/**
+	 * TextView object for the points earned for each round
+	 */
+	public static TextView questionscoreTextView;
+
+	/**
+	 * TextView object for the points earned for time remaining
+	 */
+	public static TextView timescoreTextView;
+
+	/**
+	 * TextView object for the points earned in total
+	 */
+	public static TextView totalscoreTextView;
+
+	public static ImageView goldMedal;
+
+	public static ImageView silverMedal;
+
+	public static ImageView bronzeMedal;
+
+	public static TextView resultMessage;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_results);
+
+		// open file 1 to be written to
+		try {
+			FileInputStream fin = openFileInput(Results.file1);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level1CurrentHighscore = Integer.parseInt(temp);
+			fin.close();
+		} catch (Exception e) {
+		}
+
+		// open file 2 to be written to
+		try {
+			FileInputStream fin = openFileInput(Results.file2);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level2CurrentHighscore = Integer.parseInt(temp);
+			fin.close();
+		} catch (Exception e) {
+		}
+
+		// open file 3 to be written to
+		try {
+			FileInputStream fin = openFileInput(Results.file3);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level3CurrentHighscore = Integer.parseInt(temp);
+			fin.close();
+		} catch (Exception e) {
+		}
+
+		// assign image to arrow button
+		btn = (ImageButton) findViewById(R.id.next_page);
+
+		questionscoreTextView = (TextView) findViewById(R.id.questionscore);
+		// gives 30points per correct answer
+		questionscoreTextView.setText(Integer.toString(numberCorrect * 30));
+
+		timescoreTextView = (TextView) findViewById(R.id.timescore);
+		// gives timer points for each correct answer
+		timescoreTextView.setText(Integer.toString(timerPoints));
+
+		totalscoreTextView = (TextView) findViewById(R.id.totalscore);
+		// adds the question points and timer points
+		totalscoreTextView.setText(Integer.toString((numberCorrect * 30)
+				+ (timerPoints)));
+
+		goldMedal = (ImageView) findViewById(R.id.goldMedal);
+		silverMedal = (ImageView) findViewById(R.id.silverMedal);
+		bronzeMedal = (ImageView) findViewById(R.id.bronzeMedal);
+		
+		resultMessage = (TextView) findViewById(R.id.resultMessage);
+
+		if (((numberCorrect * 30) + (timerPoints)) >= 200) {
+			goldMedal.setVisibility(View.VISIBLE);
+			silverMedal.setVisibility(View.INVISIBLE);
+			bronzeMedal.setVisibility(View.INVISIBLE);
+			resultMessage.setText("Well done!");
+		} else if (((numberCorrect * 30) + (timerPoints)) >= 100
+				&& ((numberCorrect * 30) + (timerPoints)) < 200) {
+			goldMedal.setVisibility(View.INVISIBLE);
+			silverMedal.setVisibility(View.VISIBLE);
+			bronzeMedal.setVisibility(View.INVISIBLE);
+			resultMessage.setText("Almost, try again");
+		} else if (((numberCorrect * 30) + (timerPoints)) >= 0
+				&& ((numberCorrect * 30) + (timerPoints)) < 100) {
+			goldMedal.setVisibility(View.INVISIBLE);
+			silverMedal.setVisibility(View.INVISIBLE);
+			bronzeMedal.setVisibility(View.VISIBLE);
+			resultMessage.setText("Hard luck");
+		}
+
+		if (level1Selected == true) {
+			if ((numberCorrect * 30) + (timerPoints) > Level1CurrentHighscore) {
+				saveLevel1HighScore(Level1HighscoreTextView);
+			}
+		}
+
+		if (level2Selected == true) {
+			if ((numberCorrect * 30) + (timerPoints) > Level2CurrentHighscore) {
+				saveLevel2HighScore(Level2HighscoreTextView);
+			}
+		}
+
+		if (level3Selected == true) {
+			if ((numberCorrect * 30) + (timerPoints) > Level3CurrentHighscore) {
+				saveLevel3HighScore(Level3HighscoreTextView);
+			}
+		}
+		
+		// if statement to unlock levels after previous has been completed for age 3 to 5
+		if (SelectAgeActivity.age3to5Selected ==true && level1Selected == true && Level1CurrentHighscore > 199){
+			LevelSelect3to5.level2.setEnabled(true);
+		}
+		if (SelectAgeActivity.age3to5Selected ==true && level2Selected == true && Level2CurrentHighscore > 199){
+			LevelSelect3to5.level3.setEnabled(true);
+		}
+		// if statement to unlock levels after previous has been completed for age 5 to 7
+		if (SelectAgeActivity.age3to5Selected ==true && level1Selected == true && Level1CurrentHighscore > 199){
+			
+		}
+		if (SelectAgeActivity.age3to5Selected ==true && level1Selected == true && Level1CurrentHighscore > 199){
+
+		}
+
+		nextPageButton();
+		setTicks();
+
+	}
+
+	/**
+	 * saves score from level 1 to high scores table
+	 * 
+	 * @param view
+	 */
+	@SuppressLint("WorldReadableFiles")
+	public void saveLevel1HighScore(View view) {
+
+		data1 = totalscoreTextView.getText().toString();
+
+		// sets new current high score
+		Level1CurrentHighscore = Integer.parseInt(data1);
+
+		try {
+			@SuppressWarnings("deprecation")
+			FileOutputStream fOut = openFileOutput(file1, MODE_WORLD_READABLE);
+			fOut.write(data1.getBytes());
+			fOut.close();
+			Toast.makeText(getBaseContext(), "New High Score",
+					Toast.LENGTH_SHORT).show();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * saves score from level 2 to high scores table
+	 * 
+	 * @param view
+	 */
+	@SuppressLint("WorldReadableFiles")
+	public void saveLevel2HighScore(View view) {
+
+		data2 = totalscoreTextView.getText().toString();
+
+		Level2CurrentHighscore = Integer.parseInt(data2);
+
+		try {
+			@SuppressWarnings("deprecation")
+			FileOutputStream fOut = openFileOutput(file2, MODE_WORLD_READABLE);
+			fOut.write(data2.getBytes());
+			fOut.close();
+			Toast.makeText(getBaseContext(), "New High Score",
+					Toast.LENGTH_SHORT).show();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * saves score from level 3 to high scores table
+	 * 
+	 * @param view
+	 */
+	@SuppressLint("WorldReadableFiles")
+	public void saveLevel3HighScore(View view) {
+
+		data3 = totalscoreTextView.getText().toString();
+
+		Level3CurrentHighscore = Integer.parseInt(data3);
+
+		try {
+			@SuppressWarnings("deprecation")
+			FileOutputStream fOut = openFileOutput(file3, MODE_WORLD_READABLE);
+			fOut.write(data3.getBytes());
+			fOut.close();
+			Toast.makeText(getBaseContext(), "New High Score",
+					Toast.LENGTH_SHORT).show();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * Method to change screen after arrow is pressed
+	 */
+	private void nextPageButton() {
+
+		ImageButton btn = (ImageButton) findViewById(R.id.next_page);
+		btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				
+				Intent changeScreen = new Intent(Results.this,
+						MainActivity.class);
+				startActivity(changeScreen);
+				// reset scores
+				numberCorrect = 0;
+				timerPoints = 0;
+			}
+
+		});
+	}
+
+	/**
+	 * Method to disable the back button
+	 */
+	@Override
+	public void onBackPressed() {
+		// super.onBackPressed();
+	}
+
+}

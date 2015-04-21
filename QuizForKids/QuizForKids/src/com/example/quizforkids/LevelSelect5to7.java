@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.Button;
 
 public class LevelSelect5to7 extends MainActivity {
+	
+	static Button level1;
+	static Button level2;
+	static Button level3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -16,15 +20,22 @@ public class LevelSelect5to7 extends MainActivity {
 		setContentView(R.layout.activity_level_select5to7);
 
 		// Create button objects for the page
-		final Button level1 = (Button) findViewById(R.id.level_1_button);
-		final Button level2 = (Button) findViewById(R.id.level_2_button);
-		final Button level3 = (Button) findViewById(R.id.level_3_button);
+		level1 = (Button) findViewById(R.id.level_1_button);
+		level2 = (Button) findViewById(R.id.level_2_button);
+		level3 = (Button) findViewById(R.id.level_3_button);
 
-		// Set level 1 and 2 buttons to be not clickable until previous level is
-		// complete
-		//level2.setEnabled(false);
-		//level3.setEnabled(false);
-
+		// if statement to unlock levels after previous has been completed and gold medal achieved for age 5 to 7
+		if (Results.Level1CurrentHighscore > 199){
+			LevelSelect5to7.level2.setEnabled(true);
+		} else {
+			LevelSelect5to7.level2.setEnabled(false);
+		}
+		if (Results.Level2CurrentHighscore > 199){
+			LevelSelect5to7.level3.setEnabled(true);
+		} else {
+			LevelSelect5to7.level3.setEnabled(false);
+		}
+		
 		// Create listener for Level 1 button
 		level1.setOnClickListener(new View.OnClickListener() {
 			@Override
