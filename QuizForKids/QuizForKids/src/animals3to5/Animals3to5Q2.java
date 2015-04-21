@@ -60,7 +60,7 @@ public class Animals3to5Q2 extends MainActivity {
 			public void onClick(View v) {
 				if (Answer2.isPressed()) {
 					Answer1.setBackgroundColor(Color.YELLOW);
-					Answer2.setBackgroundColor(Color.RED);
+					Answer2.setBackgroundColor(Color.WHITE);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
 					answeredCorrectly = false;
@@ -75,7 +75,7 @@ public class Animals3to5Q2 extends MainActivity {
 				if (Answer3.isPressed()) {
 					Answer1.setBackgroundColor(Color.YELLOW);
 					Answer2.setBackgroundColor(Color.YELLOW);
-					Answer3.setBackgroundColor(Color.RED);
+					Answer3.setBackgroundColor(Color.WHITE);
 					Answer4.setBackgroundColor(Color.YELLOW);
 					answeredCorrectly = false;
 				}
@@ -90,7 +90,7 @@ public class Animals3to5Q2 extends MainActivity {
 					Answer1.setBackgroundColor(Color.YELLOW);
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
-					Answer4.setBackgroundColor(Color.RED);
+					Answer4.setBackgroundColor(Color.WHITE);
 					answeredCorrectly = true;
 				}
 				// set arrow to visible
