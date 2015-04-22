@@ -2,11 +2,156 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/resultsbackground"
     tools:context="${relativePackage}.${activityClass}" >
 
     <TextView
+        android:id="@+id/questionscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="80dp"
+        android:textColor="#ffffff"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/timescore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="190dp"
+        android:textColor="#ffffff"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/totalscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="310dp"
+        android:textColor="#ffffff"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/next_page"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="270dp"
+        android:background="@null"
+        android:src="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/greentick0"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/greentick0"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/greentick1"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/greentick1"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/greentick2"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/greentick2"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/greentick3"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/greentick3"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/greentick4"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/greentick4"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/greentick5"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/greentick5"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/goldMedal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="440dp"
+        android:src="@drawable/goldmedal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/silverMedal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="440dp"
+        android:src="@drawable/silvermedal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/bronzeMedal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="440dp"
+        android:src="@drawable/bronzemedal"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/resultMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="450dp"
+        android:text="result message"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

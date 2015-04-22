@@ -2,7 +2,7 @@ package shapes5to7;
 
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
-import com.example.quizforkids.Results;
+import com.example.quizforkids.Age3to5Results;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -117,7 +117,7 @@ public class Shapes5to7Q5 extends MainActivity {
 				updateScore();
 				countDownTimer.cancel();
 				Intent changeScreen = new Intent(Shapes5to7Q5.this,
-						Results.class);
+						Age3to5Results.class);
 				startActivity(changeScreen);
 			}
 		});

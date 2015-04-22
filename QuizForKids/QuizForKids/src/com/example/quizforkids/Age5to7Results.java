@@ -34,33 +34,33 @@ public class Age5to7Results extends MainActivity {
 	// causes app to always start with a highest score of 0
 	// move to another location to make internal storage keep actual highest
 	// score in final product
-	static int Level1CurrentHighscore;
-	static int Level2CurrentHighscore;
-	static int Level3CurrentHighscore;
+	static int age5to7Level1CurrentHighscore;
+	static int age5to7Level2CurrentHighscore;
+	static int age5to7Level3CurrentHighscore;
 
 	/**
 	 * TextView object for the Level 1 Highscores.
 	 */
-	public static TextView Level1HighscoreTextView;
+	public static TextView age5to7Level1HighscoreTextView;
 
 	/**
 	 * TextView object for the Level 2 Highscores.
 	 */
-	public static TextView Level2HighscoreTextView;
+	public static TextView age5to7Level2HighscoreTextView;
 
 	/**
 	 * TextView object for the Level 3 Highscores.
 	 */
-	public static TextView Level3HighscoreTextView;
+	public static TextView age5to7Level3HighscoreTextView;
 
-	public static String data1;
-	public static String file1 = "lvl1Highscore";
+	public static String age5to7data1;
+	public static String age5to7Highscore1 = "lvl1Highscore";
 
-	public static String data2;
-	public static String file2 = "lvl2Highscore";
+	public static String age5to7data2;
+	public static String age5to7Highscore2 = "lvl2Highscore";
 
-	public static String data3;
-	public static String file3 = "lvl3Highscore";
+	public static String age5to7data3;
+	public static String age5to7Highscore3 = "lvl3Highscore";
 
 	/**
 	 * TextView object for the points earned for each round
@@ -92,39 +92,39 @@ public class Age5to7Results extends MainActivity {
 
 		// open file 1 to be written to
 		try {
-			FileInputStream fin = openFileInput(Age5to7Results.file1);
+			FileInputStream fin = openFileInput(Age5to7Results.age5to7Highscore1);
 			int c;
 			String temp = "";
 			while ((c = fin.read()) != -1) {
 				temp = temp + Character.toString((char) c);
 			}
-			Level1CurrentHighscore = Integer.parseInt(temp);
+			age5to7Level1CurrentHighscore = Integer.parseInt(temp);
 			fin.close();
 		} catch (Exception e) {
 		}
 
 		// open file 2 to be written to
 		try {
-			FileInputStream fin = openFileInput(Age5to7Results.file2);
+			FileInputStream fin = openFileInput(Age5to7Results.age5to7Highscore2);
 			int c;
 			String temp = "";
 			while ((c = fin.read()) != -1) {
 				temp = temp + Character.toString((char) c);
 			}
-			Level2CurrentHighscore = Integer.parseInt(temp);
+			age5to7Level2CurrentHighscore = Integer.parseInt(temp);
 			fin.close();
 		} catch (Exception e) {
 		}
 
 		// open file 3 to be written to
 		try {
-			FileInputStream fin = openFileInput(Age5to7Results.file3);
+			FileInputStream fin = openFileInput(Age5to7Results.age5to7Highscore3);	
 			int c;
 			String temp = "";
 			while ((c = fin.read()) != -1) {
 				temp = temp + Character.toString((char) c);
 			}
-			Level3CurrentHighscore = Integer.parseInt(temp);
+			age5to7Level3CurrentHighscore = Integer.parseInt(temp);
 			fin.close();
 		} catch (Exception e) {
 		}
@@ -155,7 +155,6 @@ public class Age5to7Results extends MainActivity {
 			goldMedal.setVisibility(View.VISIBLE);
 			silverMedal.setVisibility(View.INVISIBLE);
 			bronzeMedal.setVisibility(View.INVISIBLE);
-			LevelSelect3to5.level2.setEnabled(true);
 			resultMessage.setText("Well done!");
 		} else if (((numberCorrect * 30) + (timerPoints)) >= 100
 				&& ((numberCorrect * 30) + (timerPoints)) < 200) {
@@ -172,20 +171,20 @@ public class Age5to7Results extends MainActivity {
 		}
 
 		if (level1Selected == true) {
-			if ((numberCorrect * 30) + (timerPoints) > Level1CurrentHighscore) {
-				saveLevel1HighScore(Level1HighscoreTextView);
+			if ((numberCorrect * 30) + (timerPoints) > age5to7Level1CurrentHighscore) {
+				saveLevel1HighScore(age5to7Level1HighscoreTextView);
 			}
 		}
 
 		if (level2Selected == true) {
-			if ((numberCorrect * 30) + (timerPoints) > Level2CurrentHighscore) {
-				saveLevel2HighScore(Level2HighscoreTextView);
+			if ((numberCorrect * 30) + (timerPoints) > age5to7Level2CurrentHighscore) {
+				saveLevel2HighScore(age5to7Level2HighscoreTextView);
 			}
 		}
 
 		if (level3Selected == true) {
-			if ((numberCorrect * 30) + (timerPoints) > Level3CurrentHighscore) {
-				saveLevel3HighScore(Level3HighscoreTextView);
+			if ((numberCorrect * 30) + (timerPoints) > age5to7Level3CurrentHighscore) {
+				saveLevel3HighScore(age5to7Level3HighscoreTextView);
 			}
 		}
 
@@ -202,15 +201,15 @@ public class Age5to7Results extends MainActivity {
 	@SuppressLint("WorldReadableFiles")
 	public void saveLevel1HighScore(View view) {
 
-		data1 = totalscoreTextView.getText().toString();
+		age5to7data1 = totalscoreTextView.getText().toString();
 
 		// sets new current high score
-		Level1CurrentHighscore = Integer.parseInt(data1);
+		age5to7Level1CurrentHighscore = Integer.parseInt(age5to7data1);
 
 		try {
 			@SuppressWarnings("deprecation")
-			FileOutputStream fOut = openFileOutput(file1, MODE_WORLD_READABLE);
-			fOut.write(data1.getBytes());
+			FileOutputStream fOut = openFileOutput(age5to7Highscore1, MODE_WORLD_READABLE);
+			fOut.write(age5to7data1.getBytes());
 			fOut.close();
 			Toast.makeText(getBaseContext(), "New High Score",
 					Toast.LENGTH_SHORT).show();
@@ -229,14 +228,14 @@ public class Age5to7Results extends MainActivity {
 	@SuppressLint("WorldReadableFiles")
 	public void saveLevel2HighScore(View view) {
 
-		data2 = totalscoreTextView.getText().toString();
+		age5to7data2 = totalscoreTextView.getText().toString();
 
-		Level2CurrentHighscore = Integer.parseInt(data2);
+		age5to7Level2CurrentHighscore = Integer.parseInt(age5to7data2);
 
 		try {
 			@SuppressWarnings("deprecation")
-			FileOutputStream fOut = openFileOutput(file2, MODE_WORLD_READABLE);
-			fOut.write(data2.getBytes());
+			FileOutputStream fOut = openFileOutput(age5to7Highscore2, MODE_WORLD_READABLE);
+			fOut.write(age5to7data2.getBytes());
 			fOut.close();
 			Toast.makeText(getBaseContext(), "New High Score",
 					Toast.LENGTH_SHORT).show();
@@ -255,14 +254,14 @@ public class Age5to7Results extends MainActivity {
 	@SuppressLint("WorldReadableFiles")
 	public void saveLevel3HighScore(View view) {
 
-		data3 = totalscoreTextView.getText().toString();
+		age5to7data3 = totalscoreTextView.getText().toString();
 
-		Level3CurrentHighscore = Integer.parseInt(data3);
+		age5to7Level3CurrentHighscore = Integer.parseInt(age5to7data3);
 
 		try {
 			@SuppressWarnings("deprecation")
-			FileOutputStream fOut = openFileOutput(file3, MODE_WORLD_READABLE);
-			fOut.write(data3.getBytes());
+			FileOutputStream fOut = openFileOutput(age5to7Highscore3, MODE_WORLD_READABLE);
+			fOut.write(age5to7data3.getBytes());
 			fOut.close();
 			Toast.makeText(getBaseContext(), "New High Score",
 					Toast.LENGTH_SHORT).show();
@@ -285,7 +284,7 @@ public class Age5to7Results extends MainActivity {
 			public void onClick(View v) {
 				
 				Intent changeScreen = new Intent(Age5to7Results.this,
-						MainActivity.class);
+						LevelSelect5to7.class);
 				startActivity(changeScreen);
 				// reset scores
 				numberCorrect = 0;

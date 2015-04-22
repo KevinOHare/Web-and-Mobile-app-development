@@ -18,6 +18,7 @@
     <string name="level_1_button">Level 1</string>
     <string name="level_2_button">Level 2</string>
     <string name="level_3_button">Level 3</string>
+    <string name="mainpage_button">Home</string>
 
     <color name="white">#FFFFFF</color>
 

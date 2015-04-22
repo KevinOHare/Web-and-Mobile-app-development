@@ -3,39 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 	android:background="@drawable/highscoresbackground"
-    tools:context="com.example.quizforkids.Highscore" >
+    tools:context="com.example.quizforkids.Age3to5Highscore" >
     
-    <TextView 
+    <TextView
         android:id="@+id/Level1Highscore"
-        android:textSize="30sp"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="190sp"
         android:paddingTop="135sp"
-        />
-    
-       <TextView 
-        android:id="@+id/Level2Highscore"
-        android:textSize="30sp"
         android:textColor="#ffffff"
-        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Level2Highscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="190sp"
         android:paddingTop="250sp"
-        />
-        
-       <TextView 
-        android:id="@+id/Level3Highscore"
-        android:textSize="30sp"
         android:textColor="#ffffff"
-        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Level3Highscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="190sp"
         android:paddingTop="365sp"
-        />
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

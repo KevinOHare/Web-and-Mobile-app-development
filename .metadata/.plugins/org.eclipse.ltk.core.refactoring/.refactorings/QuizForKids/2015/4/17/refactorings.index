@@ -13,3 +13,18 @@
 1429648767374	Delete element
 1429648957435	Delete element
 1429649155389	Delete element
+1429708182032	Rename type 'Highscore'
+1429708223880	Rename type 'Results'
+1429708388509	Rename type 'SelectAgeActivity'
+1429710230336	Rename field 'data1'
+1429710240871	Rename field 'data2'
+1429710251354	Rename field 'data3'
+1429710265439	Rename field 'file1'
+1429710286506	Rename field 'file2'
+1429710301677	Rename field 'file3'
+1429710590989	Rename field 'Level1CurrentHighscore'
+1429710599859	Rename field 'Level2CurrentHighscore'
+1429710613403	Rename field 'Level3CurrentHighscore'
+1429710639824	Rename field 'Level1HighscoreTextView'
+1429710646946	Rename field 'Level2HighscoreTextView'
+1429710653230	Rename field 'Level3HighscoreTextView'

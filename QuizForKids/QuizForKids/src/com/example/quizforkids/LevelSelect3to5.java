@@ -18,6 +18,7 @@ public class LevelSelect3to5 extends MainActivity {
 	static Button level1;
 	static Button level2;
 	static Button level3;
+	static Button mainpage;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +29,15 @@ public class LevelSelect3to5 extends MainActivity {
 		level1 = (Button) findViewById(R.id.level_1_button);
 		level2 = (Button) findViewById(R.id.level_2_button);
 		level3 = (Button) findViewById(R.id.level_3_button);
-		
-		// Set level 1 and 2 buttons to be not clickable until previous level is complete
+		mainpage = (Button) findViewById(R.id.mainpage_button);
 		
 		// if statement to unlock levels after previous has been completed and gold medal achieved for age 3 to 5
-		if (Results.Level1CurrentHighscore > 199){
+		if (Age3to5Results.age3to5Level1CurrentHighscore > 199){
 			LevelSelect3to5.level2.setEnabled(true);
 		} else {
 			LevelSelect3to5.level2.setEnabled(false);
 		}
-		if (Results.Level2CurrentHighscore > 199){
+		if (Age3to5Results.age3to5Level2CurrentHighscore > 199){
 			LevelSelect3to5.level3.setEnabled(true);
 		} else {
 			LevelSelect3to5.level3.setEnabled(false);
@@ -79,6 +79,16 @@ public class LevelSelect3to5 extends MainActivity {
 				// Create intent to switch to the first Question in level 3
 				Intent q1SwitchLevel3 = new Intent(LevelSelect3to5.this, Shapes3to5Q1.class);
 				startActivity(q1SwitchLevel3);
+			}
+		});
+		
+		// Create listener for main page button
+		mainpage.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// Create intent to switch to the main page
+				Intent mainpageSwitch = new Intent(LevelSelect3to5.this, MainActivity.class);
+				startActivity(mainpageSwitch);
 			}
 		});
 	}

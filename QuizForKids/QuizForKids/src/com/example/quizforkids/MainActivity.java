@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.quizforkids.Results;
+import com.example.quizforkids.Age3to5Results;
 
 public class MainActivity extends Activity {
 
@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent changeScreen = new Intent(MainActivity.this,
-						SelectAgeActivity.class);
+						QuestionAgeSelect.class);
 				startActivity(changeScreen);
 
 			}
@@ -132,8 +132,8 @@ public class MainActivity extends Activity {
 	// increases results screen score for each correct answer
 	public static void updateScore() {
 		if (answeredCorrectly == true) {
-			Results.numberCorrect+=1;
-			Results.timerPoints += Integer.parseInt(timer.getText().toString());
+			Age3to5Results.numberCorrect+=1;
+			Age3to5Results.timerPoints += Integer.parseInt(timer.getText().toString());
 		}
 	}
 
@@ -146,17 +146,17 @@ public class MainActivity extends Activity {
 		greentick5  = (ImageView) findViewById(R.id.greentick5);
 
 
-		if (Results.numberCorrect == 1) {
+		if (Age3to5Results.numberCorrect == 1) {
 			greentick1.setVisibility(View.VISIBLE);
-		} else if (Results.numberCorrect == 2) {
+		} else if (Age3to5Results.numberCorrect == 2) {
 			greentick2.setVisibility(View.VISIBLE);
-		} else if (Results.numberCorrect == 3) {
+		} else if (Age3to5Results.numberCorrect == 3) {
 			greentick3.setVisibility(View.VISIBLE);
-		} else if (Results.numberCorrect == 4) {
+		} else if (Age3to5Results.numberCorrect == 4) {
 			greentick4.setVisibility(View.VISIBLE);
-		} else if (Results.numberCorrect == 5) {
+		} else if (Age3to5Results.numberCorrect == 5) {
 			greentick5.setVisibility(View.VISIBLE);
-		} else if (Results.numberCorrect == 0) {
+		} else if (Age3to5Results.numberCorrect == 0) {
 			greentick0.setVisibility(View.VISIBLE);
 		}
 	}

@@ -3,7 +3,7 @@ package com.example.quizforkids;
 import java.io.FileInputStream;
 import com.example.quizforkids.R;
 import com.example.quizforkids.MainActivity;
-import com.example.quizforkids.Results;
+import com.example.quizforkids.Age3to5Results;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,52 +12,52 @@ import android.widget.TextView;
 
 public class Age5to7Highscore extends MainActivity {
 
-	TextView Level1HighscoreTextView;
-	TextView Level2HighscoreTextView;
-	TextView Level3HighscoreTextView;
+	TextView age5to7Level1HighscoreTextView;
+	TextView age5to7Level2HighscoreTextView;
+	TextView age5to7Level3HighscoreTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_highscore);
 
-		Level1HighscoreTextView = (TextView) findViewById(R.id.Level1Highscore);
-		Level2HighscoreTextView = (TextView) findViewById(R.id.Level2Highscore);
-		Level3HighscoreTextView = (TextView) findViewById(R.id.Level3Highscore);
+		age5to7Level1HighscoreTextView = (TextView) findViewById(R.id.Level1Highscore);
+		age5to7Level2HighscoreTextView = (TextView) findViewById(R.id.Level2Highscore);
+		age5to7Level3HighscoreTextView = (TextView) findViewById(R.id.Level3Highscore);
 		
 		// reads this levels saved high score and displays it
 		try {
-			FileInputStream fin = openFileInput(Results.file1);
+			FileInputStream fin = openFileInput(Age5to7Results.age5to7Highscore1);
 			int c;
 			String temp = "";
 			while ((c = fin.read()) != -1) {
 				temp = temp + Character.toString((char) c);
 			}
-			Level1HighscoreTextView.setText(temp.toString());
+			age5to7Level1HighscoreTextView.setText(temp.toString());
 		} catch (Exception e) {
 		}
 		
 		// reads this levels saved high score and displays it
 		try {
-			FileInputStream fin = openFileInput(Results.file2);
+			FileInputStream fin = openFileInput(Age5to7Results.age5to7Highscore2);
 			int c;
 			String temp = "";
 			while ((c = fin.read()) != -1) {
 				temp = temp + Character.toString((char) c);
 			}
-			Level2HighscoreTextView.setText(temp.toString());
+			age5to7Level2HighscoreTextView.setText(temp.toString());
 		} catch (Exception e) {
 		}
 		
 		// reads this levels saved high score and displays it
 		try {
-			FileInputStream fin = openFileInput(Results.file3);
+			FileInputStream fin = openFileInput(Age5to7Results.age5to7Highscore3);
 			int c;
 			String temp = "";
 			while ((c = fin.read()) != -1) {
 				temp = temp + Character.toString((char) c);
 			}
-			Level3HighscoreTextView.setText(temp.toString());
+			age5to7Level3HighscoreTextView.setText(temp.toString());
 		} catch (Exception e) {
 		}
 		
