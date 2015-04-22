@@ -1,0 +1,84 @@
+package com.example.quizforkids;
+
+import java.io.FileInputStream;
+import com.example.quizforkids.R;
+import com.example.quizforkids.MainActivity;
+import com.example.quizforkids.Results;
+
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
+
+public class age3to5Highscore extends MainActivity {
+
+	TextView Level1HighscoreTextView;
+	TextView Level2HighscoreTextView;
+	TextView Level3HighscoreTextView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_highscore);
+
+		Level1HighscoreTextView = (TextView) findViewById(R.id.Level1Highscore);
+		Level2HighscoreTextView = (TextView) findViewById(R.id.Level2Highscore);
+		Level3HighscoreTextView = (TextView) findViewById(R.id.Level3Highscore);
+		
+		// reads this levels saved high score and displays it
+		try {
+			FileInputStream fin = openFileInput(Results.file1);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level1HighscoreTextView.setText(temp.toString());
+		} catch (Exception e) {
+		}
+		
+		// reads this levels saved high score and displays it
+		try {
+			FileInputStream fin = openFileInput(Results.file2);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level2HighscoreTextView.setText(temp.toString());
+		} catch (Exception e) {
+		}
+		
+		// reads this levels saved high score and displays it
+		try {
+			FileInputStream fin = openFileInput(Results.file3);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			Level3HighscoreTextView.setText(temp.toString());
+		} catch (Exception e) {
+		}
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.highscore, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}

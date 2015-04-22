@@ -99,7 +99,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent changeScreen = new Intent(MainActivity.this,
-						Highscore.class);
+						HighscoreAgeSelect.class);
 				startActivity(changeScreen);
 			}
 		});

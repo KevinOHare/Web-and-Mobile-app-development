@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logopage"
+    tools:context="com.example.quizforkids.HighscoreAgeSelect" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/Select_Your_Age_Group"
+        android:textColor="#A6D785"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/ages5_7yrs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ages3_5yrs"
+        android:layout_marginTop="48dp"
+        android:text="5-7yrs" />
+
+    <Button
+        android:id="@+id/ages3_5yrs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="3-5yrs" />
+
+</RelativeLayout>

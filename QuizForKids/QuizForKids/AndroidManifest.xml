@@ -166,6 +166,18 @@
             android:name="maths3to5.Maths3to5Q1"
             android:label="@string/title_activity_maths3to5_q1" >
         </activity>
+        <activity
+            android:name=".Age5to7Highscore"
+            android:label="@string/title_activity_age5to7_highscore" >
+        </activity>
+        <activity
+            android:name=".Age5to7Results"
+            android:label="@string/title_activity_age5to7_results" >
+        </activity>
+        <activity
+            android:name=".HighscoreAgeSelect"
+            android:label="@string/title_activity_highscore_age_select" >
+        </activity>
     </application>
 
 </manifest>
