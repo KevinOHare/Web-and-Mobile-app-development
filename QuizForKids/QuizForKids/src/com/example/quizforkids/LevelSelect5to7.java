@@ -27,12 +27,13 @@ public class LevelSelect5to7 extends MainActivity {
 		mainpage = (Button) findViewById(R.id.mainpage_button);
 
 		// if statement to unlock levels after previous has been completed and gold medal achieved for age 5 to 7
-		if (Age3to5Results.age3to5Level1CurrentHighscore > 199){
+		if (Age5to7Results.age5to7Level1CurrentHighscore > 199){
 			LevelSelect5to7.level2.setEnabled(true);
 		} else {
+			
 			LevelSelect5to7.level2.setEnabled(false);
 		}
-		if (Age3to5Results.age3to5Level2CurrentHighscore > 199){
+		if (Age5to7Results.age5to7Level2CurrentHighscore > 199){
 			LevelSelect5to7.level3.setEnabled(true);
 		} else {
 			LevelSelect5to7.level3.setEnabled(false);

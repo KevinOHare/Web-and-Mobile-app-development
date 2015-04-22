@@ -113,7 +113,7 @@ public class English5to7Q2 extends MainActivity {
 			
 			@Override
 			public void onClick(View v) {
-				updateScore();
+				update5to7Score();
 				countDownTimer.cancel();
 				Intent changeScreen = new Intent(English5to7Q2.this,
 						English5to7Q3.class);

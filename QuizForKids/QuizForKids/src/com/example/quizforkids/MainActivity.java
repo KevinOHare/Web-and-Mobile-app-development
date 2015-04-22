@@ -130,10 +130,18 @@ public class MainActivity extends Activity {
 	}
 
 	// increases results screen score for each correct answer
-	public static void updateScore() {
+	public static void update3to5Score() {
 		if (answeredCorrectly == true) {
 			Age3to5Results.numberCorrect+=1;
 			Age3to5Results.timerPoints += Integer.parseInt(timer.getText().toString());
+		}
+	}
+	
+	// increases results screen score for each correct answer
+	public static void update5to7Score() {
+		if (answeredCorrectly == true) {
+			Age5to7Results.numberCorrect+=1;
+			Age5to7Results.timerPoints += Integer.parseInt(timer.getText().toString());
 		}
 	}
 
@@ -157,6 +165,20 @@ public class MainActivity extends Activity {
 		} else if (Age3to5Results.numberCorrect == 5) {
 			greentick5.setVisibility(View.VISIBLE);
 		} else if (Age3to5Results.numberCorrect == 0) {
+			greentick0.setVisibility(View.VISIBLE);
+		}
+		
+		if (Age5to7Results.numberCorrect == 1) {
+			greentick1.setVisibility(View.VISIBLE);
+		} else if (Age5to7Results.numberCorrect == 2) {
+			greentick2.setVisibility(View.VISIBLE);
+		} else if (Age5to7Results.numberCorrect == 3) {
+			greentick3.setVisibility(View.VISIBLE);
+		} else if (Age5to7Results.numberCorrect == 4) {
+			greentick4.setVisibility(View.VISIBLE);
+		} else if (Age5to7Results.numberCorrect == 5) {
+			greentick5.setVisibility(View.VISIBLE);
+		} else if (Age5to7Results.numberCorrect == 0) {
 			greentick0.setVisibility(View.VISIBLE);
 		}
 	}

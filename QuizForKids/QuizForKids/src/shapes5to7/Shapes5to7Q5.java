@@ -114,7 +114,7 @@ public class Shapes5to7Q5 extends MainActivity {
 			
 			@Override
 			public void onClick(View v) {
-				updateScore();
+				update5to7Score();
 				countDownTimer.cancel();
 				Intent changeScreen = new Intent(Shapes5to7Q5.this,
 						Age3to5Results.class);

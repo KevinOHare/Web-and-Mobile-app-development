@@ -113,7 +113,7 @@ public class Animals3to5Q1 extends MainActivity {
 			
 			@Override
 			public void onClick(View v) {
-				updateScore();
+				update3to5Score();
 				countDownTimer.cancel();
 				Intent changeScreen = new Intent(Animals3to5Q1.this,
 						Animals3to5Q2.class);
