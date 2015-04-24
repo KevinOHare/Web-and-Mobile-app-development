@@ -30,6 +30,12 @@ public class Age3to5Results extends MainActivity {
 	 * Instance variable for the points assigned per second remaining.
 	 */
 	public static int age3to5timerPoints = 0;
+	
+	public static boolean age3to5Q1AnsweredCorrectly = false;
+	public static boolean age3to5Q2AnsweredCorrectly = false;
+	public static boolean age3to5Q3AnsweredCorrectly = false;
+	public static boolean age3to5Q4AnsweredCorrectly = false;
+	public static boolean age3to5Q5AnsweredCorrectly = false;
 
 	// causes app to always start with a highest score of 0
 	// move to another location to make internal storage keep actual highest
@@ -78,12 +84,22 @@ public class Age3to5Results extends MainActivity {
 	public static TextView totalscoreTextView;
 
 	public static ImageView goldMedal;
-
 	public static ImageView silverMedal;
-
 	public static ImageView bronzeMedal;
 
 	public static TextView resultMessage;
+	
+	public static ImageView greentick1;
+	public static ImageView greentick2;
+	public static ImageView greentick3;
+	public static ImageView greentick4;
+	public static ImageView greentick5;
+	
+	public static ImageView redcross1;
+	public static ImageView redcross2;
+	public static ImageView redcross3;
+	public static ImageView redcross4;
+	public static ImageView redcross5;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -150,6 +166,61 @@ public class Age3to5Results extends MainActivity {
 		bronzeMedal = (ImageView) findViewById(R.id.bronzeMedal);
 		
 		resultMessage = (TextView) findViewById(R.id.resultMessage);
+		
+		age3to5greentick1 = (ImageView) findViewById(R.id.age3to5greentick1);
+		age3to5redcross1 = (ImageView) findViewById(R.id.age3to5redcross1);
+		
+		age3to5greentick2 = (ImageView) findViewById(R.id.age3to5greentick2);
+		age3to5redcross2 = (ImageView) findViewById(R.id.age3to5redcross2);
+		
+		age3to5greentick3 = (ImageView) findViewById(R.id.age3to5greentick3);
+		age3to5redcross3 = (ImageView) findViewById(R.id.age3to5redcross3);
+		
+		age3to5greentick4 = (ImageView) findViewById(R.id.age3to5greentick4);
+		age3to5redcross4 = (ImageView) findViewById(R.id.age3to5redcross4);
+		
+		age3to5greentick5 = (ImageView) findViewById(R.id.age3to5greentick5);
+		age3to5redcross5 = (ImageView) findViewById(R.id.age3to5redcross5);
+		
+		if(age3to5Q1AnsweredCorrectly == true){
+			age3to5greentick1.setVisibility(View.VISIBLE);
+			age3to5redcross1.setVisibility(View.INVISIBLE);
+		} else if (age3to5Q1AnsweredCorrectly == false){
+			age3to5greentick1.setVisibility(View.INVISIBLE);
+			age3to5redcross1.setVisibility(View.VISIBLE);
+		}
+		
+		if(age3to5Q2AnsweredCorrectly == true){
+			age3to5greentick2.setVisibility(View.VISIBLE);
+			age3to5redcross2.setVisibility(View.INVISIBLE);
+		} else if (age3to5Q2AnsweredCorrectly == false){
+			age3to5greentick2.setVisibility(View.INVISIBLE);
+			age3to5redcross2.setVisibility(View.VISIBLE);
+		}
+		
+		if(age3to5Q3AnsweredCorrectly == true){
+			age3to5greentick3.setVisibility(View.VISIBLE);
+			age3to5redcross3.setVisibility(View.INVISIBLE);
+		} else if (age3to5Q3AnsweredCorrectly == false){
+			age3to5greentick3.setVisibility(View.INVISIBLE);
+			age3to5redcross3.setVisibility(View.VISIBLE);
+		}
+		
+		if(age3to5Q4AnsweredCorrectly == true){
+			age3to5greentick4.setVisibility(View.VISIBLE);
+			age3to5redcross4.setVisibility(View.INVISIBLE);
+		} else if (age3to5Q4AnsweredCorrectly == false){
+			age3to5greentick4.setVisibility(View.INVISIBLE);
+			age3to5redcross4.setVisibility(View.VISIBLE);
+		}
+		
+		if(age3to5Q5AnsweredCorrectly == true){
+			age3to5greentick5.setVisibility(View.VISIBLE);
+			age3to5redcross5.setVisibility(View.INVISIBLE);
+		} else if (age3to5Q5AnsweredCorrectly == false){
+			age3to5greentick5.setVisibility(View.INVISIBLE);
+			age3to5redcross5.setVisibility(View.VISIBLE);
+		}
 
 		if (((age3to5numberCorrect * 30) + (age3to5timerPoints)) >= 200) {
 			goldMedal.setVisibility(View.VISIBLE);
@@ -189,32 +260,7 @@ public class Age3to5Results extends MainActivity {
 		}
 
 		nextPageButton();
-		set3to5Ticks();
 
-	}
-	
-	public void set3to5Ticks() {
-		greentick0  = (ImageView) findViewById(R.id.greentick0);
-		greentick1  = (ImageView) findViewById(R.id.greentick1);
-		greentick2  = (ImageView) findViewById(R.id.greentick2);
-		greentick3  = (ImageView) findViewById(R.id.greentick3);
-		greentick4  = (ImageView) findViewById(R.id.greentick4);
-		greentick5  = (ImageView) findViewById(R.id.greentick5);
-
-
-		if (Age3to5Results.age3to5numberCorrect == 1) {
-			greentick1.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.age3to5numberCorrect == 2) {
-			greentick2.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.age3to5numberCorrect == 3) {
-			greentick3.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.age3to5numberCorrect == 4) {
-			greentick4.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.age3to5numberCorrect == 5) {
-			greentick5.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.age3to5numberCorrect == 0) {
-			greentick0.setVisibility(View.VISIBLE);
-		}
 	}
 
 	/**

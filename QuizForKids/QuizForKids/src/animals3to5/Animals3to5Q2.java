@@ -1,5 +1,6 @@
 package animals3to5;
 
+import com.example.quizforkids.Age3to5Results;
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
 
@@ -113,6 +114,11 @@ public class Animals3to5Q2 extends MainActivity {
 			
 			@Override
 			public void onClick(View v) {
+				if(age3to5answeredCorrectly == true){
+					Age3to5Results.age3to5Q2AnsweredCorrectly = true;
+				} else if (age3to5answeredCorrectly == false){
+					Age3to5Results.age3to5Q2AnsweredCorrectly = false;
+				}
 				update3to5Score();
 				countDownTimer.cancel();
 				Intent changeScreen = new Intent(Animals3to5Q2.this,

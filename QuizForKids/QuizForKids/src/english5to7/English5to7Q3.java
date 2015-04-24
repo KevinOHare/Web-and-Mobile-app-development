@@ -1,5 +1,6 @@
 package english5to7;
 
+import com.example.quizforkids.Age5to7Results;
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
 
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class English5to7Q3 extends MainActivity {
 
@@ -17,7 +19,7 @@ public class English5to7Q3 extends MainActivity {
 	static Button Answer2;
 	static Button Answer3;
 	static Button Answer4;
-	
+
 	// Button for the arrow
 	static ImageButton btn;
 
@@ -25,10 +27,10 @@ public class English5to7Q3 extends MainActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_english5to7_q3);
-		
+
 		// assign image to arrow button
 		btn = (ImageButton) findViewById(R.id.next_page);
-		
+
 		// Buttons for answers
 		Answer1 = (Button) findViewById(R.id.button1);
 		Answer2 = (Button) findViewById(R.id.button2);
@@ -107,12 +109,19 @@ public class English5to7Q3 extends MainActivity {
 	 * Method to change screen after arrow is pressed
 	 */
 	private void nextPageButton() {
-		
+
+		age5to7greentick3 = (ImageView) findViewById(R.id.age5to7greentick3);
+
 		ImageButton btn = (ImageButton) findViewById(R.id.next_page);
 		btn.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
+				if (age5to7answeredCorrectly == true) {
+					Age5to7Results.age5to7Q3AnsweredCorrectly = true;
+				} else if (age5to7answeredCorrectly == false) {
+					Age5to7Results.age5to7Q3AnsweredCorrectly = false;
+				}
 				update5to7Score();
 				countDownTimer.cancel();
 				Intent changeScreen = new Intent(English5to7Q3.this,
@@ -121,9 +130,9 @@ public class English5to7Q3 extends MainActivity {
 			}
 		});
 	}
-	
+
 	@Override
-	public void onBackPressed(){
-		//super.onBackPressed();
+	public void onBackPressed() {
+		// super.onBackPressed();
 	}
 }

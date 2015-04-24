@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.webkit.WebView.FindListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,18 +21,35 @@ public class MainActivity extends Activity {
 	public static boolean age5to7answeredCorrectly = false;
 
 	public static CountDownTimer countDownTimer;
-	
+
 	public static boolean level1Selected = false;
 	public static boolean level2Selected = false;
 	public static boolean level3Selected = false;
+
+	public static ImageView age3to5greentick1;
+	public static ImageView age3to5greentick2;
+	public static ImageView age3to5greentick3;
+	public static ImageView age3to5greentick4;
+	public static ImageView age3to5greentick5;
 	
-	public static ImageView greentick0;
-	public static ImageView greentick1;
-	public static ImageView greentick2;
-	public static ImageView greentick3;
-	public static ImageView greentick4;
-	public static ImageView greentick5;
+	public static ImageView age3to5redcross1;
+	public static ImageView age3to5redcross2;
+	public static ImageView age3to5redcross3;
+	public static ImageView age3to5redcross4;
+	public static ImageView age3to5redcross5;
 	
+	public static ImageView age5to7greentick1;
+	public static ImageView age5to7greentick2;
+	public static ImageView age5to7greentick3;
+	public static ImageView age5to7greentick4;
+	public static ImageView age5to7greentick5;
+	
+	public static ImageView age5to7redcross1;
+	public static ImageView age5to7redcross2;
+	public static ImageView age5to7redcross3;
+	public static ImageView age5to7redcross4;
+	public static ImageView age5to7redcross5;
+
 	// Create a mediaPlayer for music
 	MediaPlayer bugSong;
 	private int mSec = 0;
@@ -111,13 +129,13 @@ public class MainActivity extends Activity {
 	 * Countdown timer method - from 30 seconds
 	 */
 	public void countDown() {
-		
+
 		// create timer Text view and link to xml
 		timer = (TextView) findViewById(R.id.timer);
-		
+
 		// create timer function
 		countDownTimer = new CountDownTimer(30000, 1000) {
-			
+
 			public void onTick(long millSecs) {
 				timer.setText("" + millSecs / 1000);
 			}
@@ -133,54 +151,19 @@ public class MainActivity extends Activity {
 	// increases results screen score for each correct answer
 	public static void update3to5Score() {
 		if (age3to5answeredCorrectly == true) {
-			Age3to5Results.age3to5numberCorrect+=1;
-			Age3to5Results.age3to5timerPoints += Integer.parseInt(timer.getText().toString());
+			Age3to5Results.age3to5numberCorrect += 1;
+			Age3to5Results.age3to5timerPoints += Integer.parseInt(timer
+					.getText().toString());
 		}
 	}
-	
+
 	// increases results screen score for each correct answer
 	public static void update5to7Score() {
 		if (age5to7answeredCorrectly == true) {
-			Age5to7Results.age5to7numberCorrect+=1;
-			Age5to7Results.age5to7timerPoints += Integer.parseInt(timer.getText().toString());
+			Age5to7Results.age5to7numberCorrect += 1;
+			Age5to7Results.age5to7timerPoints += Integer.parseInt(timer
+					.getText().toString());
 		}
 	}
 
-	public void setTicks() {
-		greentick0  = (ImageView) findViewById(R.id.greentick0);
-		greentick1  = (ImageView) findViewById(R.id.greentick1);
-		greentick2  = (ImageView) findViewById(R.id.greentick2);
-		greentick3  = (ImageView) findViewById(R.id.greentick3);
-		greentick4  = (ImageView) findViewById(R.id.greentick4);
-		greentick5  = (ImageView) findViewById(R.id.greentick5);
-
-
-		if (Age3to5Results.age3to5numberCorrect == 1) {
-			greentick1.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.age3to5numberCorrect == 2) {
-			greentick2.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.age3to5numberCorrect == 3) {
-			greentick3.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.age3to5numberCorrect == 4) {
-			greentick4.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.age3to5numberCorrect == 5) {
-			greentick5.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.age3to5numberCorrect == 0) {
-			greentick0.setVisibility(View.VISIBLE);
-		}
-		
-		if (Age5to7Results.age5to7numberCorrect == 1) {
-			greentick1.setVisibility(View.VISIBLE);
-		} else if (Age5to7Results.age5to7numberCorrect == 2) {
-			greentick2.setVisibility(View.VISIBLE);
-		} else if (Age5to7Results.age5to7numberCorrect == 3) {
-			greentick3.setVisibility(View.VISIBLE);
-		} else if (Age5to7Results.age5to7numberCorrect == 4) {
-			greentick4.setVisibility(View.VISIBLE);
-		} else if (Age5to7Results.age5to7numberCorrect == 5) {
-			greentick5.setVisibility(View.VISIBLE);
-		} else if (Age5to7Results.age5to7numberCorrect == 0) {
-			greentick0.setVisibility(View.VISIBLE);
-		}
-	}
 }

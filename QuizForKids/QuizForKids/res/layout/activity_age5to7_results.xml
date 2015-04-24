@@ -51,70 +51,114 @@
         android:background="@null"
         android:src="@drawable/arrow" />
 
-    <ImageView
-        android:id="@+id/greentick0"
-        android:layout_width="125dp"
-        android:layout_height="110dp"
+   <ImageView
+        android:id="@+id/age5to7greentick1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="40dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="70dp"
-        android:src="@drawable/greentick0"
+        android:src="@drawable/greentick"
         android:visibility="invisible" />
-
+    
     <ImageView
-        android:id="@+id/greentick1"
-        android:layout_width="125dp"
-        android:layout_height="110dp"
+        android:id="@+id/age5to7redcross1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="40dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="70dp"
-        android:src="@drawable/greentick1"
+        android:src="@drawable/redcross"
         android:visibility="invisible" />
-
+    
     <ImageView
-        android:id="@+id/greentick2"
-        android:layout_width="125dp"
-        android:layout_height="110dp"
+        android:id="@+id/age5to7greentick2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="40dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="70dp"
-        android:src="@drawable/greentick2"
+        android:src="@drawable/greentick"
         android:visibility="invisible" />
-
+    
     <ImageView
-        android:id="@+id/greentick3"
-        android:layout_width="125dp"
-        android:layout_height="110dp"
+        android:id="@+id/age5to7redcross2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="40dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="70dp"
-        android:src="@drawable/greentick3"
+        android:src="@drawable/redcross"
         android:visibility="invisible" />
-
+    
     <ImageView
-        android:id="@+id/greentick4"
-        android:layout_width="125dp"
-        android:layout_height="110dp"
+        android:id="@+id/age5to7greentick3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="40dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="110dp"
         android:layout_marginTop="70dp"
-        android:src="@drawable/greentick4"
+        android:src="@drawable/greentick"
         android:visibility="invisible" />
-
+    
     <ImageView
-        android:id="@+id/greentick5"
-        android:layout_width="125dp"
-        android:layout_height="110dp"
+        android:id="@+id/age5to7redcross3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="40dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="110dp"
         android:layout_marginTop="70dp"
-        android:src="@drawable/greentick5"
+        android:src="@drawable/redcross"
+        android:visibility="invisible" />
+    
+    <ImageView
+        android:id="@+id/age5to7greentick4"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="105dp"
+        android:src="@drawable/greentick"
+        android:visibility="invisible" />
+    
+    <ImageView
+        android:id="@+id/age5to7redcross4"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="105dp"
+        android:src="@drawable/redcross"
+        android:visibility="invisible" />
+    
+    <ImageView
+        android:id="@+id/age5to7greentick5"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="105dp"
+        android:src="@drawable/greentick"
+        android:visibility="invisible" />
+    
+    <ImageView
+        android:id="@+id/age5to7redcross5"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="105dp"
+        android:src="@drawable/redcross"
         android:visibility="invisible" />
 
     <ImageView

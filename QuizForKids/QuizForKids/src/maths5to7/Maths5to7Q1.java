@@ -1,5 +1,6 @@
 package maths5to7;
 
+import com.example.quizforkids.Age5to7Results;
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
 
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class Maths5to7Q1 extends MainActivity {
 
@@ -17,7 +19,7 @@ public class Maths5to7Q1 extends MainActivity {
 	static Button Answer2;
 	static Button Answer3;
 	static Button Answer4;
-	
+
 	// Button for the arrow
 	static ImageButton btn;
 
@@ -25,10 +27,10 @@ public class Maths5to7Q1 extends MainActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_maths5to7_q1);
-		
+
 		// assign image to arrow button
 		btn = (ImageButton) findViewById(R.id.next_page);
-		
+
 		// Buttons for answers
 		Answer1 = (Button) findViewById(R.id.button1);
 		Answer2 = (Button) findViewById(R.id.button2);
@@ -108,11 +110,18 @@ public class Maths5to7Q1 extends MainActivity {
 	 */
 	private void nextPageButton() {
 		
+		age5to7greentick1 = (ImageView) findViewById(R.id.age5to7greentick1);
+
 		ImageButton btn = (ImageButton) findViewById(R.id.next_page);
 		btn.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
+				if (age5to7answeredCorrectly == true) {
+					Age5to7Results.age5to7Q1AnsweredCorrectly = true;
+				} else if (age5to7answeredCorrectly == false) {
+					Age5to7Results.age5to7Q1AnsweredCorrectly = false;
+				}
 				update5to7Score();
 				countDownTimer.cancel();
 				Intent changeScreen = new Intent(Maths5to7Q1.this,
@@ -121,9 +130,9 @@ public class Maths5to7Q1 extends MainActivity {
 			}
 		});
 	}
-	
+
 	@Override
-	public void onBackPressed(){
-		//super.onBackPressed();
+	public void onBackPressed() {
+		// super.onBackPressed();
 	}
 }

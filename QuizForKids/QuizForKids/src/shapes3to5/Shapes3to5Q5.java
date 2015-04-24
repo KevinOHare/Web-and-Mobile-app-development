@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class Shapes3to5Q5 extends MainActivity {
 
@@ -109,11 +110,18 @@ public class Shapes3to5Q5 extends MainActivity {
 	 */
 	private void nextPageButton() {
 		
+		age3to5greentick5 = (ImageView) findViewById(R.id.age3to5greentick5);
+		
 		ImageButton btn = (ImageButton) findViewById(R.id.next_page);
 		btn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				if(age3to5answeredCorrectly == true){
+					Age3to5Results.age3to5Q5AnsweredCorrectly = true;
+				} else if (age3to5answeredCorrectly == false){
+					Age3to5Results.age3to5Q5AnsweredCorrectly = false;
+				}
 				update3to5Score();
 				countDownTimer.cancel();
 				Intent changeScreen = new Intent(Shapes3to5Q5.this,
