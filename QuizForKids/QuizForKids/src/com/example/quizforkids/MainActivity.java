@@ -16,7 +16,8 @@ public class MainActivity extends Activity {
 
 	public static TextView timer;
 
-	public static boolean answeredCorrectly = false;
+	public static boolean age3to5answeredCorrectly = false;
+	public static boolean age5to7answeredCorrectly = false;
 
 	public static CountDownTimer countDownTimer;
 	
@@ -131,7 +132,7 @@ public class MainActivity extends Activity {
 
 	// increases results screen score for each correct answer
 	public static void update3to5Score() {
-		if (answeredCorrectly == true) {
+		if (age3to5answeredCorrectly == true) {
 			Age3to5Results.numberCorrect+=1;
 			Age3to5Results.timerPoints += Integer.parseInt(timer.getText().toString());
 		}
@@ -139,7 +140,7 @@ public class MainActivity extends Activity {
 	
 	// increases results screen score for each correct answer
 	public static void update5to7Score() {
-		if (answeredCorrectly == true) {
+		if (age3to5answeredCorrectly == true) {
 			Age5to7Results.numberCorrect+=1;
 			Age5to7Results.timerPoints += Integer.parseInt(timer.getText().toString());
 		}

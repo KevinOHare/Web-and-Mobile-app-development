@@ -50,7 +50,7 @@ public class Shapes5to7Q5 extends MainActivity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
-					answeredCorrectly = false;
+					age5to7answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -64,7 +64,7 @@ public class Shapes5to7Q5 extends MainActivity {
 					Answer2.setBackgroundColor(Color.WHITE);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
-					answeredCorrectly = false;
+					age5to7answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -78,7 +78,7 @@ public class Shapes5to7Q5 extends MainActivity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.WHITE);
 					Answer4.setBackgroundColor(Color.YELLOW);
-					answeredCorrectly = true;
+					age5to7answeredCorrectly = true;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
@@ -92,7 +92,7 @@ public class Shapes5to7Q5 extends MainActivity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.WHITE);
-					answeredCorrectly = false;
+					age5to7answeredCorrectly = false;
 				}
 				// set arrow to visible
 				btn.setVisibility(View.VISIBLE);
