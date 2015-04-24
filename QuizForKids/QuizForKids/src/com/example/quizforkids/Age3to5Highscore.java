@@ -19,7 +19,7 @@ public class Age3to5Highscore extends MainActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_highscore);
+		setContentView(R.layout.activity_age3to5_highscore);
 
 		age3to5Level1HighscoreTextView = (TextView) findViewById(R.id.Level1Highscore);
 		age3to5Level2HighscoreTextView = (TextView) findViewById(R.id.Level2Highscore);

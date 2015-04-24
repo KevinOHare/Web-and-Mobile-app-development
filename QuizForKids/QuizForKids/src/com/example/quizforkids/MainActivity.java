@@ -133,16 +133,16 @@ public class MainActivity extends Activity {
 	// increases results screen score for each correct answer
 	public static void update3to5Score() {
 		if (age3to5answeredCorrectly == true) {
-			Age3to5Results.numberCorrect+=1;
-			Age3to5Results.timerPoints += Integer.parseInt(timer.getText().toString());
+			Age3to5Results.age3to5numberCorrect+=1;
+			Age3to5Results.age3to5timerPoints += Integer.parseInt(timer.getText().toString());
 		}
 	}
 	
 	// increases results screen score for each correct answer
 	public static void update5to7Score() {
-		if (age3to5answeredCorrectly == true) {
-			Age5to7Results.numberCorrect+=1;
-			Age5to7Results.timerPoints += Integer.parseInt(timer.getText().toString());
+		if (age5to7answeredCorrectly == true) {
+			Age5to7Results.age5to7numberCorrect+=1;
+			Age5to7Results.age5to7timerPoints += Integer.parseInt(timer.getText().toString());
 		}
 	}
 
@@ -155,31 +155,31 @@ public class MainActivity extends Activity {
 		greentick5  = (ImageView) findViewById(R.id.greentick5);
 
 
-		if (Age3to5Results.numberCorrect == 1) {
+		if (Age3to5Results.age3to5numberCorrect == 1) {
 			greentick1.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.numberCorrect == 2) {
+		} else if (Age3to5Results.age3to5numberCorrect == 2) {
 			greentick2.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.numberCorrect == 3) {
+		} else if (Age3to5Results.age3to5numberCorrect == 3) {
 			greentick3.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.numberCorrect == 4) {
+		} else if (Age3to5Results.age3to5numberCorrect == 4) {
 			greentick4.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.numberCorrect == 5) {
+		} else if (Age3to5Results.age3to5numberCorrect == 5) {
 			greentick5.setVisibility(View.VISIBLE);
-		} else if (Age3to5Results.numberCorrect == 0) {
+		} else if (Age3to5Results.age3to5numberCorrect == 0) {
 			greentick0.setVisibility(View.VISIBLE);
 		}
 		
-		if (Age5to7Results.numberCorrect == 1) {
+		if (Age5to7Results.age5to7numberCorrect == 1) {
 			greentick1.setVisibility(View.VISIBLE);
-		} else if (Age5to7Results.numberCorrect == 2) {
+		} else if (Age5to7Results.age5to7numberCorrect == 2) {
 			greentick2.setVisibility(View.VISIBLE);
-		} else if (Age5to7Results.numberCorrect == 3) {
+		} else if (Age5to7Results.age5to7numberCorrect == 3) {
 			greentick3.setVisibility(View.VISIBLE);
-		} else if (Age5to7Results.numberCorrect == 4) {
+		} else if (Age5to7Results.age5to7numberCorrect == 4) {
 			greentick4.setVisibility(View.VISIBLE);
-		} else if (Age5to7Results.numberCorrect == 5) {
+		} else if (Age5to7Results.age5to7numberCorrect == 5) {
 			greentick5.setVisibility(View.VISIBLE);
-		} else if (Age5to7Results.numberCorrect == 0) {
+		} else if (Age5to7Results.age5to7numberCorrect == 0) {
 			greentick0.setVisibility(View.VISIBLE);
 		}
 	}

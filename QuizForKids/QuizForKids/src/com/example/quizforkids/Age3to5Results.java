@@ -24,12 +24,12 @@ public class Age3to5Results extends MainActivity {
 	/**
 	 * Instance variable for the number of correct answers.
 	 */
-	public static int numberCorrect = 0;
+	public static int age3to5numberCorrect = 0;
 
 	/**
 	 * Instance variable for the points assigned per second remaining.
 	 */
-	public static int timerPoints = 0;
+	public static int age3to5timerPoints = 0;
 
 	// causes app to always start with a highest score of 0
 	// move to another location to make internal storage keep actual highest
@@ -54,13 +54,13 @@ public class Age3to5Results extends MainActivity {
 	public static TextView age3to5Level3HighscoreTextView;
 
 	public static String age3to5data1;
-	public static String age3to5Highscore1 = "lvl1Highscore";
+	public static String age3to5Highscore1 = "age3to5lvl1Highscore";
 
 	public static String age3to5data2;
-	public static String age3to5Highscore2 = "lvl2Highscore";
+	public static String age3to5Highscore2 = "age3to5lvl2Highscore";
 
 	public static String age3to5data3;
-	public static String age3to5Highscore3 = "lvl3Highscore";
+	public static String age3to5Highscore3 = "age3to5lvl3Highscore";
 
 	/**
 	 * TextView object for the points earned for each round
@@ -88,7 +88,7 @@ public class Age3to5Results extends MainActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_results);
+		setContentView(R.layout.activity_age3to5_results);
 
 		// open file 1 to be written to
 		try {
@@ -134,16 +134,16 @@ public class Age3to5Results extends MainActivity {
 
 		questionscoreTextView = (TextView) findViewById(R.id.questionscore);
 		// gives 30points per correct answer
-		questionscoreTextView.setText(Integer.toString(numberCorrect * 30));
+		questionscoreTextView.setText(Integer.toString(age3to5numberCorrect * 30));
 
 		timescoreTextView = (TextView) findViewById(R.id.timescore);
 		// gives timer points for each correct answer
-		timescoreTextView.setText(Integer.toString(timerPoints));
+		timescoreTextView.setText(Integer.toString(age3to5timerPoints));
 
 		totalscoreTextView = (TextView) findViewById(R.id.totalscore);
 		// adds the question points and timer points
-		totalscoreTextView.setText(Integer.toString((numberCorrect * 30)
-				+ (timerPoints)));
+		totalscoreTextView.setText(Integer.toString((age3to5numberCorrect * 30)
+				+ (age3to5timerPoints)));
 
 		goldMedal = (ImageView) findViewById(R.id.goldMedal);
 		silverMedal = (ImageView) findViewById(R.id.silverMedal);
@@ -151,20 +151,20 @@ public class Age3to5Results extends MainActivity {
 		
 		resultMessage = (TextView) findViewById(R.id.resultMessage);
 
-		if (((numberCorrect * 30) + (timerPoints)) >= 200) {
+		if (((age3to5numberCorrect * 30) + (age3to5timerPoints)) >= 200) {
 			goldMedal.setVisibility(View.VISIBLE);
 			silverMedal.setVisibility(View.INVISIBLE);
 			bronzeMedal.setVisibility(View.INVISIBLE);
 			LevelSelect3to5.level2.setEnabled(true);
 			resultMessage.setText("Well done!");
-		} else if (((numberCorrect * 30) + (timerPoints)) >= 100
-				&& ((numberCorrect * 30) + (timerPoints)) < 200) {
+		} else if (((age3to5numberCorrect * 30) + (age3to5timerPoints)) >= 100
+				&& ((age3to5numberCorrect * 30) + (age3to5timerPoints)) < 200) {
 			goldMedal.setVisibility(View.INVISIBLE);
 			silverMedal.setVisibility(View.VISIBLE);
 			bronzeMedal.setVisibility(View.INVISIBLE);
 			resultMessage.setText("Almost, try again");
-		} else if (((numberCorrect * 30) + (timerPoints)) >= 0
-				&& ((numberCorrect * 30) + (timerPoints)) < 100) {
+		} else if (((age3to5numberCorrect * 30) + (age3to5timerPoints)) >= 0
+				&& ((age3to5numberCorrect * 30) + (age3to5timerPoints)) < 100) {
 			goldMedal.setVisibility(View.INVISIBLE);
 			silverMedal.setVisibility(View.INVISIBLE);
 			bronzeMedal.setVisibility(View.VISIBLE);
@@ -172,19 +172,19 @@ public class Age3to5Results extends MainActivity {
 		}
 
 		if (level1Selected == true) {
-			if ((numberCorrect * 30) + (timerPoints) > age3to5Level1CurrentHighscore) {
+			if ((age3to5numberCorrect * 30) + (age3to5timerPoints) > age3to5Level1CurrentHighscore) {
 				saveLevel1HighScore(age3to5Level1HighscoreTextView);
 			}
 		}
 
 		if (level2Selected == true) {
-			if ((numberCorrect * 30) + (timerPoints) > age3to5Level2CurrentHighscore) {
+			if ((age3to5numberCorrect * 30) + (age3to5timerPoints) > age3to5Level2CurrentHighscore) {
 				saveLevel2HighScore(age3to5Level2HighscoreTextView);
 			}
 		}
 
 		if (level3Selected == true) {
-			if ((numberCorrect * 30) + (timerPoints) > age3to5Level3CurrentHighscore) {
+			if ((age3to5numberCorrect * 30) + (age3to5timerPoints) > age3to5Level3CurrentHighscore) {
 				saveLevel3HighScore(age3to5Level3HighscoreTextView);
 			}
 		}
@@ -288,8 +288,8 @@ public class Age3to5Results extends MainActivity {
 						LevelSelect3to5.class);
 				startActivity(changeScreen);
 				// reset scores
-				numberCorrect = 0;
-				timerPoints = 0;
+				age3to5numberCorrect = 0;
+				age3to5timerPoints = 0;
 			}
 
 		});

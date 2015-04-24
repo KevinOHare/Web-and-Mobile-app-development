@@ -29,3 +29,5 @@
 1429710646946	Rename field 'Level2HighscoreTextView'
 1429710653230	Rename field 'Level3HighscoreTextView'
 1429734731670	Rename field 'answeredCorrectly'
+1429881433683	Rename resource 'activity_highscore.xml'
+1429882094745	Rename resource 'activity_results.xml'
