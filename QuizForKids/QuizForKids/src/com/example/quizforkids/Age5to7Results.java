@@ -172,25 +172,49 @@ public class Age5to7Results extends MainActivity {
 
 		if (level1Selected == true) {
 			if ((age5to7numberCorrect * 30) + (age5to7timerPoints) > age5to7Level1CurrentHighscore) {
-				saveLevel1HighScore(age5to7Level1HighscoreTextView);
+				saveage5to7Level1HighScore(age5to7Level1HighscoreTextView);
 			}
 		}
 
 		if (level2Selected == true) {
 			if ((age5to7numberCorrect * 30) + (age5to7timerPoints) > age5to7Level2CurrentHighscore) {
-				saveLevel2HighScore(age5to7Level2HighscoreTextView);
+				saveage5to7Level2HighScore(age5to7Level2HighscoreTextView);
 			}
 		}
 
 		if (level3Selected == true) {
 			if ((age5to7numberCorrect * 30) + (age5to7timerPoints) > age5to7Level3CurrentHighscore) {
-				saveLevel3HighScore(age5to7Level3HighscoreTextView);
+				saveage5to7Level3HighScore(age5to7Level3HighscoreTextView);
 			}
 		}
 
 		nextPageButton();
-		setTicks();
+		set5to7Ticks();
 
+	}
+	
+	public void set5to7Ticks() {
+		greentick0  = (ImageView) findViewById(R.id.greentick0);
+		greentick1  = (ImageView) findViewById(R.id.greentick1);
+		greentick2  = (ImageView) findViewById(R.id.greentick2);
+		greentick3  = (ImageView) findViewById(R.id.greentick3);
+		greentick4  = (ImageView) findViewById(R.id.greentick4);
+		greentick5  = (ImageView) findViewById(R.id.greentick5);
+
+
+		if (Age5to7Results.age5to7numberCorrect == 1) {
+			greentick1.setVisibility(View.VISIBLE);
+		} else if (Age5to7Results.age5to7numberCorrect == 2) {
+			greentick2.setVisibility(View.VISIBLE);
+		} else if (Age5to7Results.age5to7numberCorrect == 3) {
+			greentick3.setVisibility(View.VISIBLE);
+		} else if (Age5to7Results.age5to7numberCorrect == 4) {
+			greentick4.setVisibility(View.VISIBLE);
+		} else if (Age5to7Results.age5to7numberCorrect == 5) {
+			greentick5.setVisibility(View.VISIBLE);
+		} else if (Age5to7Results.age5to7numberCorrect == 0) {
+			greentick0.setVisibility(View.VISIBLE);
+		}
 	}
 
 	/**
@@ -199,7 +223,7 @@ public class Age5to7Results extends MainActivity {
 	 * @param view
 	 */
 	@SuppressLint("WorldReadableFiles")
-	public void saveLevel1HighScore(View view) {
+	public void saveage5to7Level1HighScore(View view) {
 
 		age5to7data1 = totalscoreTextView.getText().toString();
 
@@ -226,7 +250,7 @@ public class Age5to7Results extends MainActivity {
 	 * @param view
 	 */
 	@SuppressLint("WorldReadableFiles")
-	public void saveLevel2HighScore(View view) {
+	public void saveage5to7Level2HighScore(View view) {
 
 		age5to7data2 = totalscoreTextView.getText().toString();
 
@@ -252,7 +276,7 @@ public class Age5to7Results extends MainActivity {
 	 * @param view
 	 */
 	@SuppressLint("WorldReadableFiles")
-	public void saveLevel3HighScore(View view) {
+	public void saveage5to7Level3HighScore(View view) {
 
 		age5to7data3 = totalscoreTextView.getText().toString();
 

@@ -1,5 +1,6 @@
 package maths5to7;
 
+import com.example.quizforkids.Age5to7Results;
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
 import com.example.quizforkids.Age3to5Results;
@@ -119,7 +120,7 @@ public class Maths5to7Q5 extends MainActivity {
 				update5to7Score();
 				countDownTimer.cancel();
 				Intent changeScreen = new Intent(Maths5to7Q5.this,
-						Age3to5Results.class);
+						Age5to7Results.class);
 				startActivity(changeScreen);
 			}
 		});

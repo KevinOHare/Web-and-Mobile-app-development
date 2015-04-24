@@ -155,7 +155,6 @@ public class Age3to5Results extends MainActivity {
 			goldMedal.setVisibility(View.VISIBLE);
 			silverMedal.setVisibility(View.INVISIBLE);
 			bronzeMedal.setVisibility(View.INVISIBLE);
-			LevelSelect3to5.level2.setEnabled(true);
 			resultMessage.setText("Well done!");
 		} else if (((age3to5numberCorrect * 30) + (age3to5timerPoints)) >= 100
 				&& ((age3to5numberCorrect * 30) + (age3to5timerPoints)) < 200) {
@@ -173,25 +172,49 @@ public class Age3to5Results extends MainActivity {
 
 		if (level1Selected == true) {
 			if ((age3to5numberCorrect * 30) + (age3to5timerPoints) > age3to5Level1CurrentHighscore) {
-				saveLevel1HighScore(age3to5Level1HighscoreTextView);
+				saveage3to5Level1HighScore(age3to5Level1HighscoreTextView);
 			}
 		}
 
 		if (level2Selected == true) {
 			if ((age3to5numberCorrect * 30) + (age3to5timerPoints) > age3to5Level2CurrentHighscore) {
-				saveLevel2HighScore(age3to5Level2HighscoreTextView);
+				saveage3to5Level2HighScore(age3to5Level2HighscoreTextView);
 			}
 		}
 
 		if (level3Selected == true) {
 			if ((age3to5numberCorrect * 30) + (age3to5timerPoints) > age3to5Level3CurrentHighscore) {
-				saveLevel3HighScore(age3to5Level3HighscoreTextView);
+				saveage3to5Level3HighScore(age3to5Level3HighscoreTextView);
 			}
 		}
 
 		nextPageButton();
-		setTicks();
+		set3to5Ticks();
 
+	}
+	
+	public void set3to5Ticks() {
+		greentick0  = (ImageView) findViewById(R.id.greentick0);
+		greentick1  = (ImageView) findViewById(R.id.greentick1);
+		greentick2  = (ImageView) findViewById(R.id.greentick2);
+		greentick3  = (ImageView) findViewById(R.id.greentick3);
+		greentick4  = (ImageView) findViewById(R.id.greentick4);
+		greentick5  = (ImageView) findViewById(R.id.greentick5);
+
+
+		if (Age3to5Results.age3to5numberCorrect == 1) {
+			greentick1.setVisibility(View.VISIBLE);
+		} else if (Age3to5Results.age3to5numberCorrect == 2) {
+			greentick2.setVisibility(View.VISIBLE);
+		} else if (Age3to5Results.age3to5numberCorrect == 3) {
+			greentick3.setVisibility(View.VISIBLE);
+		} else if (Age3to5Results.age3to5numberCorrect == 4) {
+			greentick4.setVisibility(View.VISIBLE);
+		} else if (Age3to5Results.age3to5numberCorrect == 5) {
+			greentick5.setVisibility(View.VISIBLE);
+		} else if (Age3to5Results.age3to5numberCorrect == 0) {
+			greentick0.setVisibility(View.VISIBLE);
+		}
 	}
 
 	/**
@@ -200,7 +223,7 @@ public class Age3to5Results extends MainActivity {
 	 * @param view
 	 */
 	@SuppressLint("WorldReadableFiles")
-	public void saveLevel1HighScore(View view) {
+	public void saveage3to5Level1HighScore(View view) {
 
 		age3to5data1 = totalscoreTextView.getText().toString();
 
@@ -227,7 +250,7 @@ public class Age3to5Results extends MainActivity {
 	 * @param view
 	 */
 	@SuppressLint("WorldReadableFiles")
-	public void saveLevel2HighScore(View view) {
+	public void saveage3to5Level2HighScore(View view) {
 
 		age3to5data2 = totalscoreTextView.getText().toString();
 
@@ -253,7 +276,7 @@ public class Age3to5Results extends MainActivity {
 	 * @param view
 	 */
 	@SuppressLint("WorldReadableFiles")
-	public void saveLevel3HighScore(View view) {
+	public void saveage3to5Level3HighScore(View view) {
 
 		age3to5data3 = totalscoreTextView.getText().toString();
 
