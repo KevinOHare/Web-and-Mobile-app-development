@@ -1,7 +1,4 @@
 INDEX VERSION 1.126+/Users/chrismcclune/Documents/GitHub Repositories/Web-and-Mobile-app-development/.metadata/.plugins/org.eclipse.jdt.core
 3952450476.index
-2558215109.index
 1377251446.index
-3030048219.index
 1115762709.index
-511835121.index

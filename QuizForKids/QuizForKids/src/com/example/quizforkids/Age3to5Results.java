@@ -118,7 +118,6 @@ public class Age3to5Results extends MainActivity {
 			}
 			age3to5Level1CurrentHighscore = Integer.parseInt(temp);
 			fin.close();
-			JDBC.saveScoreToDB("3 to 5", 1, temp);
 		} catch (Exception e) {
 		}
 
@@ -132,7 +131,6 @@ public class Age3to5Results extends MainActivity {
 			}
 			age3to5Level2CurrentHighscore = Integer.parseInt(temp);
 			fin.close();
-			JDBC.saveScoreToDB("3 to 5", 2, temp);
 		} catch (Exception e) {
 		}
 
@@ -146,7 +144,6 @@ public class Age3to5Results extends MainActivity {
 			}
 			age3to5Level3CurrentHighscore = Integer.parseInt(temp);
 			fin.close();
-			JDBC.saveScoreToDB("3 to 5", 3, temp);
 		} catch (Exception e) {
 		}
 
