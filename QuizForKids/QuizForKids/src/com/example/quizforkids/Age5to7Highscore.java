@@ -3,7 +3,6 @@ package com.example.quizforkids;
 import java.io.FileInputStream;
 import com.example.quizforkids.R;
 import com.example.quizforkids.MainActivity;
-import com.example.quizforkids.Age3to5Results;
 
 import android.os.Bundle;
 import android.view.Menu;
