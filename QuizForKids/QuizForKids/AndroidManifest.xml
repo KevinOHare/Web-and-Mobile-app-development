@@ -8,6 +8,9 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="21" />
 
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -22,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".VideoHelp" />
         <activity
             android:name=".QuestionAgeSelect"
             android:label="@string/title_activity_select_age" >
@@ -161,10 +165,6 @@
         <activity
             android:name="shapes5to7.Shapes5to7Q5"
             android:label="@string/title_activity_shapes5to7_q5" >
-        </activity>
-        <activity
-            android:name="maths3to5.Maths3to5Q1"
-            android:label="@string/title_activity_maths3to5_q1" >
         </activity>
         <activity
             android:name=".Age5to7Highscore"

@@ -15,8 +15,8 @@
         android:text="@string/Play"
         android:textColor="#00EE00"
         android:textSize="24sp" />
-    
-     <Button
+
+    <Button
         android:id="@+id/highscores_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,28 +27,28 @@
         android:text="@string/highscores"
         android:textColor="#00EE00"
         android:textSize="24sp" />
-    
+
     <Button
         android:id="@+id/music_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-		android:layout_below="@+id/highscores_button"
-		android:layout_marginTop="20dp"
-		android:layout_marginLeft="20dp"
+        android:layout_below="@+id/highscores_button"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="34dp"
+        android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         android:text="@string/music_label"
         android:textColor="#00EE00"
         android:textSize="24sp" />
-    
-     <Button
+
+    <Button
         android:id="@+id/music_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/music_label"
+        android:layout_marginEnd="16dp"
         android:layout_marginLeft="125dp"
         android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp"
         android:text="@string/music_on_button"
         android:textColor="#000000"
         android:textSize="24sp" />
@@ -63,5 +63,16 @@
         android:text="@string/music_off_button"
         android:textColor="#000000"
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/videoHelp_button"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#000000"
+        android:text="@string/videoHelp_button"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
 </RelativeLayout>

@@ -123,6 +123,19 @@ public class MainActivity extends Activity {
 			}
 		});
 
+		// Create the functionality for the HELP button
+		final Button videoHelpButton = (Button) findViewById(R.id.videoHelp_button);
+		// Capture button clicks
+		videoHelpButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent changeScreen = new Intent(MainActivity.this,
+						VideoHelp.class);
+				startActivity(changeScreen);
+			}
+		});
+			
 	}
 
 	/**
