@@ -5,8 +5,10 @@ import java.io.FileOutputStream;
 
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -227,18 +229,21 @@ public class Age5to7Results extends MainActivity {
 			silverMedal.setVisibility(View.INVISIBLE);
 			bronzeMedal.setVisibility(View.INVISIBLE);
 			resultMessage.setText("Well done!");
+			resultMessage.setTextColor(Color.RED);
 		} else if (((age5to7numberCorrect * 30) + (age5to7timerPoints)) >= 100
 				&& ((age5to7numberCorrect * 30) + (age5to7timerPoints)) < 200) {
 			goldMedal.setVisibility(View.INVISIBLE);
 			silverMedal.setVisibility(View.VISIBLE);
 			bronzeMedal.setVisibility(View.INVISIBLE);
 			resultMessage.setText("Almost, try again");
+			resultMessage.setTextColor(Color.BLUE);
 		} else if (((age5to7numberCorrect * 30) + (age5to7timerPoints)) >= 0
 				&& ((age5to7numberCorrect * 30) + (age5to7timerPoints)) < 100) {
 			goldMedal.setVisibility(View.INVISIBLE);
 			silverMedal.setVisibility(View.INVISIBLE);
 			bronzeMedal.setVisibility(View.VISIBLE);
 			resultMessage.setText("Hard luck");
+			resultMessage.setTextColor(Color.GREEN);
 		}
 
 		if (level1Selected == true) {
