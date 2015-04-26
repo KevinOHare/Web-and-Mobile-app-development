@@ -1,5 +1,8 @@
 package animals3to5;
 
+/**
+ * import resources
+ */
 import com.example.quizforkids.Age3to5Results;
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
@@ -12,15 +15,37 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+/**
+ * Class for the 1st Question in the Animals round of the 3to5yr old
+ * @author chrismcclune
+ *
+ */
 public class Animals3to5Q1 extends MainActivity {
 
-	// Buttons for answers
+	
+	/**
+	 * Button for Answer 1
+	 */
 	static Button Answer1;
+	
+	/**
+	 * Button for Answer 2
+	 */
 	static Button Answer2;
+	
+	/**
+	 * Button for Answer 3
+	 */
 	static Button Answer3;
+	
+	/**
+	 * Button for Answer 4
+	 */
 	static Button Answer4;
 	
-	// Button for the arrow
+	/**
+	 * Button for the next arrow
+	 */
 	static ImageButton btn;
 	
 	@Override
@@ -51,6 +76,7 @@ public class Animals3to5Q1 extends MainActivity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					// set correct answer boolean
 					age3to5answeredCorrectly = true;
 				}
 				// set arrow to visible
@@ -65,6 +91,7 @@ public class Animals3to5Q1 extends MainActivity {
 					Answer2.setBackgroundColor(Color.WHITE);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					// set answer boolean
 					age3to5answeredCorrectly = false;
 				}
 				// set arrow to visible
@@ -79,6 +106,7 @@ public class Animals3to5Q1 extends MainActivity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.WHITE);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					// set answer boolean
 					age3to5answeredCorrectly = false;
 				}
 				// set arrow to visible
@@ -93,6 +121,7 @@ public class Animals3to5Q1 extends MainActivity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.WHITE);
+					// set answer boolean
 					age3to5answeredCorrectly = false;
 				}
 				// set arrow to visible
@@ -109,7 +138,7 @@ public class Animals3to5Q1 extends MainActivity {
 	 * Method to change screen after arrow is pressed
 	 */
 	private void nextPageButton() {
-		
+		// assign image to the green tick imageview
 		age3to5greentick1 = (ImageView) findViewById(R.id.age3to5greentick1);
 		
 		ImageButton btn = (ImageButton) findViewById(R.id.next_page);
@@ -118,19 +147,24 @@ public class Animals3to5Q1 extends MainActivity {
 			@Override
 			public void onClick(View v) {
 				if(age3to5answeredCorrectly == true){
+					// assign the correct answer 
 					Age3to5Results.age3to5Q1AnsweredCorrectly = true;
 				} else if (age3to5answeredCorrectly == false){
+					// assign the incorrect answer
 					Age3to5Results.age3to5Q1AnsweredCorrectly = false;
 				}
 				update3to5Score();
 				countDownTimer.cancel();
+				// intent to change to the next question screen
 				Intent changeScreen = new Intent(Animals3to5Q1.this,
 						Animals3to5Q2.class);
 				startActivity(changeScreen);
 			}
 		});
 	}
-	
+	/**
+	 * Method to disable the back key on device so user cannot restart level until all are finished
+	 */
 	@Override
 	public void onBackPressed(){
 		//super.onBackPressed();

@@ -1,5 +1,8 @@
 package english5to7;
 
+/**
+ * import resources
+ */
 import com.example.quizforkids.Age5to7Results;
 import com.example.quizforkids.MainActivity;
 import com.example.quizforkids.R;
@@ -12,15 +15,36 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+/**
+ * Class for the 5th Question in the English round of the 5to7yr old
+ * @author chrismcclune
+ *
+ */
 public class English5to7Q5 extends MainActivity {
 
-	// Buttons for answers
+	/**
+	 * Button for answer 1
+	 */
 	static Button Answer1;
+	
+	/**
+	 * Button for answer 2
+	 */
 	static Button Answer2;
+	
+	/**
+	 * Button for answer 3
+	 */
 	static Button Answer3;
+	
+	/**
+	 * Button for answer 4
+	 */
 	static Button Answer4;
 
-	// Button for the arrow
+	/**
+	 * Button for the next arrow
+	 */
 	static ImageButton btn;
 
 	@Override
@@ -51,6 +75,7 @@ public class English5to7Q5 extends MainActivity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					// set correct answer boolean
 					age5to7answeredCorrectly = true;
 				}
 				// set arrow to visible
@@ -65,6 +90,7 @@ public class English5to7Q5 extends MainActivity {
 					Answer2.setBackgroundColor(Color.WHITE);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					// set answer boolean
 					age5to7answeredCorrectly = false;
 				}
 				// set arrow to visible
@@ -79,6 +105,7 @@ public class English5to7Q5 extends MainActivity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.WHITE);
 					Answer4.setBackgroundColor(Color.YELLOW);
+					// set answer boolean
 					age5to7answeredCorrectly = false;
 				}
 				// set arrow to visible
@@ -93,6 +120,7 @@ public class English5to7Q5 extends MainActivity {
 					Answer2.setBackgroundColor(Color.YELLOW);
 					Answer3.setBackgroundColor(Color.YELLOW);
 					Answer4.setBackgroundColor(Color.WHITE);
+					// set answer boolean
 					age5to7answeredCorrectly = false;
 				}
 				// set arrow to visible
@@ -110,20 +138,24 @@ public class English5to7Q5 extends MainActivity {
 	 */
 	private void nextPageButton() {
 
+		// assign image to the green tick imageview
 		age5to7greentick5 = (ImageView) findViewById(R.id.age5to7greentick5);
-
 		ImageButton btn = (ImageButton) findViewById(R.id.next_page);
+		
 		btn.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				if (age5to7answeredCorrectly == true) {
+					// assign the correct answer 
 					Age5to7Results.age5to7Q5AnsweredCorrectly = true;
 				} else if (age5to7answeredCorrectly == false) {
+					// assign the incorrect answer
 					Age5to7Results.age5to7Q5AnsweredCorrectly = false;
 				}
 				update5to7Score();
 				countDownTimer.cancel();
+				// Intent to change to the results screen
 				Intent changeScreen = new Intent(English5to7Q5.this,
 						Age5to7Results.class);
 				startActivity(changeScreen);
@@ -131,6 +163,9 @@ public class English5to7Q5 extends MainActivity {
 		});
 	}
 
+	/**
+	 * Method to disable the back key on device so user cannot restart level until all are finished
+	 */
 	@Override
 	public void onBackPressed() {
 		// super.onBackPressed();
