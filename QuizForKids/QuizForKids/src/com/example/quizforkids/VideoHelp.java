@@ -33,7 +33,7 @@ public class VideoHelp extends YouTubeBaseActivity implements YouTubePlayer.OnIn
 	 * 
 	 */
 	//http://youtu.be/<VIDEO_ID>
-	public static final String VIDEO_ID = "jbZusVDBf4A";
+	public static final String VIDEO_ID = "nDdtvpT20eg";
 
 	/**
 	 * 
