@@ -7,6 +7,14 @@
 
     <!-- image of question -->
 
+    <ImageView
+        android:id="@+id/change_image"
+        android:layout_width="300dp"
+        android:layout_height="163dp"
+	android:layout_marginTop="102dp"
+	android:layout_marginBottom="10dp"
+        android:src="@drawable/sixteen" />
+
     <!-- question asked -->
     
     <TextView
@@ -109,13 +117,5 @@
          android:background="@null"
          android:src="@drawable/arrow" />
 
-    <ImageView
-        android:id="@+id/change_image"
-        android:layout_width="180dp"
-        android:layout_height="163dp"
-        android:layout_below="@+id/question"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/sixteen" />
 
 </RelativeLayout>
