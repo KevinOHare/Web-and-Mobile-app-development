@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shapesbackground"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <!-- image of question -->
+
+    <ImageView
+        android:id="@+id/change_image"
+        android:layout_width="400dp"
+        android:layout_height="170dp"
+	android:layout_marginTop="100dp"
+	android:layout_marginBottom="4dp"
+        android:src="@drawable/sides" />
+
+    <!-- question asked -->
+    
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="17dp"
+		android:background="@color/white"
+        android:text="Which shape has least sides?"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+    
+    <!-- Countdown timer -->
+   
+       <TextView
+        android:id="@+id/timer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginStart="320dp"
+        android:textColor="#ff0000"
+        android:textStyle="bold"
+        android:textSize="25sp" /> 
+
+    <!-- Button 1 -->
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/change_image"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="70dp"
+        android:text="A"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="#FCEE21"
+        android:textAllCaps="false" />
+
+     <!-- Button 2 -->
+    
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/change_image"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="70dp"
+        android:text="B"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="#FCEE21"
+        android:textAllCaps="false"/>
+
+     <!-- Button 3 -->
+    
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/change_image"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="130dp"
+        android:text="C"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="#FCEE21"
+        android:textAllCaps="false"/>
+
+     <!-- Button 4 -->
+    
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/change_image"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="130dp"
+        android:text="D"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="#FCEE21"
+        android:textAllCaps="false" />
+    
+    <!-- Image View for arrow -->
+    
+    <ImageButton
+         android:id="@+id/next_page"
+         android:layout_width="80dp"
+         android:layout_height="60dp"
+         android:layout_alignParentBottom="true"
+         android:layout_alignRight="@+id/button4"
+         android:layout_marginBottom="14dp"
+         android:background="@null"
+         android:src="@drawable/arrow" />
+    
+    <!-- Image View for stop watch -->
+    
+     <ImageView
+         android:id="@+id/stop_watch"
+         android:layout_width="80dp"
+         android:layout_height="60dp"
+         android:layout_marginLeft="305dp"
+         android:layout_marginStart="305dp"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="3dp"
+         android:layout_marginBottom="200dp"
+         android:src="@drawable/timer" />
+</RelativeLayout>
