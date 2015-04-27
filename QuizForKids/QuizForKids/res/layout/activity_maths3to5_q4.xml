@@ -113,9 +113,9 @@
         android:id="@+id/change_image"
         android:layout_width="202dp"
         android:layout_height="190dp"
-        android:layout_marginTop="5dp"
         android:layout_below="@+id/question"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
         android:src="@drawable/cats" />
 
 </RelativeLayout>
