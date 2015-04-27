@@ -5,45 +5,45 @@
     android:background="@drawable/animalsbackground"
     tools:context="${relativePackage}.${activityClass}" >
 
-	<!-- image of question -->
+    <!-- image of question -->
 
     <ImageView
         android:id="@+id/change_image"
         android:layout_width="400dp"
         android:layout_height="163dp"
-	android:layout_marginTop="102dp"
-	android:layout_marginBottom="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="102dp"
         android:src="@drawable/chicken" />
 
     <!-- question asked -->
-    
+
     <TextView
         android:id="@+id/question"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/next_page"
-        android:layout_marginTop="18dp"
-		android:background="@color/white"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
         android:text="What is this animal?"
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold" />
-    
+
     <!-- Countdown timer -->
-   
-       <TextView
+
+    <TextView
         android:id="@+id/timer"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginLeft="320dp"
+        android:layout_marginLeft="290dp"
         android:layout_marginStart="320dp"
+        android:layout_marginTop="22dp"
         android:textColor="#ff0000"
-        android:textStyle="bold"
-        android:textSize="25sp" /> 
+        android:textSize="45sp"
+        android:textStyle="bold" />
 
     <!-- Button 1 -->
 
@@ -52,16 +52,16 @@
         android:layout_width="130dp"
         android:layout_height="40dp"
         android:layout_below="@+id/change_image"
-      	android:layout_marginLeft="35dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginTop="70dp"
-        android:text="a Pig"
-        android:textSize="18dp"
-        android:textStyle="bold"
         android:background="#FCEE21"
-        android:textAllCaps="false" />
+        android:text="a Pig"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
-     <!-- Button 2 -->
-    
+    <!-- Button 2 -->
+
     <Button
         android:id="@+id/button2"
         android:layout_width="130dp"
@@ -69,14 +69,14 @@
         android:layout_below="@+id/change_image"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="70dp"
-        android:text="a Crow"
-        android:textSize="18dp"
-        android:textStyle="bold"
         android:background="#FCEE21"
-        android:textAllCaps="false"/>
+        android:text="a Crow"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
-     <!-- Button 3 -->
-    
+    <!-- Button 3 -->
+
     <Button
         android:id="@+id/button3"
         android:layout_width="130dp"
@@ -84,14 +84,14 @@
         android:layout_below="@+id/change_image"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="130dp"
-        android:text="a Bear"
-        android:textSize="18dp"
-        android:textStyle="bold"
         android:background="#FCEE21"
-        android:textAllCaps="false"/>
+        android:text="a Bear"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
-     <!-- Button 4 -->
-    
+    <!-- Button 4 -->
+
     <Button
         android:id="@+id/button4"
         android:layout_width="130dp"
@@ -99,23 +99,22 @@
         android:layout_below="@+id/change_image"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="130dp"
-        android:text="a Chicken"
-        android:textSize="18dp"
-        android:textStyle="bold"
         android:background="#FCEE21"
-        android:textAllCaps="false" />
-    
+        android:text="a Chicken"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
     <!-- Image View for arrow -->
-    
+
     <ImageButton
-         android:id="@+id/next_page"
-         android:layout_width="80dp"
-         android:layout_height="60dp"
-         android:layout_alignParentBottom="true"
-         android:layout_alignRight="@+id/button4"
-         android:layout_marginBottom="14dp"
-         android:background="@null"
-         android:src="@drawable/arrow" />
-    
+        android:id="@+id/next_page"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/button4"
+        android:layout_marginBottom="14dp"
+        android:background="@null"
+        android:src="@drawable/arrow" />
 
 </RelativeLayout>

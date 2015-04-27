@@ -394,9 +394,9 @@ int id action_menu_presenter 0x7f0a0006
 int id action_mode_bar 0x7f0a002e
 int id action_mode_bar_stub 0x7f0a002d
 int id action_mode_close_button 0x7f0a0020
-int id action_settings 0x7f0a0078
+int id action_settings 0x7f0a0077
 int id activity_chooser_view_content 0x7f0a0021
-int id activity_video_help 0x7f0a0077
+int id activity_video_help 0x7f0a0076
 int id age3to5greentick1 0x7f0a0046
 int id age3to5greentick2 0x7f0a0048
 int id age3to5greentick3 0x7f0a004a
@@ -486,7 +486,6 @@ int id showHome 0x7f0a0011
 int id showTitle 0x7f0a0012
 int id silverMedal 0x7f0a0051
 int id split_action_bar 0x7f0a0004
-int id stop_watch 0x7f0a0076
 int id submit_area 0x7f0a003c
 int id tabMode 0x7f0a000c
 int id textView1 0x7f0a0068

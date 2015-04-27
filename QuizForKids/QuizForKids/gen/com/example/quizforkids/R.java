@@ -1695,9 +1695,9 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0a002e;
         public static final int action_mode_bar_stub=0x7f0a002d;
         public static final int action_mode_close_button=0x7f0a0020;
-        public static final int action_settings=0x7f0a0078;
+        public static final int action_settings=0x7f0a0077;
         public static final int activity_chooser_view_content=0x7f0a0021;
-        public static final int activity_video_help=0x7f0a0077;
+        public static final int activity_video_help=0x7f0a0076;
         public static final int age3to5greentick1=0x7f0a0046;
         public static final int age3to5greentick2=0x7f0a0048;
         public static final int age3to5greentick3=0x7f0a004a;
@@ -1787,7 +1787,6 @@ containing a value of this type.
         public static final int showTitle=0x7f0a0012;
         public static final int silverMedal=0x7f0a0051;
         public static final int split_action_bar=0x7f0a0004;
-        public static final int stop_watch=0x7f0a0076;
         public static final int submit_area=0x7f0a003c;
         public static final int tabMode=0x7f0a000c;
         public static final int textView1=0x7f0a0068;
