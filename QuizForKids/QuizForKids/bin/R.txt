@@ -382,8 +382,14 @@ int drawable sizes 0x7f02005f
 int drawable sum 0x7f020060
 int drawable sunrise 0x7f020061
 int drawable tally 0x7f020062
+<<<<<<< HEAD
 int drawable up 0x7f020063
 int drawable wordsbackground 0x7f020064
+=======
+int drawable timer 0x7f020063
+int drawable up 0x7f020064
+int drawable wordsbackground 0x7f020065
+>>>>>>> origin/master
 int id Level1Highscore 0x7f06003f
 int id Level2Highscore 0x7f060040
 int id Level3Highscore 0x7f060041
@@ -426,8 +432,13 @@ int id age5to7redcross2 0x7f06005a
 int id age5to7redcross3 0x7f06005c
 int id age5to7redcross4 0x7f06005e
 int id age5to7redcross5 0x7f060060
+<<<<<<< HEAD
 int id ages3_5yrs 0x7f06006a
 int id ages5_7yrs 0x7f060069
+=======
+int id ages3_5yrs 0x7f06006b
+int id ages5_7yrs 0x7f06006a
+>>>>>>> origin/master
 int id always 0x7f06000d
 int id beginning 0x7f060012
 int id bronzeMedal 0x7f060052
@@ -445,16 +456,25 @@ int id disableHome 0x7f06000a
 int id dropdown 0x7f060011
 int id edit_query 0x7f060033
 int id end 0x7f060014
+<<<<<<< HEAD
 int id exit_button 0x7f060074
 int id expand_activities_button 0x7f060022
 int id expanded_menu 0x7f060028
 int id goldMedal 0x7f060050
 int id highscores_button 0x7f060070
+=======
+int id exit_button 0x7f060075
+int id expand_activities_button 0x7f060022
+int id expanded_menu 0x7f060028
+int id goldMedal 0x7f060050
+int id highscores_button 0x7f060071
+>>>>>>> origin/master
 int id home 0x7f060015
 int id homeAsUp 0x7f060007
 int id icon 0x7f060026
 int id ifRoom 0x7f06000c
 int id image 0x7f060023
+<<<<<<< HEAD
 int id level_1_button 0x7f06006c
 int id level_2_button 0x7f06006b
 int id level_3_button 0x7f06006d
@@ -465,11 +485,27 @@ int id middle 0x7f060013
 int id music_label 0x7f060071
 int id music_off_button 0x7f060073
 int id music_on_button 0x7f060072
+=======
+int id level_1_button 0x7f06006d
+int id level_2_button 0x7f06006c
+int id level_3_button 0x7f06006e
+int id listMode 0x7f060002
+int id list_item 0x7f060025
+int id mainpage_button 0x7f06006f
+int id middle 0x7f060013
+int id music_label 0x7f060072
+int id music_off_button 0x7f060074
+int id music_on_button 0x7f060073
+>>>>>>> origin/master
 int id never 0x7f06000b
 int id next_page 0x7f060045
 int id none 0x7f060004
 int id normal 0x7f060001
+<<<<<<< HEAD
 int id play_button 0x7f06006f
+=======
+int id play_button 0x7f060070
+>>>>>>> origin/master
 int id progress_circular 0x7f06001c
 int id progress_horizontal 0x7f06001d
 int id question 0x7f060062
@@ -492,17 +528,28 @@ int id showHome 0x7f060006
 int id showTitle 0x7f060008
 int id silverMedal 0x7f060051
 int id split_action_bar 0x7f060019
+<<<<<<< HEAD
 int id stop_watch 0x7f060076
 int id submit_area 0x7f06003c
 int id tabMode 0x7f060003
 int id textView1 0x7f060068
+=======
+int id stop_watch 0x7f060068
+int id submit_area 0x7f06003c
+int id tabMode 0x7f060003
+int id textView1 0x7f060069
+>>>>>>> origin/master
 int id timer 0x7f060063
 int id timescore 0x7f060043
 int id title 0x7f060027
 int id totalscore 0x7f060044
 int id up 0x7f060016
 int id useLogo 0x7f060005
+<<<<<<< HEAD
 int id videoHelp_button 0x7f060075
+=======
+int id videoHelp_button 0x7f060076
+>>>>>>> origin/master
 int id withText 0x7f06000e
 int id wrap_content 0x7f060000
 int integer abc_max_action_buttons 0x7f0a0000

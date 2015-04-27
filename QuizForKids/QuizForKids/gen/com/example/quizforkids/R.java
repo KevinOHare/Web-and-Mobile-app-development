@@ -1727,8 +1727,13 @@ containing a value of this type.
         public static final int age5to7redcross3=0x7f06005c;
         public static final int age5to7redcross4=0x7f06005e;
         public static final int age5to7redcross5=0x7f060060;
+<<<<<<< HEAD
         public static final int ages3_5yrs=0x7f06006a;
         public static final int ages5_7yrs=0x7f060069;
+=======
+        public static final int ages3_5yrs=0x7f06006b;
+        public static final int ages5_7yrs=0x7f06006a;
+>>>>>>> origin/master
         public static final int always=0x7f06000d;
         public static final int beginning=0x7f060012;
         public static final int bronzeMedal=0x7f060052;
@@ -1746,16 +1751,25 @@ containing a value of this type.
         public static final int dropdown=0x7f060011;
         public static final int edit_query=0x7f060033;
         public static final int end=0x7f060014;
+<<<<<<< HEAD
         public static final int exit_button=0x7f060074;
         public static final int expand_activities_button=0x7f060022;
         public static final int expanded_menu=0x7f060028;
         public static final int goldMedal=0x7f060050;
         public static final int highscores_button=0x7f060070;
+=======
+        public static final int exit_button=0x7f060075;
+        public static final int expand_activities_button=0x7f060022;
+        public static final int expanded_menu=0x7f060028;
+        public static final int goldMedal=0x7f060050;
+        public static final int highscores_button=0x7f060071;
+>>>>>>> origin/master
         public static final int home=0x7f060015;
         public static final int homeAsUp=0x7f060007;
         public static final int icon=0x7f060026;
         public static final int ifRoom=0x7f06000c;
         public static final int image=0x7f060023;
+<<<<<<< HEAD
         public static final int level_1_button=0x7f06006c;
         public static final int level_2_button=0x7f06006b;
         public static final int level_3_button=0x7f06006d;
@@ -1766,11 +1780,27 @@ containing a value of this type.
         public static final int music_label=0x7f060071;
         public static final int music_off_button=0x7f060073;
         public static final int music_on_button=0x7f060072;
+=======
+        public static final int level_1_button=0x7f06006d;
+        public static final int level_2_button=0x7f06006c;
+        public static final int level_3_button=0x7f06006e;
+        public static final int listMode=0x7f060002;
+        public static final int list_item=0x7f060025;
+        public static final int mainpage_button=0x7f06006f;
+        public static final int middle=0x7f060013;
+        public static final int music_label=0x7f060072;
+        public static final int music_off_button=0x7f060074;
+        public static final int music_on_button=0x7f060073;
+>>>>>>> origin/master
         public static final int never=0x7f06000b;
         public static final int next_page=0x7f060045;
         public static final int none=0x7f060004;
         public static final int normal=0x7f060001;
+<<<<<<< HEAD
         public static final int play_button=0x7f06006f;
+=======
+        public static final int play_button=0x7f060070;
+>>>>>>> origin/master
         public static final int progress_circular=0x7f06001c;
         public static final int progress_horizontal=0x7f06001d;
         public static final int question=0x7f060062;
@@ -1793,17 +1823,28 @@ containing a value of this type.
         public static final int showTitle=0x7f060008;
         public static final int silverMedal=0x7f060051;
         public static final int split_action_bar=0x7f060019;
+<<<<<<< HEAD
         public static final int stop_watch=0x7f060076;
         public static final int submit_area=0x7f06003c;
         public static final int tabMode=0x7f060003;
         public static final int textView1=0x7f060068;
+=======
+        public static final int stop_watch=0x7f060068;
+        public static final int submit_area=0x7f06003c;
+        public static final int tabMode=0x7f060003;
+        public static final int textView1=0x7f060069;
+>>>>>>> origin/master
         public static final int timer=0x7f060063;
         public static final int timescore=0x7f060043;
         public static final int title=0x7f060027;
         public static final int totalscore=0x7f060044;
         public static final int up=0x7f060016;
         public static final int useLogo=0x7f060005;
+<<<<<<< HEAD
         public static final int videoHelp_button=0x7f060075;
+=======
+        public static final int videoHelp_button=0x7f060076;
+>>>>>>> origin/master
         public static final int withText=0x7f06000e;
         public static final int wrap_content=0x7f060000;
     }
