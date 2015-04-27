@@ -76,6 +76,7 @@ public class MainActivity extends Activity {
 		// Create the functionality for the SOUND buttons
 		final Button soundOnButton = (Button) findViewById(R.id.music_on_button);
 		final Button soundOffButton = (Button) findViewById(R.id.music_off_button);
+		soundOffButton.setEnabled(false);
 
 		soundOnButton.setOnClickListener(new View.OnClickListener() {
 

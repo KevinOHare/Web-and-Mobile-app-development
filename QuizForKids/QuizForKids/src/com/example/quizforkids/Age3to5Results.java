@@ -1,7 +1,8 @@
 package com.example.quizforkids;
 
-// testing git connection
-
+/**
+ * import resources
+ */
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
@@ -18,6 +19,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Class to show the results of the Age 3 to 5 levels
+ * @author chrismcclune
+ *
+ */
 public class Age3to5Results extends MainActivity {
 
 	/**
@@ -34,18 +40,45 @@ public class Age3to5Results extends MainActivity {
 	 * Instance variable for the points assigned per second remaining.
 	 */
 	public static int age3to5timerPoints = 0;
-	
+
+	/**
+	 * Instance variable for the question 1 answer
+	 */
 	public static boolean age3to5Q1AnsweredCorrectly = false;
+	
+	/**
+	 * Instance variable for the question 2 answer
+	 */
 	public static boolean age3to5Q2AnsweredCorrectly = false;
+	
+	/**
+	 * Instance variable for the question 3 answer
+	 */
 	public static boolean age3to5Q3AnsweredCorrectly = false;
+	
+	/**
+	 * Instance variable for the question 4 answer
+	 */
 	public static boolean age3to5Q4AnsweredCorrectly = false;
+	
+	/**
+	 * Instance variable for the question 5 answer
+	 */
 	public static boolean age3to5Q5AnsweredCorrectly = false;
 
-	// causes app to always start with a highest score of 0
-	// move to another location to make internal storage keep actual highest
-	// score in final product
+	/**
+	 * int for the current highscore of level 1 in age 3to5
+	 */
 	static int age3to5Level1CurrentHighscore;
+	
+	/**
+	 * int for the current highscore of level 2 in age 3to5
+	 */
 	static int age3to5Level2CurrentHighscore;
+	
+	/**
+	 * int for the current highscore of level 3 in age 3to5
+	 */
 	static int age3to5Level3CurrentHighscore;
 
 	/**
@@ -63,13 +96,34 @@ public class Age3to5Results extends MainActivity {
 	 */
 	public static TextView age3to5Level3HighscoreTextView;
 
+	/**
+	 * instance variable for the data to be written to highscore
+	 */
 	public static String age3to5data1;
+	
+	/**
+	 * String to assign the Highscore to
+	 */
 	public static String age3to5Highscore1 = "age3to5lvl1Highscore";
 
+	/**
+	 * instance variable for the data to be written to highscore
+	 */
 	public static String age3to5data2;
+	
+	/**
+	 * String to assign the Highscore to
+	 */
 	public static String age3to5Highscore2 = "age3to5lvl2Highscore";
 
+	/**
+	 * instance variable for the data to be written to highscore
+	 */
 	public static String age3to5data3;
+	
+	/**
+	 * String to assign the Highscore to
+	 */
 	public static String age3to5Highscore3 = "age3to5lvl3Highscore";
 
 	/**
@@ -87,74 +141,93 @@ public class Age3to5Results extends MainActivity {
 	 */
 	public static TextView totalscoreTextView;
 
+	/**
+	 * Image view for the gold medal
+	 */
 	public static ImageView goldMedal;
+	
+	/**
+	 * Image view for the silver medal
+	 */
 	public static ImageView silverMedal;
+	
+	/**
+	 * Image view for the bronze medal
+	 */
 	public static ImageView bronzeMedal;
 
+	/**
+	 * TextView for the results message
+	 */
 	public static TextView resultMessage;
-	
+
+	/**
+	 * ImageView for greentick question 1
+	 */
 	public static ImageView greentick1;
-	public static ImageView greentick2;
-	public static ImageView greentick3;
-	public static ImageView greentick4;
-	public static ImageView greentick5;
 	
+	/**
+	 * ImageView for greentick question 2
+	 */
+	public static ImageView greentick2;
+	
+	/**
+	 * ImageView for greentick question 3
+	 */
+	public static ImageView greentick3;
+	
+	/**
+	 * ImageView for greentick question 4
+	 */
+	public static ImageView greentick4;
+	
+	/**
+	 * ImageView for greentick question 5
+	 */
+	public static ImageView greentick5;
+
+	/**
+	 * ImageView for redcross question 1
+	 */
 	public static ImageView redcross1;
+	
+	/**
+	 * ImageView for redcross question 2
+	 */
 	public static ImageView redcross2;
+	
+	/**
+	 * ImageView for redcross question 3
+	 */
 	public static ImageView redcross3;
+	
+	/**
+	 * ImageView for redcross question 4
+	 */
 	public static ImageView redcross4;
+	
+	/**
+	 * ImageView for redcross question 5
+	 */
 	public static ImageView redcross5;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_age3to5_results);
-
-		// open file 1 to be written to
-		try {
-			FileInputStream fin = openFileInput(Age3to5Results.age3to5Highscore1);
-			int c;
-			String temp = "";
-			while ((c = fin.read()) != -1) {
-				temp = temp + Character.toString((char) c);
-			}
-			age3to5Level1CurrentHighscore = Integer.parseInt(temp);
-			fin.close();
-		} catch (Exception e) {
-		}
-
-		// open file 2 to be written to
-		try {
-			FileInputStream fin = openFileInput(Age3to5Results.age3to5Highscore2);
-			int c;
-			String temp = "";
-			while ((c = fin.read()) != -1) {
-				temp = temp + Character.toString((char) c);
-			}
-			age3to5Level2CurrentHighscore = Integer.parseInt(temp);
-			fin.close();
-		} catch (Exception e) {
-		}
-
-		// open file 3 to be written to
-		try {
-			FileInputStream fin = openFileInput(Age3to5Results.age3to5Highscore3);	
-			int c;
-			String temp = "";
-			while ((c = fin.read()) != -1) {
-				temp = temp + Character.toString((char) c);
-			}
-			age3to5Level3CurrentHighscore = Integer.parseInt(temp);
-			fin.close();
-		} catch (Exception e) {
-		}
+		
+		// open the files to read the highscores
+		openFile1();
+		openFile2();
+		openFile3();
 
 		// assign image to arrow button
 		btn = (ImageButton) findViewById(R.id.next_page);
 
 		questionscoreTextView = (TextView) findViewById(R.id.questionscore);
 		// gives 30points per correct answer
-		questionscoreTextView.setText(Integer.toString(age3to5numberCorrect * 30));
+		questionscoreTextView.setText(Integer
+				.toString(age3to5numberCorrect * 30));
 
 		timescoreTextView = (TextView) findViewById(R.id.timescore);
 		// gives timer points for each correct answer
@@ -165,67 +238,72 @@ public class Age3to5Results extends MainActivity {
 		totalscoreTextView.setText(Integer.toString((age3to5numberCorrect * 30)
 				+ (age3to5timerPoints)));
 
+		// assign gold medal image to imageviews
 		goldMedal = (ImageView) findViewById(R.id.goldMedal);
 		silverMedal = (ImageView) findViewById(R.id.silverMedal);
 		bronzeMedal = (ImageView) findViewById(R.id.bronzeMedal);
-		
+
+		// assign results message image to result message
 		resultMessage = (TextView) findViewById(R.id.resultMessage);
-		
+
+		// assign greenticks and red crosses to appropriate images
 		age3to5greentick1 = (ImageView) findViewById(R.id.age3to5greentick1);
 		age3to5redcross1 = (ImageView) findViewById(R.id.age3to5redcross1);
-		
 		age3to5greentick2 = (ImageView) findViewById(R.id.age3to5greentick2);
 		age3to5redcross2 = (ImageView) findViewById(R.id.age3to5redcross2);
-		
 		age3to5greentick3 = (ImageView) findViewById(R.id.age3to5greentick3);
 		age3to5redcross3 = (ImageView) findViewById(R.id.age3to5redcross3);
-		
 		age3to5greentick4 = (ImageView) findViewById(R.id.age3to5greentick4);
 		age3to5redcross4 = (ImageView) findViewById(R.id.age3to5redcross4);
-		
 		age3to5greentick5 = (ImageView) findViewById(R.id.age3to5greentick5);
 		age3to5redcross5 = (ImageView) findViewById(R.id.age3to5redcross5);
-		
-		if(age3to5Q1AnsweredCorrectly == true){
+
+		// if statement to set visibility of ticks and crosses to question 1
+		if (age3to5Q1AnsweredCorrectly == true) {
 			age3to5greentick1.setVisibility(View.VISIBLE);
 			age3to5redcross1.setVisibility(View.INVISIBLE);
-		} else if (age3to5Q1AnsweredCorrectly == false){
+		} else if (age3to5Q1AnsweredCorrectly == false) {
 			age3to5greentick1.setVisibility(View.INVISIBLE);
 			age3to5redcross1.setVisibility(View.VISIBLE);
 		}
 		
-		if(age3to5Q2AnsweredCorrectly == true){
+		// if statement to set visibility of ticks and crosses to question 2
+		if (age3to5Q2AnsweredCorrectly == true) {
 			age3to5greentick2.setVisibility(View.VISIBLE);
 			age3to5redcross2.setVisibility(View.INVISIBLE);
-		} else if (age3to5Q2AnsweredCorrectly == false){
+		} else if (age3to5Q2AnsweredCorrectly == false) {
 			age3to5greentick2.setVisibility(View.INVISIBLE);
 			age3to5redcross2.setVisibility(View.VISIBLE);
 		}
 		
-		if(age3to5Q3AnsweredCorrectly == true){
+		// if statement to set visibility of ticks and crosses to question 3
+		if (age3to5Q3AnsweredCorrectly == true) {
 			age3to5greentick3.setVisibility(View.VISIBLE);
 			age3to5redcross3.setVisibility(View.INVISIBLE);
-		} else if (age3to5Q3AnsweredCorrectly == false){
+		} else if (age3to5Q3AnsweredCorrectly == false) {
 			age3to5greentick3.setVisibility(View.INVISIBLE);
 			age3to5redcross3.setVisibility(View.VISIBLE);
 		}
 		
-		if(age3to5Q4AnsweredCorrectly == true){
+		// if statement to set visibility of ticks and crosses to question 4
+		if (age3to5Q4AnsweredCorrectly == true) {
 			age3to5greentick4.setVisibility(View.VISIBLE);
 			age3to5redcross4.setVisibility(View.INVISIBLE);
-		} else if (age3to5Q4AnsweredCorrectly == false){
+		} else if (age3to5Q4AnsweredCorrectly == false) {
 			age3to5greentick4.setVisibility(View.INVISIBLE);
 			age3to5redcross4.setVisibility(View.VISIBLE);
 		}
-		
-		if(age3to5Q5AnsweredCorrectly == true){
+
+		// if statement to set visibility of ticks and crosses to question 5
+		if (age3to5Q5AnsweredCorrectly == true) {
 			age3to5greentick5.setVisibility(View.VISIBLE);
 			age3to5redcross5.setVisibility(View.INVISIBLE);
-		} else if (age3to5Q5AnsweredCorrectly == false){
+		} else if (age3to5Q5AnsweredCorrectly == false) {
 			age3to5greentick5.setVisibility(View.INVISIBLE);
 			age3to5redcross5.setVisibility(View.VISIBLE);
 		}
 
+		// If statements to determine score and to give appropriate medal colour
 		if (((age3to5numberCorrect * 30) + (age3to5timerPoints)) >= 200) {
 			goldMedal.setVisibility(View.VISIBLE);
 			silverMedal.setVisibility(View.INVISIBLE);
@@ -248,26 +326,82 @@ public class Age3to5Results extends MainActivity {
 			resultMessage.setTextColor(Color.GREEN);
 		}
 
+		// if statement to write new highscore if better than previous attempts
 		if (level1Selected == true) {
 			if ((age3to5numberCorrect * 30) + (age3to5timerPoints) > age3to5Level1CurrentHighscore) {
 				saveage3to5Level1HighScore(age3to5Level1HighscoreTextView);
 			}
 		}
-
+		// if statement to write new highscore if better than previous attempts
 		if (level2Selected == true) {
 			if ((age3to5numberCorrect * 30) + (age3to5timerPoints) > age3to5Level2CurrentHighscore) {
 				saveage3to5Level2HighScore(age3to5Level2HighscoreTextView);
 			}
 		}
-
+		// if statement to write new highscore if better than previous attempts
 		if (level3Selected == true) {
 			if ((age3to5numberCorrect * 30) + (age3to5timerPoints) > age3to5Level3CurrentHighscore) {
 				saveage3to5Level3HighScore(age3to5Level3HighscoreTextView);
 			}
 		}
 
+		// call method to move to next screen
 		nextPageButton();
 
+	}
+
+	/**
+	* Method to read the highscore from the saved file and assign it to the current highscore	
+	*/
+	public void openFile1() {
+		// open file 1 to be written to
+		try {
+			FileInputStream fin = openFileInput(Age3to5Results.age3to5Highscore1);
+			int c;
+			String temp = "";
+			while ((c = fin.read()) != -1) {
+				temp = temp + Character.toString((char) c);
+			}
+			age3to5Level1CurrentHighscore = Integer.parseInt(temp);
+			fin.close();
+		} catch (Exception e) {
+		}
+	}
+	
+	/**
+	 * Method to read the highscore from the saved file and assign it to the current highscore
+	 */
+	public void openFile2() {
+		// open file 2 to be written to
+				try {
+					FileInputStream fin = openFileInput(Age3to5Results.age3to5Highscore2);
+					int c;
+					String temp = "";
+					while ((c = fin.read()) != -1) {
+						temp = temp + Character.toString((char) c);
+					}
+					age3to5Level2CurrentHighscore = Integer.parseInt(temp);
+					fin.close();
+				} catch (Exception e) {
+				}
+	}
+	
+	/**
+	 * Method to read the highscore from the saved file and assign it to the current highscore
+	 */
+	public void openFile3(){
+		// open file 3 to be written to
+				try {
+					FileInputStream fin = openFileInput(Age3to5Results.age3to5Highscore3);
+					int c;
+					String temp = "";
+					while ((c = fin.read()) != -1) {
+						temp = temp + Character.toString((char) c);
+					}
+					age3to5Level3CurrentHighscore = Integer.parseInt(temp);
+					fin.close();
+				} catch (Exception e) {
+				}
 	}
 
 	/**
@@ -278,14 +412,17 @@ public class Age3to5Results extends MainActivity {
 	@SuppressLint("WorldReadableFiles")
 	public void saveage3to5Level1HighScore(View view) {
 
+		// assign the value from totalscore text view to data to be written to file
 		age3to5data1 = totalscoreTextView.getText().toString();
 
 		// sets new current high score
 		age3to5Level1CurrentHighscore = Integer.parseInt(age3to5data1);
 
+		//write to file and display toast if highscore is better than before
 		try {
 			@SuppressWarnings("deprecation")
-			FileOutputStream fOut = openFileOutput(age3to5Highscore1, MODE_WORLD_READABLE);
+			FileOutputStream fOut = openFileOutput(age3to5Highscore1,
+					MODE_WORLD_READABLE);
 			fOut.write(age3to5data1.getBytes());
 			fOut.close();
 			Toast.makeText(getBaseContext(), "New High Score",
@@ -304,14 +441,17 @@ public class Age3to5Results extends MainActivity {
 	 */
 	@SuppressLint("WorldReadableFiles")
 	public void saveage3to5Level2HighScore(View view) {
-
+		// assign the value from totalscore text view to data to be written to file
 		age3to5data2 = totalscoreTextView.getText().toString();
 
+		// sets new current high score
 		age3to5Level2CurrentHighscore = Integer.parseInt(age3to5data2);
 
+		//write to file and display toast if highscore is better than before
 		try {
 			@SuppressWarnings("deprecation")
-			FileOutputStream fOut = openFileOutput(age3to5Highscore2, MODE_WORLD_READABLE);
+			FileOutputStream fOut = openFileOutput(age3to5Highscore2,
+					MODE_WORLD_READABLE);
 			fOut.write(age3to5data2.getBytes());
 			fOut.close();
 			Toast.makeText(getBaseContext(), "New High Score",
@@ -330,14 +470,17 @@ public class Age3to5Results extends MainActivity {
 	 */
 	@SuppressLint("WorldReadableFiles")
 	public void saveage3to5Level3HighScore(View view) {
-
+		// assign the value from totalscore text view to data to be written to file
 		age3to5data3 = totalscoreTextView.getText().toString();
 
+		// sets new current high score
 		age3to5Level3CurrentHighscore = Integer.parseInt(age3to5data3);
 
+		//write to file and display toast if highscore is better than before
 		try {
 			@SuppressWarnings("deprecation")
-			FileOutputStream fOut = openFileOutput(age3to5Highscore3, MODE_WORLD_READABLE);
+			FileOutputStream fOut = openFileOutput(age3to5Highscore3,
+					MODE_WORLD_READABLE);
 			fOut.write(age3to5data3.getBytes());
 			fOut.close();
 			Toast.makeText(getBaseContext(), "New High Score",
@@ -359,7 +502,8 @@ public class Age3to5Results extends MainActivity {
 
 			@Override
 			public void onClick(View v) {
-				
+
+				// Intent to change screen to level select after level completed
 				Intent changeScreen = new Intent(Age3to5Results.this,
 						LevelSelect3to5.class);
 				startActivity(changeScreen);
