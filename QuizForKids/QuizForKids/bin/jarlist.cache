@@ -1,10 +1,5 @@
 # cache for current jar dependency. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-<<<<<<< Updated upstream
-1430135298981 995624 3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28 C:\Users\Caoimhin\Documents\GitHub\Web-and-Mobile-app-development\QuizForKids\appcompat_v7\libs\android-support-v4.jar
-1430135296670 995624 3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28 C:\Users\Caoimhin\Documents\GitHub\Web-and-Mobile-app-development\QuizForKids\QuizForKids\libs\android-support-v4.jar
-=======
 1429559426000 995624 3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28 /Users/chrismcclune/Documents/GitHub Repositories/Web-and-Mobile-app-development/QuizForKids/appcompat_v7/libs/android-support-v4.jar
 1429559425000 995624 3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28 /Users/chrismcclune/Documents/GitHub Repositories/Web-and-Mobile-app-development/QuizForKids/QuizForKids/libs/android-support-v4.jar
->>>>>>> Stashed changes
