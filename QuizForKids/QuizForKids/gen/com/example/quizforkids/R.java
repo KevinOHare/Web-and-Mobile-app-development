@@ -1689,7 +1689,6 @@ containing a value of this type.
         public static final int Level1Highscore=0x7f06003f;
         public static final int Level2Highscore=0x7f060040;
         public static final int Level3Highscore=0x7f060041;
-        public static final int VideoView=0x7f060077;
         public static final int action_bar=0x7f060031;
         public static final int action_bar_activity_content=0x7f060018;
         public static final int action_bar_container=0x7f060030;
@@ -1705,6 +1704,7 @@ containing a value of this type.
         public static final int action_mode_close_button=0x7f060020;
         public static final int action_settings=0x7f060078;
         public static final int activity_chooser_view_content=0x7f060021;
+        public static final int activity_video_help=0x7f060077;
         public static final int age3to5greentick1=0x7f060046;
         public static final int age3to5greentick2=0x7f060048;
         public static final int age3to5greentick3=0x7f06004a;
