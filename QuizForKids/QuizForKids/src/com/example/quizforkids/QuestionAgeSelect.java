@@ -1,25 +1,42 @@
 package com.example.quizforkids;
 
 import com.example.quizforkids.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * Class used to display question age select page
+ * @author Steven
+ *
+ */
 public class QuestionAgeSelect extends Activity {
 	
+	/**
+	 * Boolean for age3to5 selected
+	 */
 	static boolean age3to5Selected = false;
+	
+	/**
+	 * Boolean for age5to7 selected
+	 */
 	static boolean age5to7Selected = false;
 
+	/**
+	 * on create to populate the question age select page
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		// get state from superclass
 		super.onCreate(savedInstanceState);
+		// set the content view from the xml
 		setContentView(R.layout.activity_select_age);
 
 		// Create button for 3-5 button
 		final Button age3to5 = (Button) findViewById(R.id.ages3_5yrs);
+		// Create button for 5-7 button
 		final Button age5to7 = (Button) findViewById(R.id.ages5_7yrs);
 
 		// Create button listener for lower age group
@@ -27,12 +44,13 @@ public class QuestionAgeSelect extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				
+				// change the boolean 
 				age3to5Selected = true;
 
 				// Create intent to change screen on click
 				Intent pageSwitch3to5 = new Intent(QuestionAgeSelect.this,
 						LevelSelect3to5.class);
+				// open new view
 				startActivity(pageSwitch3to5);
 
 			}
@@ -43,11 +61,13 @@ public class QuestionAgeSelect extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				
+				// change the boolean 
 				age5to7Selected = true;
 				
+				// Create intent to change screen on click
 				Intent pageSwitch5to7 = new Intent(QuestionAgeSelect.this,
 						LevelSelect5to7.class);
+				// open new view
 				startActivity(pageSwitch5to7);
 
 			}
