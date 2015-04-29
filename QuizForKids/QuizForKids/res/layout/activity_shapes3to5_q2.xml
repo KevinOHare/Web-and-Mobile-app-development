@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/change_image"
-        android:layout_width="400dp"
+        android:layout_width="224dp"
         android:layout_height="170dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="86dp"
         android:src="@drawable/objects" />
 
     <!-- question asked -->
